@@ -3,6 +3,8 @@
 <template>
     <div>
         DevDocument
+
+        <ButtonComp />
     </div>
 </template>
 
