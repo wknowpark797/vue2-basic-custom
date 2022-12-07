@@ -5,7 +5,7 @@
         <h2>Components</h2>
 
         <!-- Button -->
-        <div>
+        <div class="group-box">
             <h3>Button Component</h3>
 
             <div>
@@ -37,9 +37,9 @@
                 <ButtonComp :disabled="true" :outlined="true" :color="'gray'">button</ButtonComp>
             </div>
             <div>
-                <ButtonComp :size="'large'">button</ButtonComp>
-                <ButtonComp>button</ButtonComp>
-                <ButtonComp :size="'small'">button</ButtonComp>
+                <ButtonComp :size="'large'">large button</ButtonComp>
+                <ButtonComp>medium button</ButtonComp>
+                <ButtonComp :size="'small'">small button</ButtonComp>
             </div>
         </div>
         
@@ -51,12 +51,16 @@
         name: 'DevDocument',
         data() {
             return {
-                
+
             }
         }
     }
 </script>
 
 <style lang="scss" scoped>
-
+    .group-box {
+        > div {
+            margin-top: 5px;
+        }
+    }
 </style>
