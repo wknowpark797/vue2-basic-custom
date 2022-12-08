@@ -1,4 +1,6 @@
-<!-- Button Component -->
+<!-- 
+    [ Button Component ]
+ -->
 
 <template>
     <button :type="type" 
