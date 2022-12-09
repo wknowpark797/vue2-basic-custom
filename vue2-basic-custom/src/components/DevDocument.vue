@@ -58,6 +58,16 @@
                        @keyup="inputKeyup" />
             <p>input value : {{ inputValue }}</p>
         </div>
+
+        <!-- Textarea -->
+        <div class="group-box">
+            <h3>Textarea Component</h3>
+
+            <TextareaComp v-model="textareaValue"
+                          :placeholder="'내용 입력'"
+                          :label="'Label'" />
+            <p>textarea value : {{ textareaValue }}</p>
+        </div>
         
     </div>
 </template>
@@ -67,7 +77,8 @@
         name: 'DevDocument',
         data() {
             return {
-                inputValue: ''
+                inputValue: '',
+                textareaValue: ''
             }
         },
         methods: {
