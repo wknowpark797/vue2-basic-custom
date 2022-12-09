@@ -14,6 +14,11 @@
 <script>
     export default {
         name: 'ButtonComp',
+        data() {
+            return {
+                
+            }
+        },
         props: {
             type: {
                 type: String,
@@ -38,14 +43,6 @@
                 type: Boolean,
                 default: false
             }
-        },
-        data() {
-            return {
-                
-            }
-        },
-        mounted() {
-            
         },
         methods: {
             onClick() {

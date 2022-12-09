@@ -1,7 +1,9 @@
 <!-- 
     [ Input Component ]
 
-    - TODO: reset button 만들기
+    - TODO : 
+        reset button 만들기
+        유효성 검사 (에러 메세지 / 성공 메세지) 추가
  -->
 
 <template>
@@ -23,6 +25,11 @@
 <script>
     export default {
         name: 'InputComp',
+        data() {
+            return {
+                compValue: this.value
+            }
+        },
         props: {
             value: {
                 type: [String, Number],
@@ -49,14 +56,6 @@
                 type: String,
                 default: ''
             }
-        },
-        data() {
-            return {
-                compValue: this.value
-            }
-        },
-        mounted() {
-            
         },
         methods: {
             onInput(event) {
