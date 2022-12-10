@@ -77,6 +77,15 @@
                              :label="'Label'" />
             <p>checkbox value : {{ checkSingleValue }}</p>
         </div>
+
+        <!-- Checkbox : Group -->
+        <div class="group-box">
+            <h3>Checkbox Group Component</h3>
+
+            <CheckGroupComp v-model="checkGroupValue"
+                            :options="checkGroupOptions" />
+            <p>checkbox value : {{ checkGroupValue }}</p>
+        </div>
         
     </div>
 </template>
@@ -88,7 +97,16 @@
             return {
                 inputValue: '',
                 textareaValue: '',
-                checkSingleValue: 'N'
+                checkSingleValue: 'N',
+
+                checkGroupValue: [],
+                checkGroupOptions: [
+                    { label: 'test1', value: 'test1' },
+                    { label: 'test2', value: 'test2' },
+                    { label: 'test3', value: 'test3' },
+                    { label: 'test4', value: 'test4' },
+                    { label: 'test5', value: 'test5' }
+                ]
             }
         },
         methods: {
