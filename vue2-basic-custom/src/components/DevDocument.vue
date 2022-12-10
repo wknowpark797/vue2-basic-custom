@@ -95,6 +95,15 @@
                        :options="radioOptions" />
             <p>radio value : {{ radioValue }}</p>
         </div>
+
+        <!-- Select -->
+        <div class="group-box">
+            <h3>Select Component</h3>
+
+            <SelectComp v-model="selectValue" 
+                        :options="selectOptions" />
+            <p>select value : {{ selectValue }}</p>
+        </div>
         
     </div>
 </template>
@@ -124,6 +133,13 @@
                     { label: 'test3', value: 'test3' },
                     { label: 'test4', value: 'test4' },
                     { label: 'test5', value: 'test5' }
+                ],
+
+                selectValue: 'option1',
+                selectOptions: [
+                    { text: 'option1', value: 'option1' },
+                    { text: 'option2', value: 'option2' },
+                    { text: 'option3', value: 'option3' }
                 ]
             }
         },
