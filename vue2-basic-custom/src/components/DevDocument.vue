@@ -68,6 +68,15 @@
                           :label="'Label'" />
             <p>textarea value : {{ textareaValue }}</p>
         </div>
+
+        <!-- Checkbox : Single -->
+        <div class="group-box">
+            <h3>Checkbox Single Component</h3>
+
+            <CheckSingleComp v-model="checkSingleValue"
+                             :label="'Label'" />
+            <p>checkbox value : {{ checkSingleValue }}</p>
+        </div>
         
     </div>
 </template>
@@ -78,7 +87,8 @@
         data() {
             return {
                 inputValue: '',
-                textareaValue: ''
+                textareaValue: '',
+                checkSingleValue: 'N'
             }
         },
         methods: {
