@@ -6,6 +6,7 @@ import CheckSingleComp from '../components/common/CheckSingleComp'
 import CheckGroupComp from '../components/common/CheckGroupComp'
 import RadioComp from '../components/common/RadioComp'
 import SelectComp from '../components/common/SelectComp'
+import DropdownComp from '../components/common/DropdownComp'
 
 const GlobalComponents = {
     install(Vue) {
@@ -16,6 +17,7 @@ const GlobalComponents = {
         Vue.component(CheckGroupComp.name, CheckGroupComp)
         Vue.component(RadioComp.name, RadioComp)
         Vue.component(SelectComp.name, SelectComp)
+        Vue.component(DropdownComp.name, DropdownComp)
     }
 }
 

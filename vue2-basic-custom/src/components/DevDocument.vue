@@ -104,6 +104,15 @@
                         :options="selectOptions" />
             <p>select value : {{ selectValue }}</p>
         </div>
+
+        <!-- Dropdown -->
+        <div class="group-box">
+            <h3>Dropdown Component</h3>
+
+            <DropdownComp v-model="dropdownValue" 
+                          :options="dropdownOptions" />
+            <p>dropdown value : {{ dropdownValue }}</p>
+        </div>
         
     </div>
 </template>
@@ -140,6 +149,13 @@
                     { text: 'option1', value: 'option1' },
                     { text: 'option2', value: 'option2' },
                     { text: 'option3', value: 'option3' }
+                ],
+
+                dropdownValue: '1',
+                dropdownOptions: [
+                    { text: 'option1', value: '1' },
+                    { text: 'option2', value: '2' },
+                    { text: 'option3', value: '3' }
                 ]
             }
         },
