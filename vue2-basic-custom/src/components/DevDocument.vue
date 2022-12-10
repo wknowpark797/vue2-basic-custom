@@ -86,6 +86,15 @@
                             :options="checkGroupOptions" />
             <p>checkbox value : {{ checkGroupValue }}</p>
         </div>
+
+        <!-- Radio -->
+        <div class="group-box">
+            <h3>Radio Component</h3>
+
+            <RadioComp v-model="radioValue" 
+                       :options="radioOptions" />
+            <p>radio value : {{ radioValue }}</p>
+        </div>
         
     </div>
 </template>
@@ -101,6 +110,15 @@
 
                 checkGroupValue: [],
                 checkGroupOptions: [
+                    { label: 'test1', value: 'test1' },
+                    { label: 'test2', value: 'test2' },
+                    { label: 'test3', value: 'test3' },
+                    { label: 'test4', value: 'test4' },
+                    { label: 'test5', value: 'test5' }
+                ],
+
+                radioValue: '',
+                radioOptions: [
                     { label: 'test1', value: 'test1' },
                     { label: 'test2', value: 'test2' },
                     { label: 'test3', value: 'test3' },
