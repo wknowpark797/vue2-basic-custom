@@ -113,6 +113,30 @@
                           :options="dropdownOptions" />
             <p>dropdown value : {{ dropdownValue }}</p>
         </div>
+
+        <!-- Modal -->
+        <div class="group-box">
+            <h3>Modal Component</h3>
+
+            <ButtonComp :color="'blue'" 
+                        @click="showCommonModal">
+                Show Modal
+            </ButtonComp>
+        </div>
+
+        <ModalComp ref="commonModal">
+            <template v-slot:title>
+                Modal Title
+            </template>
+
+            <template v-slot:body>
+                Modal Body
+            </template>
+
+            <template v-slot:footer>
+                Modal Footer
+            </template>
+        </ModalComp>
         
     </div>
 </template>
@@ -171,6 +195,13 @@
             },
             inputKeyup(value) {
                 console.log('keyup value : ', value);
+            },
+
+            showCommonModal() {
+                this.$refs.commonModal.show();
+            },
+            closeCommonModal() {
+                this.$refs.commonModal.close();
             }
         }
     }
