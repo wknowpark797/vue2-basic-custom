@@ -132,6 +132,13 @@
             
         </div>
 
+        <!-- File Upload -->
+        <div class="group-box">
+            <h3>File Upload Component</h3>
+
+            <FileUploadComp v-model="fileUploadValue" />
+        </div>
+
         <!-- Modal -->
         <div class="group-box">
             <h3>Modal Component</h3>
@@ -201,7 +208,9 @@
                 ],
 
                 datepickerValue: '2022-12-01',
-                timepickerValue: '19:00'
+                timepickerValue: '19:00',
+
+                fileUploadValue: null
             }
         },
         methods: {
