@@ -7,6 +7,7 @@ import CheckGroupComp from '../components/common/CheckGroupComp'
 import RadioComp from '../components/common/RadioComp'
 import SelectComp from '../components/common/SelectComp'
 import DropdownComp from '../components/common/DropdownComp'
+import DatepickerComp from '../components/common/DatepickerComp'
 import ModalComp from '../components/common/ModalComp'
 
 const GlobalComponents = {
@@ -19,6 +20,7 @@ const GlobalComponents = {
         Vue.component(RadioComp.name, RadioComp)
         Vue.component(SelectComp.name, SelectComp)
         Vue.component(DropdownComp.name, DropdownComp)
+        Vue.component(DatepickerComp.name, DatepickerComp)
         Vue.component(ModalComp.name, ModalComp)
     }
 }

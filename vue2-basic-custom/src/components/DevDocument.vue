@@ -114,6 +114,15 @@
             <p>dropdown value : {{ dropdownValue }}</p>
         </div>
 
+        <!-- Datepicker -->
+        <div class="group-box">
+            <h3>Datepicker Component</h3>
+
+            <DatepickerComp v-model="datepickerValue"
+                            :label="'날짜 선택'" />
+            <p>datepicker value : {{ datepickerValue }}</p>
+        </div>
+
         <!-- Modal -->
         <div class="group-box">
             <h3>Modal Component</h3>
@@ -180,7 +189,9 @@
                     { text: 'option1', value: '1' },
                     { text: 'option2', value: '2' },
                     { text: 'option3', value: '3' }
-                ]
+                ],
+
+                datepickerValue: '2022-12-01'
             }
         },
         methods: {
