@@ -4,6 +4,7 @@ import InputComp from '../components/common/InputComp'
 import TextareaComp from '../components/common/TextareaComp'
 import CheckSingleComp from '../components/common/CheckSingleComp'
 import CheckGroupComp from '../components/common/CheckGroupComp'
+import SwitchComp from '../components/common/SwitchComp'
 import RadioComp from '../components/common/RadioComp'
 import SelectComp from '../components/common/SelectComp'
 import DropdownComp from '../components/common/DropdownComp'
@@ -19,6 +20,7 @@ const GlobalComponents = {
         Vue.component(TextareaComp.name, TextareaComp)
         Vue.component(CheckSingleComp.name, CheckSingleComp)
         Vue.component(CheckGroupComp.name, CheckGroupComp)
+        Vue.component(SwitchComp.name, SwitchComp)
         Vue.component(RadioComp.name, RadioComp)
         Vue.component(SelectComp.name, SelectComp)
         Vue.component(DropdownComp.name, DropdownComp)

@@ -139,6 +139,14 @@
             <FileUploadComp v-model="fileUploadValue" />
         </div>
 
+        <!-- Switch -->
+        <div class="group-box">
+            <h3>Switch Component</h3>
+
+            <SwitchComp v-model="switchValue" />
+            <p>switch value : {{ switchValue }}</p>
+        </div>
+
         <!-- Modal -->
         <div class="group-box">
             <h3>Modal Component</h3>
@@ -209,8 +217,8 @@
 
                 datepickerValue: '2022-12-01',
                 timepickerValue: '19:00',
-
-                fileUploadValue: null
+                fileUploadValue: null,
+                switchValue: false
             }
         },
         methods: {
