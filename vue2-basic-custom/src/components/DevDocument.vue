@@ -114,13 +114,22 @@
             <p>dropdown value : {{ dropdownValue }}</p>
         </div>
 
-        <!-- Datepicker -->
+        <!-- Date / Time -->
         <div class="group-box">
-            <h3>Datepicker Component</h3>
+            <h3>Datepicker / Timepicker Component</h3>
 
-            <DatepickerComp v-model="datepickerValue"
-                            :label="'날짜 선택'" />
-            <p>datepicker value : {{ datepickerValue }}</p>
+            <div>
+                <DatepickerComp v-model="datepickerValue"
+                                :label="'날짜 선택'" />
+                <p>datepicker value : {{ datepickerValue }}</p>
+            </div>
+
+            <div>
+                <TimepickerComp v-model="timepickerValue"
+                                :label="'시간 선택'" />
+                <p>timepicker value : {{ timepickerValue }}</p>
+            </div>
+            
         </div>
 
         <!-- Modal -->
@@ -191,7 +200,8 @@
                     { text: 'option3', value: '3' }
                 ],
 
-                datepickerValue: '2022-12-01'
+                datepickerValue: '2022-12-01',
+                timepickerValue: '19:00'
             }
         },
         methods: {
