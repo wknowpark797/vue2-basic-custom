@@ -147,6 +147,20 @@
             <p>switch value : {{ switchValue }}</p>
         </div>
 
+        <!-- Avatar -->
+        <div class="group-box">
+            <h3>Avatar Component</h3>
+
+            <div class="flex-box">
+                <AvatarComp :src="require('../assets/images/sample-image.png')" />
+                <AvatarComp :src="require('../assets/images/sample-image.png')"
+                            :rounded="false" />
+                <AvatarComp :src="require('../assets/images/sample-image.png')"
+                            :badge="true" />
+                <AvatarComp :text="'Ara'" />
+            </div>
+        </div>
+
         <!-- Modal -->
         <div class="group-box">
             <h3>Modal Component</h3>
@@ -249,6 +263,15 @@
     .group-box {
         > div {
             margin-top: 5px;
+        }
+        .flex-box {
+            display: flex;
+            align-items: center;
+            > div {
+                &:not(:first-child) {
+                    margin-left: 5px;
+                }
+            }
         }
     }
 </style>

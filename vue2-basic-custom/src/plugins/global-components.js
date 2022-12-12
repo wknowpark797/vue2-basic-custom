@@ -12,6 +12,7 @@ import DatepickerComp from '../components/common/DatepickerComp'
 import TimepickerComp from '../components/common/TimepickerComp'
 import FileUploadComp from '../components/common/FileUploadComp'
 import ModalComp from '../components/common/ModalComp'
+import AvatarComp from '../components/common/AvatarComp'
 
 const GlobalComponents = {
     install(Vue) {
@@ -28,6 +29,7 @@ const GlobalComponents = {
         Vue.component(TimepickerComp.name, TimepickerComp)
         Vue.component(FileUploadComp.name, FileUploadComp)
         Vue.component(ModalComp.name, ModalComp)
+        Vue.component(AvatarComp.name, AvatarComp)
     }
 }
 
