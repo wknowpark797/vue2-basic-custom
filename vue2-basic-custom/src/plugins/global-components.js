@@ -15,6 +15,7 @@ import ModalComp from '../components/common/ModalComp'
 import AvatarComp from '../components/common/AvatarComp'
 import AccordionComp from '../components/common/AccordionComp'
 import TagsComp from '../components/common/TagsComp'
+import CountComp from '../components/common/CountComp'
 
 const GlobalComponents = {
     install(Vue) {
@@ -34,6 +35,7 @@ const GlobalComponents = {
         Vue.component(AvatarComp.name, AvatarComp)
         Vue.component(AccordionComp.name, AccordionComp)
         Vue.component(TagsComp.name, TagsComp)
+        Vue.component(CountComp.name, CountComp)
     }
 }
 

@@ -176,6 +176,14 @@
                       @deleteTag="onDeleteTag" />
         </div>
 
+        <!-- Count -->
+        <div class="group-box">
+            <h3>Count Component</h3>
+
+            <CountComp v-model="countValue" />
+            <p>count value : {{ countValue }}</p>
+        </div>
+
         <!-- Modal -->
         <div class="group-box">
             <h3>Modal Component</h3>
@@ -283,7 +291,9 @@
                     { seq: 3, content: '태그3' },
                     { seq: 4, content: '태그4' },
                     { seq: 5, content: '태그5' }
-                ]
+                ],
+
+                countValue: 0
             }
         },
         methods: {
