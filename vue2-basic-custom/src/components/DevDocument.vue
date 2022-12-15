@@ -168,6 +168,14 @@
             <AccordionComp :list="accordionList" />
         </div>
 
+        <!-- Tags -->
+        <div class="group-box">
+            <h3>Tags Component</h3>
+
+            <TagsComp :list="tagList" 
+                      @deleteTag="onDeleteTag" />
+        </div>
+
         <!-- Modal -->
         <div class="group-box">
             <h3>Modal Component</h3>
@@ -267,6 +275,14 @@
                         title: 'Title 5',
                         content: 'Content 5'
                     }
+                ],
+
+                tagList: [
+                    { seq: 1, content: '태그1' },
+                    { seq: 2, content: '태그2' },
+                    { seq: 3, content: '태그3' },
+                    { seq: 4, content: '태그4' },
+                    { seq: 5, content: '태그5' }
                 ]
             }
         },
@@ -289,6 +305,11 @@
             },
             closeCommonModal() {
                 this.$refs.commonModal.close();
+            },
+
+            onDeleteTag(seq) {
+                const index = this.tagList.findIndex(item => item.seq === seq);
+                this.tagList.splice(index, 1);
             }
         }
     }
