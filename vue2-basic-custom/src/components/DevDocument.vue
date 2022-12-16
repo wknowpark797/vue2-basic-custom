@@ -184,6 +184,14 @@
             <p>count value : {{ countValue }}</p>
         </div>
 
+        <!-- Rating -->
+        <div class="group-box">
+            <h3>Rating Component (별점)</h3>
+
+            <RatingComp v-model="rateValue" />
+            <p>rating value : {{ rateValue }}</p>
+        </div>
+
         <!-- Modal -->
         <div class="group-box">
             <h3>Modal Component</h3>
@@ -293,7 +301,8 @@
                     { seq: 5, content: '태그5' }
                 ],
 
-                countValue: 0
+                countValue: 0,
+                rateValue: 3
             }
         },
         methods: {
