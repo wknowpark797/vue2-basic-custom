@@ -192,6 +192,14 @@
             <p>rating value : {{ rateValue }}</p>
         </div>
 
+        <!-- Pagination -->
+        <div class="group-box">
+            <h3>Pagination Component</h3>
+
+            <PaginationComp v-model="paginationValue" />
+            <p>pagination value : {{ paginationValue }}</p>
+        </div>
+
         <!-- Modal -->
         <div class="group-box">
             <h3>Modal Component</h3>
@@ -302,7 +310,8 @@
                 ],
 
                 countValue: 0,
-                rateValue: 3
+                rateValue: 3,
+                paginationValue: 3
             }
         },
         methods: {

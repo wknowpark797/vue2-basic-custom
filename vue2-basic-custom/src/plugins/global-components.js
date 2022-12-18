@@ -17,6 +17,7 @@ import AccordionComp from '../components/common/AccordionComp'
 import TagsComp from '../components/common/TagsComp'
 import CountComp from '../components/common/CountComp'
 import RatingComp from '../components/common/RatingComp'
+import PaginationComp from '../components/common/PaginationComp'
 
 const GlobalComponents = {
     install(Vue) {
@@ -38,6 +39,7 @@ const GlobalComponents = {
         Vue.component(TagsComp.name, TagsComp)
         Vue.component(CountComp.name, CountComp)
         Vue.component(RatingComp.name, RatingComp)
+        Vue.component(PaginationComp.name, PaginationComp)
     }
 }
 
