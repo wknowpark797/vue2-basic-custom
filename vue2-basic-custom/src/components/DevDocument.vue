@@ -255,6 +255,7 @@
 
             <ButtonComp @click="showAlertModal">Alert Modal</ButtonComp>
             <ButtonComp @click="showConfirmModal">Confirm Modal</ButtonComp>
+            <ButtonComp @click="showToast">Toast</ButtonComp>
         </div>
         
     </div>
@@ -395,6 +396,12 @@
                             alert('콜백 실행');
                         }
                     }
+                })
+            },
+            showToast() {
+                this.$showToast({
+                    type: 'success',
+                    content: 'success 3초'
                 })
             }
         }

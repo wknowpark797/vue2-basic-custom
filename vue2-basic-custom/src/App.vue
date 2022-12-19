@@ -9,6 +9,9 @@
         <!-- Confirm Modal -->
         <ConfirmModalComp ref="confirmModal" />
 
+        <!-- Toast -->
+        <ToastComp ref="toastBar" />
+
     </div>
 </template>
 
@@ -33,8 +36,8 @@
             })
 
             // Toast
-            EventBus.$on('@showToast', () => {
-
+            EventBus.$on('@showToast', ({type, content, callback}) => {
+                this.$refs.toastBar.show({type, content, callback});
             })
 
             // Loading
