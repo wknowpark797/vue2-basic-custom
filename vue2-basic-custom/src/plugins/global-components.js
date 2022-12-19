@@ -20,6 +20,8 @@ import RatingComp from '../components/common/RatingComp'
 import PaginationComp from '../components/common/PaginationComp'
 import TabsComp from '../components/common/TabsComp'
 
+import AlertModalComp from '../components/common/AlertModalComp'
+
 import { EventBus } from '../utils/EventBus'
 
 const GlobalComponents = {
@@ -44,6 +46,8 @@ const GlobalComponents = {
         Vue.component(RatingComp.name, RatingComp)
         Vue.component(PaginationComp.name, PaginationComp)
         Vue.component(TabsComp.name, TabsComp)
+
+        Vue.component(AlertModalComp.name, AlertModalComp)
 
         // Alert Modal
         Vue.prototype.$showAlert = function({title, content, callback}) {

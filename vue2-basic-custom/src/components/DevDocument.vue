@@ -248,6 +248,13 @@
                 Modal Footer
             </template>
         </ModalComp>
+
+        <!-- Common Modal -->
+        <div class="group-box">
+            <h3>Common Modal</h3>
+
+            <ButtonComp @click="showAlertModal">Alert Modal</ButtonComp>
+        </div>
         
     </div>
 </template>
@@ -370,6 +377,13 @@
             onDeleteTag(seq) {
                 const index = this.tagList.findIndex(item => item.seq === seq);
                 this.tagList.splice(index, 1);
+            },
+
+            showAlertModal() {
+                this.$showAlert({
+                    title: '알림 메세지',
+                    content: '이 메세지는 공통 알림 입니다.'
+                })
             }
         }
     }

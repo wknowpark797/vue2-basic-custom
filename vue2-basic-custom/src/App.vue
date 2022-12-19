@@ -3,6 +3,9 @@
 
         <router-view />
 
+        <!-- Alert Modal -->
+        <AlertModalComp ref="alertModal" />
+
     </div>
 </template>
 
@@ -17,8 +20,8 @@
         created() {
             
             // Alert Modal
-            EventBus.$on('@showAlert', () => {
-
+            EventBus.$on('@showAlert', ({title, content, callback}) => {
+                this.$refs.alertModal.show({title, content, callback});
             })
 
             // Confirm Modal
@@ -36,7 +39,7 @@
 
             })
             EventBus.$on('@hideLoading', () => {
-                
+
             })
 
         }
