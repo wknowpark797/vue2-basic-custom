@@ -6,6 +6,9 @@
         <!-- Alert Modal -->
         <AlertModalComp ref="alertModal" />
 
+        <!-- Confirm Modal -->
+        <ConfirmModalComp ref="confirmModal" />
+
     </div>
 </template>
 
@@ -25,8 +28,8 @@
             })
 
             // Confirm Modal
-            EventBus.$on('@showConfirm', () => {
-
+            EventBus.$on('@showConfirm', ({title, content, callback}) => {
+                this.$refs.confirmModal.show({title, content, callback});
             })
 
             // Toast

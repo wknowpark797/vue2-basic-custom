@@ -21,6 +21,7 @@ import PaginationComp from '../components/common/PaginationComp'
 import TabsComp from '../components/common/TabsComp'
 
 import AlertModalComp from '../components/common/AlertModalComp'
+import ConfirmModalComp from '../components/common/ConfirmModalComp'
 
 import { EventBus } from '../utils/EventBus'
 
@@ -48,6 +49,7 @@ const GlobalComponents = {
         Vue.component(TabsComp.name, TabsComp)
 
         Vue.component(AlertModalComp.name, AlertModalComp)
+        Vue.component(ConfirmModalComp.name, ConfirmModalComp)
 
         // Alert Modal
         Vue.prototype.$showAlert = function({title, content, callback}) {

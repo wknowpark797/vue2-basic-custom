@@ -254,6 +254,7 @@
             <h3>Common Modal</h3>
 
             <ButtonComp @click="showAlertModal">Alert Modal</ButtonComp>
+            <ButtonComp @click="showConfirmModal">Confirm Modal</ButtonComp>
         </div>
         
     </div>
@@ -383,6 +384,17 @@
                 this.$showAlert({
                     title: '알림 메세지',
                     content: '이 메세지는 공통 알림 입니다.'
+                })
+            },
+            showConfirmModal() {
+                this.$showConfirm({
+                    title: '콜백 실행',
+                    content: '콜백을 실행 하시겠습니까?',
+                    callback: (msg) => {
+                        if(msg === 'ok') {
+                            alert('콜백 실행');
+                        }
+                    }
                 })
             }
         }
