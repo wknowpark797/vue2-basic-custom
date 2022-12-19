@@ -20,6 +20,8 @@ import RatingComp from '../components/common/RatingComp'
 import PaginationComp from '../components/common/PaginationComp'
 import TabsComp from '../components/common/TabsComp'
 
+import { EventBus } from '../utils/EventBus'
+
 const GlobalComponents = {
     install(Vue) {
         Vue.component(ButtonComp.name, ButtonComp)
@@ -42,6 +44,29 @@ const GlobalComponents = {
         Vue.component(RatingComp.name, RatingComp)
         Vue.component(PaginationComp.name, PaginationComp)
         Vue.component(TabsComp.name, TabsComp)
+
+        // Alert Modal
+        Vue.prototype.$showAlert = function({title, content, callback}) {
+            EventBus.$emit('@showAlert', {title, content, callback});
+        }
+
+        // Confirm Modal
+        Vue.prototype.$showConfirm = function({title, content, callback}) {
+            EventBus.$emit('@showConfirm', {title, content, callback});
+        }
+
+        // Toast
+        Vue.prototype.$showToast = function({type, content, callback}) {
+            EventBus.$emit('@showToast', {type, content, callback});
+        }
+
+        // Loading
+        Vue.prototype.$showLoading = function() {
+            EventBus.$emit('@showLoading');
+        }
+        Vue.prototype.$hideLoading = function() {
+            EventBus.$emit('@hideLoading');
+        }
     }
 }
 
