@@ -1,7 +1,7 @@
 <template>
     <div id="app">
 
-        <router-view />
+        <component :is="layout" />
 
         <!-- Alert Modal -->
         <AlertModalComp ref="alertModal" />
@@ -21,10 +21,17 @@
 <script>
     import { EventBus } from './utils/EventBus';
 
+    const defaultLayout = 'DefaultLayout';
+
     export default {
         name: 'App',
         components: {
             
+        },
+        computed: {
+            layout() {
+                return this.$route.meta.layout || defaultLayout;
+            }
         },
         created() {
             

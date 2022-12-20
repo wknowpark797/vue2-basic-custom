@@ -8,12 +8,28 @@ const router = new VueRouter({
     routes: [
         {
             path: '/',
-            redirect: '/dev/document'
+            redirect: '/main'
+        },
+        {
+            path: '/main',
+            name: 'main',
+            component: () => import(/* webpackChunkName: 'main' */ '../views/MainComp')
+        },
+        {
+            path: '/login',
+            name: 'login',
+            component: () => import(/* webpackChunkName: 'login' */ '../views/LoginComp'),
+            meta: {
+                layout: 'FlatLayout'
+            }
         },
         {
             path: '/dev/document',
             name: 'dev-document',
-            component: () => import(/* webpackChunkName: 'dev' */ '../components/DevDocument')
+            component: () => import(/* webpackChunkName: 'dev' */ '../components/DevDocument'),
+            meta: {
+                layout: 'FlatLayout'
+            }
         }
     ]
 })
