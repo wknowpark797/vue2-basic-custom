@@ -258,6 +258,9 @@
             <ButtonComp @click="showToast">Toast</ButtonComp>
             <ButtonComp @click="showLoading">Loading</ButtonComp>
         </div>
+
+        <!-- ScrollTop -->
+        <ScrollTopComp />
         
     </div>
 </template>
