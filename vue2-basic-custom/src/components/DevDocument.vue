@@ -256,6 +256,7 @@
             <ButtonComp @click="showAlertModal">Alert Modal</ButtonComp>
             <ButtonComp @click="showConfirmModal">Confirm Modal</ButtonComp>
             <ButtonComp @click="showToast">Toast</ButtonComp>
+            <ButtonComp @click="showLoading">Loading</ButtonComp>
         </div>
         
     </div>
@@ -403,6 +404,12 @@
                     type: 'success',
                     content: 'success 3초'
                 })
+            },
+            showLoading() {
+                this.$showLoading();
+                setTimeout(() => {
+                    this.$hideLoading();
+                }, 2000)
             }
         }
     }

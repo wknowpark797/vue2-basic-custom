@@ -23,6 +23,7 @@ import TabsComp from '../components/common/TabsComp'
 import AlertModalComp from '../components/common/AlertModalComp'
 import ConfirmModalComp from '../components/common/ConfirmModalComp'
 import ToastComp from '../components/common/ToastComp'
+import LoadingComp from '../components/common/LoadingComp'
 
 import { EventBus } from '../utils/EventBus'
 
@@ -52,6 +53,7 @@ const GlobalComponents = {
         Vue.component(AlertModalComp.name, AlertModalComp)
         Vue.component(ConfirmModalComp.name, ConfirmModalComp)
         Vue.component(ToastComp.name, ToastComp)
+        Vue.component(LoadingComp.name, LoadingComp)
 
         // Alert Modal
         Vue.prototype.$showAlert = function({title, content, callback}) {

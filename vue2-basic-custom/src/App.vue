@@ -12,6 +12,9 @@
         <!-- Toast -->
         <ToastComp ref="toastBar" />
 
+        <!-- Loading -->
+        <LoadingComp ref="loading" />
+
     </div>
 </template>
 
@@ -42,10 +45,10 @@
 
             // Loading
             EventBus.$on('@showLoading', () => {
-
+                this.$refs.loading.show();
             })
             EventBus.$on('@hideLoading', () => {
-
+                this.$refs.loading.close();
             })
 
         }
