@@ -78,5 +78,11 @@
 </script>
 
 <style lang="scss" scoped>
-
+    label {
+        display: flex;
+        align-items: center;
+        input {
+            flex: 1;
+        }
+    }
 </style>

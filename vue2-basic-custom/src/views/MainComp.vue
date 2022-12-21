@@ -4,12 +4,27 @@
 
 <template>
     <div class="main-wrap">
-        <ButtonComp @click="$router.push('/dev/document')">
-            모두보기
-        </ButtonComp>
 
-        <h2 class="page-title">Basic Component</h2>
+        <!-- Title Wrap -->
+        <div class="title-wrap">
+            <h2>Basic Component</h2>
+            <ButtonComp :color="'blue'"
+                        @click="$router.push('/dev/document')">
+                모두보기
+            </ButtonComp>
+        </div>
 
+        <!-- Search Wrap -->
+        <div class="search-wrap">
+            <div class="input-wrap">
+                <InputComp :placeholder="'검색어 입력'" />
+            </div>
+            <ButtonComp>
+                검색
+            </ButtonComp>
+        </div>
+
+        <!-- Component List -->
         <div class="component-wrap">
             <router-link v-for="item in listComp"
                          :key="item.seq"
@@ -17,6 +32,7 @@
                 {{ item.name }}
             </router-link>
         </div>
+
     </div>
 </template>
 
@@ -65,14 +81,27 @@
 
 <style lang="scss" scoped>
     .main-wrap {
-        .page-title {
-            text-align: center;
+        max-width: 500px;
+        margin: 0 auto;
+        .title-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            h2 {
+                margin: 0;
+            }
         }
-        .component-wrap {
-            max-width: 500px;
-            max-height: calc(100vh - 200px);
+        .search-wrap {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            .input-wrap {
+                flex: 1;
+            }
+        }
+        .component-wrap {   
+            max-height: calc(100vh - 170px);
             background: #f5f5f5;
-            margin: 0 auto;
             padding: 20px;
             box-sizing: border-box;
             overflow: auto;
