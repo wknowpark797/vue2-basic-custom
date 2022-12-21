@@ -6,11 +6,18 @@
     <header class="header-wrap">
         <h1>
             <router-link :to="'/'">
-                HOME
+                로고
             </router-link>
         </h1>
-        <AvatarComp :text="'A'" 
-                    :size="'medium'" />
+
+        <div class="info-wrap">
+            <ButtonComp :color="'green'" 
+                        @click="$router.push('/login')">
+                로그인
+            </ButtonComp>
+            <AvatarComp :text="'우'" 
+                        :size="'medium'" />
+        </div>
     </header>
 </template>
 
@@ -50,6 +57,13 @@
             a {
                 color: #fff;
                 text-decoration: none;
+            }
+        }
+        .info-wrap {
+            display: flex;
+            align-items: center;
+            .avatar-wrap {
+                margin-left: 10px;
             }
         }
     }

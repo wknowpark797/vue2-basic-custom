@@ -4,13 +4,10 @@
 
 <template>
     <div class="main-wrap">
-        Main
-
         <div>
-            <router-link :to="'/login'">Login</router-link>
-        </div>
-        <div>
-            <router-link :to="'/dev/document'">Dev Document</router-link>
+            <router-link :to="'/dev/document'">
+                모두보기
+            </router-link>
         </div>
     </div>
 </template>
