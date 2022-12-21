@@ -16,6 +16,11 @@ const router = new VueRouter({
             component: () => import(/* webpackChunkName: 'main' */ '../views/MainComp')
         },
         {
+            path: '/detail/:seq',
+            name: 'detail',
+            component: () => import(/* webpackChunkName: 'detail' */ '../views/DetailComp')
+        },
+        {
             path: '/login',
             name: 'login',
             component: () => import(/* webpackChunkName: 'login' */ '../views/LoginComp'),

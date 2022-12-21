@@ -11,9 +11,9 @@
         <h2 class="page-title">Basic Component</h2>
 
         <div class="component-wrap">
-            <router-link :to="''"
-                        v-for="item in listComp"
-                        :key="item.seq">
+            <router-link v-for="item in listComp"
+                         :key="item.seq"
+                         :to="`/detail/${item.seq}`">
                 {{ item.name }}
             </router-link>
         </div>
@@ -26,31 +26,31 @@
         data() {
             return {
                 listComp: [
-                    { seq: 1, name: 'Modal Component', link: '' },
-                    { seq: 2, name: 'Alert Modal Component', link: '' },
-                    { seq: 3, name: 'Confirm Modal Component', link: '' },
-                    { seq: 4, name: 'Toast Component', link: '' },
-                    { seq: 5, name: 'Loading Component', link: '' },
-                    { seq: 6, name: 'Input Component', link: '' },
-                    { seq: 7, name: 'Textarea Component', link: '' },
-                    { seq: 8, name: 'Check Group Component', link: '' },
-                    { seq: 9, name: 'Check Single Component', link: '' },
-                    { seq: 10, name: 'Radio Component', link: '' },
-                    { seq: 11, name: 'Switch Component', link: '' },
-                    { seq: 12, name: 'Select Component', link: '' },
-                    { seq: 13, name: 'Dropdown Component', link: '' },
-                    { seq: 14, name: 'Datepicker Component', link: '' },
-                    { seq: 15, name: 'Timepicker Component', link: '' },
-                    { seq: 16, name: 'File Upload Component', link: '' },
-                    { seq: 17, name: 'Button Component', link: '' },
-                    { seq: 18, name: 'Accordion Component', link: '' },
-                    { seq: 19, name: 'Avatar Component', link: '' },
-                    { seq: 20, name: 'Count Component', link: '' },
-                    { seq: 21, name: 'Pagination Component', link: '' },
-                    { seq: 22, name: 'Rating Component', link: '' },
-                    { seq: 23, name: 'Tabs Component', link: '' },
-                    { seq: 24, name: 'Tags Component', link: '' },
-                    { seq: 25, name: 'Scroll Top Component', link: '' }
+                    { seq: 1, name: 'Modal Component' },
+                    { seq: 2, name: 'Alert Modal Component' },
+                    { seq: 3, name: 'Confirm Modal Component' },
+                    { seq: 4, name: 'Toast Component' },
+                    { seq: 5, name: 'Loading Component' },
+                    { seq: 6, name: 'Input Component' },
+                    { seq: 7, name: 'Textarea Component' },
+                    { seq: 8, name: 'Check Group Component' },
+                    { seq: 9, name: 'Check Single Component' },
+                    { seq: 10, name: 'Radio Component' },
+                    { seq: 11, name: 'Switch Component' },
+                    { seq: 12, name: 'Select Component' },
+                    { seq: 13, name: 'Dropdown Component' },
+                    { seq: 14, name: 'Datepicker Component' },
+                    { seq: 15, name: 'Timepicker Component' },
+                    { seq: 16, name: 'File Upload Component' },
+                    { seq: 17, name: 'Button Component' },
+                    { seq: 18, name: 'Accordion Component' },
+                    { seq: 19, name: 'Avatar Component' },
+                    { seq: 20, name: 'Count Component' },
+                    { seq: 21, name: 'Pagination Component' },
+                    { seq: 22, name: 'Rating Component' },
+                    { seq: 23, name: 'Tabs Component' },
+                    { seq: 24, name: 'Tags Component' },
+                    { seq: 25, name: 'Scroll Top Component' }
                 ]
             }
         },
