@@ -8,7 +8,7 @@
 <template>
     <div class="avatar-wrap">
          <div class="inner-wrap"
-              :class="{'rounded':rounded}">
+              :class="[{'rounded':rounded}, size]">
             <img v-if="src" 
                  :src="src" 
                  alt="avatar image">
@@ -44,6 +44,11 @@
             rounded: {
                 type: Boolean,
                 default: true
+            },
+            size: {
+                type: String,
+                default: 'medium',
+                description: 'small | medium | large'
             }
         },
         methods: {
@@ -59,12 +64,22 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 50px;
-            height: 50px;
             background: #eee;
             overflow: hidden;
             &.rounded {
                 border-radius: 50%;
+            }
+            &.small {
+                width: 20px;
+                height: 20px;
+            }
+            &.medium {
+                width: 35px;
+                height: 35px;   
+            }
+            &.large {
+                width: 50px;
+                height: 50px;   
             }
             img {
                 height: 100%;

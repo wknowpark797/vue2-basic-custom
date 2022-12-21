@@ -9,7 +9,9 @@
         <HeaderComp />
 
         <!-- View -->
-        <router-view />
+        <div class="content-wrapper">
+            <router-view />
+        </div>
         
     </div>
 </template>
@@ -37,5 +39,7 @@
 </script>
 
 <style lang="scss" scoped>
-
+    .content-wrapper {
+        padding-top: 50px;
+    }
 </style>
