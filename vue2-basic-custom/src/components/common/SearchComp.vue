@@ -11,7 +11,7 @@
                        :disabled="disabled"
                        :readonly="readonly"
                        @input="onInput"
-                       @keyup.enter="onEnter" />
+                       @enter="onEnter" />
         </div>
         <ButtonComp class="btn-search" 
                     @click="onSearch">
