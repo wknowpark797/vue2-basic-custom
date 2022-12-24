@@ -1,27 +1,22 @@
 <template>
     <div>
-        PaginationExamComp
+        <PaginationComp v-model="paginationValue" />
+        <p>pagination value : {{ paginationValue }}</p>
     </div>
 </template>
 
 <script>
-export default {
-    name: 'PaginationExamComp',
-
-    data() {
-        return {
+    export default {
+        name: 'PaginationExamComp',
+        data() {
+            return {
+                paginationValue: 3
+            }
+        },
+        methods: {
             
-        };
-    },
-
-    mounted() {
-        
-    },
-
-    methods: {
-        
-    },
-};
+        }
+    }
 </script>
 
 <style lang="scss" scoped>

@@ -1,27 +1,22 @@
 <template>
     <div>
-        RatingExamComp
+        <RatingComp v-model="rateValue" />
+        <p>rating value : {{ rateValue }}</p>
     </div>
 </template>
 
 <script>
-export default {
-    name: 'RatingExamComp',
-
-    data() {
-        return {
+    export default {
+        name: 'RatingExamComp',
+        data() {
+            return {
+                rateValue: 3
+            }
+        },
+        methods: {
             
-        };
-    },
-
-    mounted() {
-        
-    },
-
-    methods: {
-        
-    },
-};
+        }
+    }
 </script>
 
 <style lang="scss" scoped>

@@ -1,27 +1,32 @@
 <template>
     <div>
-        TagsExamComp
+        <TagsComp 
+            :list="tagList" 
+            @deleteTag="onDeleteTag" />
     </div>
 </template>
 
 <script>
-export default {
-    name: 'TagsExamComp',
-
-    data() {
-        return {
-            
-        };
-    },
-
-    mounted() {
-        
-    },
-
-    methods: {
-        
-    },
-};
+    export default {
+        name: 'TagsExamComp',
+        data() {
+            return {
+                tagList: [
+                    { seq: 1, content: '태그1' },
+                    { seq: 2, content: '태그2' },
+                    { seq: 3, content: '태그3' },
+                    { seq: 4, content: '태그4' },
+                    { seq: 5, content: '태그5' }
+                ]
+            }
+        },
+        methods: {
+            onDeleteTag(seq) {
+                const index = this.tagList.findIndex(item => item.seq === seq);
+                this.tagList.splice(index, 1);
+            }
+        }
+    }
 </script>
 
 <style lang="scss" scoped>

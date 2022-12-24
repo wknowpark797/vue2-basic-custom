@@ -1,27 +1,22 @@
 <template>
     <div>
-        CountExamComp
+        <CountComp v-model="countValue" />
+        <p>count value : {{ countValue }}</p>
     </div>
 </template>
 
 <script>
-export default {
-    name: 'CountExamComp',
-
-    data() {
-        return {
+    export default {
+        name: 'CountExamComp',
+        data() {
+            return {
+                countValue: 0
+            }
+        },
+        methods: {
             
-        };
-    },
-
-    mounted() {
-        
-    },
-
-    methods: {
-        
-    },
-};
+        }
+    }
 </script>
 
 <style lang="scss" scoped>

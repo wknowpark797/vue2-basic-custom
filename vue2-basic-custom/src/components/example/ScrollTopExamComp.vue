@@ -1,27 +1,21 @@
 <template>
     <div>
-        ScrollTopExamComp
+        <ScrollTopComp />
     </div>
 </template>
 
 <script>
-export default {
-    name: 'ScrollTopExamComp',
-
-    data() {
-        return {
+    export default {
+        name: 'ScrollTopExamComp',
+        data() {
+            return {
+                
+            }
+        },
+        methods: {
             
-        };
-    },
-
-    mounted() {
-        
-    },
-
-    methods: {
-        
-    },
-};
+        }
+    }
 </script>
 
 <style lang="scss" scoped>

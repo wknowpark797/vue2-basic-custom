@@ -1,27 +1,22 @@
 <template>
     <div>
-        SwitchExamComp
+        <SwitchComp v-model="switchValue" />
+        <p>switch value : {{ switchValue }}</p>
     </div>
 </template>
 
 <script>
-export default {
-    name: 'SwitchExamComp',
-
-    data() {
-        return {
+    export default {
+        name: 'SwitchExamComp',
+        data() {
+            return {
+                switchValue: false
+            }
+        },
+        methods: {
             
-        };
-    },
-
-    mounted() {
-        
-    },
-
-    methods: {
-        
-    },
-};
+        }
+    }
 </script>
 
 <style lang="scss" scoped>

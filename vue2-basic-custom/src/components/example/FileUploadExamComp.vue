@@ -1,27 +1,21 @@
 <template>
     <div>
-        FileUploadExamComp
+        <FileUploadComp v-model="fileUploadValue" />
     </div>
 </template>
 
 <script>
-export default {
-    name: 'FileUploadExamComp',
-
-    data() {
-        return {
+    export default {
+        name: 'FileUploadExamComp',
+        data() {
+            return {
+                fileUploadValue: null
+            }
+        },
+        methods: {
             
-        };
-    },
-
-    mounted() {
-        
-    },
-
-    methods: {
-        
-    },
-};
+        }
+    }
 </script>
 
 <style lang="scss" scoped>

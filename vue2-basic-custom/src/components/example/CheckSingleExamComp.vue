@@ -1,27 +1,24 @@
 <template>
     <div>
-        CheckSingleExamComp
+        <CheckSingleComp 
+            v-model="checkSingleValue"
+            :label="'Label'" />
+        <p>checkbox value : {{ checkSingleValue }}</p>
     </div>
 </template>
 
 <script>
-export default {
-    name: 'CheckSingleExamComp',
-
-    data() {
-        return {
+    export default {
+        name: 'CheckSingleExamComp',
+        data() {
+            return {
+                checkSingleValue: 'N'
+            }
+        },
+        methods: {
             
-        };
-    },
-
-    mounted() {
-        
-    },
-
-    methods: {
-        
-    },
-};
+        }
+    }
 </script>
 
 <style lang="scss" scoped>

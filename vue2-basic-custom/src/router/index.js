@@ -28,14 +28,6 @@ const router = new VueRouter({
                 layout: 'FlatLayout'
             }
         },
-        {
-            path: '/dev/document',
-            name: 'dev-document',
-            component: () => import(/* webpackChunkName: 'dev' */ '../components/DevDocument'),
-            meta: {
-                layout: 'FlatLayout'
-            }
-        }
     ]
 })
 

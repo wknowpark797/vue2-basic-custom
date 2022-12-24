@@ -10,8 +10,7 @@
             <div class="title-wrap">
                 <h2>Components</h2>
                 <ButtonComp :color="'black'"
-                            :textButton="true"
-                            @click="$router.push('/dev/document')">
+                            :textButton="true">
                     모두보기
                 </ButtonComp>
             </div>

@@ -1,27 +1,24 @@
 <template>
     <div>
-        DatepickerExamComp
+        <DatepickerComp 
+            v-model="datepickerValue"
+            :label="'날짜 선택'" />
+        <p>datepicker value : {{ datepickerValue }}</p>
     </div>
 </template>
 
 <script>
-export default {
-    name: 'DatepickerExamComp',
-
-    data() {
-        return {
+    export default {
+        name: 'DatepickerExamComp',
+        data() {
+            return {
+                datepickerValue: '2022-12-01'
+            }
+        },
+        methods: {
             
-        };
-    },
-
-    mounted() {
-        
-    },
-
-    methods: {
-        
-    },
-};
+        }
+    }
 </script>
 
 <style lang="scss" scoped>

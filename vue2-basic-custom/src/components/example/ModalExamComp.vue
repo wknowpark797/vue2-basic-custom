@@ -1,27 +1,44 @@
 <template>
     <div>
-        ModalExamComp
+        <ButtonComp 
+            :color="'blue'" 
+            @click="showCommonModal">
+            Show Modal
+        </ButtonComp>
+
+        <ModalComp ref="commonModal">
+            <template v-slot:title>
+                Modal Title
+            </template>
+
+            <template v-slot:body>
+                Modal Body
+            </template>
+
+            <template v-slot:footer>
+                Modal Footer
+            </template>
+        </ModalComp>
     </div>
 </template>
 
 <script>
-export default {
-    name: 'ModalExamComp',
-
-    data() {
-        return {
-            
-        };
-    },
-
-    mounted() {
-        
-    },
-
-    methods: {
-        
-    },
-};
+    export default {
+        name: 'ModalExamComp',
+        data() {
+            return {
+                
+            }
+        },
+        methods: {
+            showCommonModal() {
+                this.$refs.commonModal.show();
+            },
+            closeCommonModal() {
+                this.$refs.commonModal.close();
+            }
+        }
+    }
 </script>
 
 <style lang="scss" scoped>
