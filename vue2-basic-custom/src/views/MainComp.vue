@@ -41,47 +41,23 @@
 </template>
 
 <script>
+    import componentList from '@/data/componentList';
+
     export default {
         name: 'MainComp',
         data() {
             return {
                 searchValue: '',
-                listComp: [
-                    { seq: 1, name: 'Modal Component' },
-                    { seq: 2, name: 'Alert Modal Component' },
-                    { seq: 3, name: 'Confirm Modal Component' },
-                    { seq: 4, name: 'Toast Component' },
-                    { seq: 5, name: 'Loading Component' },
-                    { seq: 6, name: 'Input Component' },
-                    { seq: 7, name: 'Textarea Component' },
-                    { seq: 8, name: 'Check Group Component' },
-                    { seq: 9, name: 'Check Single Component' },
-                    { seq: 10, name: 'Radio Component' },
-                    { seq: 11, name: 'Switch Component' },
-                    { seq: 12, name: 'Select Component' },
-                    { seq: 13, name: 'Dropdown Component' },
-                    { seq: 14, name: 'Datepicker Component' },
-                    { seq: 15, name: 'Timepicker Component' },
-                    { seq: 16, name: 'File Upload Component' },
-                    { seq: 17, name: 'Button Component' },
-                    { seq: 18, name: 'Accordion Component' },
-                    { seq: 19, name: 'Avatar Component' },
-                    { seq: 20, name: 'Count Component' },
-                    { seq: 21, name: 'Pagination Component' },
-                    { seq: 22, name: 'Rating Component' },
-                    { seq: 23, name: 'Tabs Component' },
-                    { seq: 24, name: 'Tags Component' },
-                    { seq: 25, name: 'Scroll Top Component' }
-                ]
+                listComp: []
             }
-        },
-        mounted() {
-            
         },
         methods: {
             onSearch() {
                 alert(`${this.searchValue} 검색`);
             }
+        },
+        mounted() {
+            this.listComp = componentList;
         }
     }
 </script>

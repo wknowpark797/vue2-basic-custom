@@ -4,23 +4,32 @@
 
 <template>
     <div class="detail-wrap">
-        Detail
+        <h2>{{ compDetail.name }}</h2>
     </div>
 </template>
 
 <script>
+    import componentList from '@/data/componentList';
+
     export default {
         name: 'DetailComp',
         data() {
             return {
-                
+                compSeq: '',
+                compDetail: {}
             }
-        },
-        mounted() {
-            
         },
         methods: {
             
+        },
+        mounted() {
+            this.compSeq = this.$route.params.seq;
+
+            componentList.forEach(item => {
+                if(item.seq === this.compSeq) {
+                    this.compDetail = item;
+                }
+            })
         }
     }
 </script>
