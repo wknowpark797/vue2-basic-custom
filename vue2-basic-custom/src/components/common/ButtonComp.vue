@@ -5,7 +5,7 @@
 <template>
     <button :type="type" 
             :disabled="disabled" 
-            :class="[size, color, {'outlined':outlined}]" 
+            :class="[size, color, {'outlined':outlined}, {'text-button':textButton}]" 
             @click="onClick">
         <slot />
     </button>
@@ -39,6 +39,10 @@
                 type: Boolean,
                 default: false
             },
+            textButton: {
+                type: Boolean,
+                default: false
+            },
             disabled: {
                 type: Boolean,
                 default: false
@@ -54,13 +58,7 @@
 
 <style lang="scss" scoped>
     button {
-        border-radius: 3px;
         cursor: pointer;
-
-        &:not(:first-child) {
-            margin-left: 5px;
-        }
-
         &:disabled {
             opacity: .3;
         }
@@ -75,14 +73,22 @@
         &.small {
             padding: 5px 10px;
         }
+        &.text-button {
+            padding: 0;
+        }
 
-        // Color, Outlined
+        // Color, Outlined, textButton
         &.black {
             background: black;
             color: #FFF;
             &.outlined {
                 border: 1px solid black;
                 background: #FFF;
+                color: black;
+            }
+            &.text-button {
+                border: 0;
+                background: none;
                 color: black;
             }
         }
@@ -94,6 +100,11 @@
                 background: #FFF;
                 color: red;
             }
+            &.text-button {
+                border: 0;
+                background: none;
+                color: red;
+            }
         }
         &.blue {
             background: blue;
@@ -101,6 +112,11 @@
             &.outlined {
                 border: 1px solid blue;
                 background: #FFF;
+                color: blue;
+            }
+            &.text-button {
+                border: 0;
+                background: none;
                 color: blue;
             }
         }
@@ -112,6 +128,11 @@
                 background: #FFF;
                 color: green;
             }
+            &.text-button {
+                border: 0;
+                background: none;
+                color: green;
+            }
         }
         &.gray {
             background: gray;
@@ -119,6 +140,11 @@
             &.outlined {
                 border: 1px solid gray;
                 background: #FFF;
+                color: gray;
+            }
+            &.text-button {
+                border: 0;
+                background: none;
                 color: gray;
             }
         }
