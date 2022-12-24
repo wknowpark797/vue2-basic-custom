@@ -20,6 +20,7 @@ import RatingComp from '../components/common/RatingComp'
 import PaginationComp from '../components/common/PaginationComp'
 import TabsComp from '../components/common/TabsComp'
 import ScrollTopComp from '../components/common/ScrollTopComp'
+import SearchComp from '../components/common/SearchComp'
 
 import AlertModalComp from '../components/common/AlertModalComp'
 import ConfirmModalComp from '../components/common/ConfirmModalComp'
@@ -51,6 +52,7 @@ const GlobalComponents = {
         Vue.component(PaginationComp.name, PaginationComp)
         Vue.component(TabsComp.name, TabsComp)
         Vue.component(ScrollTopComp.name, ScrollTopComp)
+        Vue.component(SearchComp.name, SearchComp)
 
         Vue.component(AlertModalComp.name, AlertModalComp)
         Vue.component(ConfirmModalComp.name, ConfirmModalComp)
