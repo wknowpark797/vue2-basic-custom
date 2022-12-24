@@ -83,6 +83,10 @@
         align-items: center;
         input {
             flex: 1;
+            height: 34px;
+            border-radius: 0;
+            border: 1px solid #333;
+            box-sizing: border-box;
         }
     }
 </style>
