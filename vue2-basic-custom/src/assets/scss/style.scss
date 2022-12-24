@@ -1,6 +1,28 @@
+/***** variables *****/
+
+
+
+/***** normalize, reset *****/
+
+body {
+    font-family: 'Noto Sans KR';
+    box-sizing: border-box;
+}
+
+ol, ul {
+    list-style: none;
+}
 
 button {
     border: 0;
     background: none;
     padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
 }
