@@ -26,6 +26,19 @@ a {
     text-decoration: none;
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    thead {
+        background: #eee;
+    }
+    th, td {
+        border: 1px solid #ccc;
+        padding: 7px;
+    }
+}
+
 img {
     max-width: 100%;
 }

@@ -22,11 +22,49 @@
             <!-- Props -->
             <section class="section">
                 <h3>Props</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Props Name</th>
+                            <th>Props Type</th>
+                            <th>Default Value</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Name</td>
+                            <td>Type</td>
+                            <td>Value</td>
+                            <td>Description</td>
+                        </tr>
+                    </tbody>
+                </table>
             </section>
 
             <!-- Methods -->
             <section class="section">
                 <h3>Methods</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Methods</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Value</td>
+                            <td>Description</td>
+                        </tr>
+                        <tr>
+                            <td>Value</td>
+                            <td>Description</td>
+                        </tr>
+                    </tbody>
+                </table>
             </section>
 
             <!-- Comments -->

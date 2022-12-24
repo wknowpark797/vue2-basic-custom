@@ -78,7 +78,7 @@
         }
         .component-wrap {
             margin-top: 15px;
-            height: calc(100vh - 159px);
+            height: calc(100vh - 160px);
             overflow-y: auto;
             > a {
                 display: block;

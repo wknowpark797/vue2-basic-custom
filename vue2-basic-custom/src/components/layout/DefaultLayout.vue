@@ -46,6 +46,7 @@
             height: 100vh;
             padding: 30px;
             box-sizing: border-box;
+            overflow: auto;
         }
     }
 </style>
