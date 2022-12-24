@@ -11,7 +11,6 @@
         {{ label }}
         <textarea v-model="compValue"
                   :placeholder="placeholder"
-                  :cols="cols" 
                   :rows="rows"
                   :disabled="disabled"
                   :readonly="readonly"
@@ -35,10 +34,6 @@
             placeholder: {
                 type: String,
                 default: ''
-            },
-            cols: {
-                type: Number,
-                default: 50
             },
             rows: {
                 type: Number,
@@ -66,5 +61,8 @@
 </script>
 
 <style lang="scss" scoped>
-
+    textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
 </style>

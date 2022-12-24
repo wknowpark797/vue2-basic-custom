@@ -15,7 +15,7 @@
 
                 <!-- Todo List -->
                 <div class="group-box">
-
+                    <TodoListComp />
                 </div>
             </section>
 
@@ -39,9 +39,13 @@
 
 <script>
     import componentList from '@/data/componentList';
+    import TodoListComp from '@/components/TodoListComp'
 
     export default {
         name: 'DetailComp',
+        components: {
+            TodoListComp
+        },
         data() {
             return {
                 compSeq: '',
@@ -75,12 +79,16 @@
         }
         .flex-section {
             display: flex;
+            align-items: flex-start;
             flex-wrap: wrap;
             h2 {
                 width: 100%;
             }
             .group-box {
                 flex: 1;
+                &:not(:last-child) {
+                    margin-right: 30px;
+                }
             }
         }
         .detail-box {

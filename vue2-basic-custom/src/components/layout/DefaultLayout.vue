@@ -43,7 +43,9 @@
         display: flex;
         .content-wrapper {
             flex: 1;
-            padding: 20px;
+            height: 100vh;
+            padding: 30px;
+            box-sizing: border-box;
         }
     }
 </style>
