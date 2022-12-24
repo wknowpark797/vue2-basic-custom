@@ -5,32 +5,36 @@
 <template>
     <div class="main-wrap">
 
-        <!-- Title Wrap -->
-        <div class="title-wrap">
-            <h2>Basic Component</h2>
-            <ButtonComp :color="'blue'"
-                        @click="$router.push('/dev/document')">
-                모두보기
-            </ButtonComp>
-        </div>
-
-        <!-- Search Wrap -->
-        <div class="search-wrap">
-            <div class="input-wrap">
-                <InputComp :placeholder="'검색어 입력'" />
+        <!-- Components -->
+        <div class="group-box">
+            <div class="title-wrap">
+                <h2>Components</h2>
+                <ButtonComp :color="'black'"
+                            :textButton="true"
+                            @click="$router.push('/dev/document')">
+                    모두보기
+                </ButtonComp>
             </div>
-            <ButtonComp>
-                검색
-            </ButtonComp>
+
+            <!-- Search Wrap -->
+            <SearchComp v-model="searchValue"
+                        @search="onSearch" />
+
+            <!-- Component List -->
+            <div class="component-wrap">
+                <router-link v-for="item in listComp"
+                            :key="item.seq"
+                            :to="`/detail/${item.seq}`">
+                    {{ item.name }}
+                </router-link>
+            </div>
         </div>
 
-        <!-- Component List -->
-        <div class="component-wrap">
-            <router-link v-for="item in listComp"
-                         :key="item.seq"
-                         :to="`/detail/${item.seq}`">
-                {{ item.name }}
-            </router-link>
+        <!-- Comments -->
+        <div class="group-box">
+            <div class="title-wrap">
+                <h2>Comments</h2>
+            </div>
         </div>
 
     </div>
@@ -41,6 +45,7 @@
         name: 'MainComp',
         data() {
             return {
+                searchValue: '',
                 listComp: [
                     { seq: 1, name: 'Modal Component' },
                     { seq: 2, name: 'Alert Modal Component' },
@@ -74,50 +79,27 @@
             
         },
         methods: {
-            
+            onSearch() {
+                alert(`${this.searchValue} 검색`);
+            }
         }
     }
 </script>
 
 <style lang="scss" scoped>
     .main-wrap {
-        max-width: 500px;
-        margin: 0 auto;
+        display: flex;
+        .group-box {
+            flex: 1;
+            &:not(:first-child) {
+                margin-left: 20px;
+            }
+        }
         .title-wrap {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            h2 {
-                margin: 0;
-            }
-        }
-        .search-wrap {
-            display: flex;
-            align-items: center;
-            margin: 10px 0;
-            .input-wrap {
-                flex: 1;
-            }
-        }
-        .component-wrap {   
-            max-height: calc(100vh - 170px);
-            background: #f5f5f5;
-            padding: 20px;
-            box-sizing: border-box;
-            overflow: auto;
-            > a {
-                display: block;
-                background: #999;
-                padding: 15px;
-                color: #fff;
-                text-decoration: none;
-                &:hover {
-                    background: #555;
-                }
-                &:not(:first-child) {
-                    margin-top: 15px;
-                }
-            }
+            margin-bottom: 15px;
         }
     }
 </style>
