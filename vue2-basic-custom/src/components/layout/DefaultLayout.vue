@@ -5,8 +5,8 @@
 <template>
     <div class="wrapper">
 
-        <!-- Header -->
-        <HeaderComp />
+        <!-- Sidebar -->
+        <SidebarComp />
 
         <!-- View -->
         <div class="content-wrapper">
@@ -17,12 +17,12 @@
 </template>
 
 <script>
-    import HeaderComp from './HeaderComp.vue';
+    import SidebarComp from './SidebarComp.vue';
 
     export default {
         name: 'DefaultLayout',
         components: {
-            HeaderComp
+            SidebarComp
         },
         data() {
             return {
@@ -39,7 +39,11 @@
 </script>
 
 <style lang="scss" scoped>
-    .content-wrapper {
-        padding-top: 50px;
+    .wrapper {
+        display: flex;
+        .content-wrapper {
+            flex: 1;
+            padding: 20px;
+        }
     }
 </style>
