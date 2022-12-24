@@ -1,7 +1,15 @@
+<!-- 
+    [ Count Example Component ]
+ -->
+
 <template>
-    <div>
+    <div class="count-exam-wrap">
         <CountComp v-model="countValue" />
-        <p>count value : {{ countValue }}</p>
+
+        <div class="value-box">
+            <p class="tit">Value</p>
+            <p class="cont">{{ countValue }}</p>
+        </div>
     </div>
 </template>
 

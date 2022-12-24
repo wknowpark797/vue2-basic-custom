@@ -48,5 +48,9 @@
 </script>
 
 <style lang="scss" scoped>
-
+    .radio-wrap {
+        label {
+            display: block;
+        }
+    }
 </style>

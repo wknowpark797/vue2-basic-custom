@@ -60,6 +60,7 @@
 <style lang="scss" scoped>
     .avatar-wrap {
         position: relative;
+        display: inline-block;
         .inner-wrap {
             display: flex;
             align-items: center;

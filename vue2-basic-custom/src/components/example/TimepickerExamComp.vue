@@ -1,9 +1,17 @@
+<!-- 
+    [ Timepicker Example Component ]
+ -->
+
 <template>
-    <div>
+    <div class="timepicker-exam-wrap">
         <TimepickerComp 
             v-model="timepickerValue"
             :label="'시간 선택'" />
-        <p>timepicker value : {{ timepickerValue }}</p>
+
+        <div class="value-box">
+            <p class="tit">Value</p>
+            <p class="cont">{{ timepickerValue }}</p>
+        </div>
     </div>
 </template>
 

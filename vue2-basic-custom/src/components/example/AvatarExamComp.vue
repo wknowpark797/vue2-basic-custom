@@ -1,5 +1,9 @@
+<!-- 
+    [ Avatar Example Component ]
+ -->
+
 <template>
-    <div>
+    <div class="avatar-exam-wrap">
         <AvatarComp :src="require('@/assets/images/sample-image.png')" />
         <AvatarComp :src="require('@/assets/images/sample-image.png')"
                     :rounded="false" />
@@ -24,5 +28,13 @@
 </script>
 
 <style lang="scss" scoped>
-
+    .avatar-exam-wrap {
+        display: flex;
+        align-content: center;
+        .avatar-wrap {
+            &:not(:first-child) {
+                margin-left: 10px;
+            }
+        }
+    }
 </style>

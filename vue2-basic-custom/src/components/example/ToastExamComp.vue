@@ -1,5 +1,9 @@
+<!-- 
+    [ Toast Example Component ]
+ -->
+
 <template>
-    <div>
+    <div class="toast-exam-wrap">
         <ButtonComp @click="showToast">
             Toast
         </ButtonComp>

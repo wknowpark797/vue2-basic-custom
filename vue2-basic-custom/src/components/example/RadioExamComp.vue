@@ -1,9 +1,17 @@
+<!-- 
+    [ Radio Example Component ]
+ -->
+
 <template>
-    <div>
+    <div class="radio-exam-wrap">
         <RadioComp 
             v-model="radioValue" 
             :options="radioOptions" />
-        <p>radio value : {{ radioValue }}</p>
+
+        <div class="value-box">
+            <p class="tit">Value</p>
+            <p class="cont">{{ radioValue }}</p>
+        </div>
     </div>
 </template>
 

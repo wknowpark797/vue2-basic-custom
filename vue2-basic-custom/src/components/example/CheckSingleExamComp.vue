@@ -1,9 +1,17 @@
+<!-- 
+    [ Checkbox Single Example Component ]
+ -->
+
 <template>
-    <div>
+    <div class="check-single-exam-wrap">
         <CheckSingleComp 
             v-model="checkSingleValue"
             :label="'Label'" />
-        <p>checkbox value : {{ checkSingleValue }}</p>
+
+        <div class="value-box">
+            <p class="tit">Value</p>
+            <p class="cont">{{ checkSingleValue }}</p>
+        </div>
     </div>
 </template>
 

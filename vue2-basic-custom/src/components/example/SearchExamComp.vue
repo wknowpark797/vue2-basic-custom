@@ -1,8 +1,17 @@
+<!-- 
+    [ Search Example Component ]
+ -->
+
 <template>
-    <div>
+    <div class="search-exam-wrap">
         <SearchComp 
             v-model="searchValue"
             @search="onSearch" />
+
+        <div class="value-box">
+            <p class="tit">Value</p>
+            <p class="cont">{{ searchValue }}</p>
+        </div>
     </div>
 </template>
 

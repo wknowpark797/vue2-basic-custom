@@ -4,9 +4,36 @@
 
 <template>
     <div class="detail-wrap">
-        <h2>{{ compDetail.name }}</h2>
+        <div class="section-wrap">
+            <section class="section flex-section">
+                <h2>{{ compDetail.name }}</h2>
 
-        <component :is="compDetail.component" />
+                <!-- Component Detail -->
+                <div class="group-box detail-box">
+                    <component :is="compDetail.component" />
+                </div>
+
+                <!-- Todo List -->
+                <div class="group-box">
+
+                </div>
+            </section>
+
+            <!-- Props -->
+            <section class="section">
+                <h3>Props</h3>
+            </section>
+
+            <!-- Methods -->
+            <section class="section">
+                <h3>Methods</h3>
+            </section>
+
+            <!-- Comments -->
+            <section class="section">
+                <h3>Comments</h3>
+            </section>
+        </div>
     </div>
 </template>
 
@@ -37,5 +64,42 @@
 </script>
 
 <style lang="scss" scoped>
+    .detail-wrap {
+        .section {
+            &:not(:first-child) {
+                margin-top: 30px;
+            }
+            h2, h3 {
+                margin-bottom: 15px;
+            }
+        }
+        .flex-section {
+            display: flex;
+            flex-wrap: wrap;
+            h2 {
+                width: 100%;
+            }
+            .group-box {
+                flex: 1;
+            }
+        }
+        .detail-box {
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+    }
+</style>
 
+<style lang="scss">
+    .value-box {
+        background: #eee;
+        padding: 15px;
+        margin-top: 15px;
+        .tit {
+            font-size: 0.875rem;
+        }
+        .cont {
+            margin-top: 5px;
+        }
+    }
 </style>

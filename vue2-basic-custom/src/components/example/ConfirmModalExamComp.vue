@@ -1,5 +1,9 @@
+<!-- 
+    [ Confirm Modal Example Component ]
+ -->
+
 <template>
-    <div>
+    <div class="confirm-modal-exam-wrap">
         <ButtonComp @click="showConfirmModal">
             Confirm Modal
         </ButtonComp>

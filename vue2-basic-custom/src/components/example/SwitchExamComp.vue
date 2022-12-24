@@ -1,7 +1,15 @@
+<!-- 
+    [ Switch Example Component ]
+ -->
+
 <template>
-    <div>
+    <div class="switch-exam-wrap">
         <SwitchComp v-model="switchValue" />
-        <p>switch value : {{ switchValue }}</p>
+
+        <div class="value-box">
+            <p class="tit">Value</p>
+            <p class="cont">{{ switchValue }}</p>
+        </div>
     </div>
 </template>
 

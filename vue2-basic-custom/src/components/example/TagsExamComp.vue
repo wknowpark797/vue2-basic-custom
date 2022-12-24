@@ -1,8 +1,17 @@
+<!-- 
+    [ Tags Example Component ]
+ -->
+
 <template>
-    <div>
+    <div class="tags-exam-wrap">
         <TagsComp 
             :list="tagList" 
             @deleteTag="onDeleteTag" />
+
+        <div class="value-box">
+            <p class="tit">Value</p>
+            <p class="cont">{{ tagList }}</p>
+        </div>
     </div>
 </template>
 

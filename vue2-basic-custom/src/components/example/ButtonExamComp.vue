@@ -1,5 +1,9 @@
+<!-- 
+    [ Button Example Component ]
+ -->
+
 <template>
-    <div>
+    <div class="button-exam-wrap">
         <div>
             <ButtonComp>button</ButtonComp>
             <ButtonComp :color="'red'">button</ButtonComp>
@@ -51,5 +55,16 @@
 </script>
 
 <style lang="scss" scoped>
-
+    .button-exam-wrap {
+        > div {
+            &:not(:first-child) {
+                margin-top: 10px;
+            }
+        }
+        button {
+            &:not(:first-child) {
+                margin-left: 10px;
+            }
+        }
+    }
 </style>

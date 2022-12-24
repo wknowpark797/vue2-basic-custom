@@ -1,7 +1,11 @@
+<!-- 
+    [ Modal Example Component ]
+ -->
+
 <template>
-    <div>
+    <div class="modal-exam-wrap">
         <ButtonComp 
-            :color="'blue'" 
+            :color="'black'" 
             @click="showCommonModal">
             Show Modal
         </ButtonComp>

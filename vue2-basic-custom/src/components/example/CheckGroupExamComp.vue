@@ -1,9 +1,17 @@
+<!-- 
+    [ Checkbox Group Example Component ]
+ -->
+
 <template>
-    <div>
+    <div class="check-group-exam-wrap">
         <CheckGroupComp 
             v-model="checkGroupValue"
             :options="checkGroupOptions" />
-        <p>checkbox value : {{ checkGroupValue }}</p>
+
+        <div class="value-box">
+            <p class="tit">Value</p>
+            <p class="cont">{{ checkGroupValue }}</p>
+        </div>
     </div>
 </template>
 

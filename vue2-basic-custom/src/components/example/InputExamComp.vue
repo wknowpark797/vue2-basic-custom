@@ -1,5 +1,9 @@
+<!-- 
+    [ Input Example Component ]
+ -->
+
 <template>
-    <div>
+    <div class="input-exam-wrap">
         <InputComp 
             v-model="inputValue" 
             :placeholder="'내용 입력'"
@@ -8,7 +12,11 @@
             @focusout="inputFocusout" 
             @enter="inputEnter"
             @keyup="inputKeyup" />
-        <p>input value : {{ inputValue }}</p>
+
+        <div class="value-box">
+            <p class="tit">Value</p>
+            <p class="cont">{{ inputValue }}</p>
+        </div>
     </div>
 </template>
 

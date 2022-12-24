@@ -1,10 +1,18 @@
+<!-- 
+    [ Textarea Example Component ]
+ -->
+
 <template>
-    <div>
+    <div class="textarea-exam-wrap">
         <TextareaComp 
             v-model="textareaValue"
             :placeholder="'내용 입력'"
             :label="'Label'" />
-        <p>textarea value : {{ textareaValue }}</p>
+
+        <div class="value-box">
+            <p class="tit">Value</p>
+            <p class="cont">{{ textareaValue }}</p>
+        </div>
     </div>
 </template>
 

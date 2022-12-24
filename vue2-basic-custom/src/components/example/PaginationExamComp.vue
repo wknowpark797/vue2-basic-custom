@@ -1,7 +1,15 @@
+<!-- 
+    [ Pagination Example Component ]
+ -->
+
 <template>
-    <div>
+    <div class="pagination-exam-wrap">
         <PaginationComp v-model="paginationValue" />
-        <p>pagination value : {{ paginationValue }}</p>
+
+        <div class="value-box">
+            <p class="tit">Value</p>
+            <p class="cont">{{ paginationValue }}</p>
+        </div>
     </div>
 </template>
 

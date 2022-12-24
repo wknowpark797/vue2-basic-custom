@@ -129,6 +129,11 @@
             background: #eee;
             padding: 10px;
             text-align: right;
+            button {
+                &:not(:first-child) {
+                    margin-left: 10px;
+                }
+            }
         }
     }
 </style>

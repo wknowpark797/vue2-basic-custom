@@ -1,5 +1,9 @@
+<!-- 
+    [ File Upload Example Component ]
+ -->
+
 <template>
-    <div>
+    <div class="file-upload-exam-wrap">
         <FileUploadComp v-model="fileUploadValue" />
     </div>
 </template>

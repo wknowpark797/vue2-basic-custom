@@ -1,7 +1,15 @@
+<!-- 
+    [ Rating Example Component ]
+ -->
+
 <template>
-    <div>
+    <div class="rating-exam-wrap">
         <RatingComp v-model="rateValue" />
-        <p>rating value : {{ rateValue }}</p>
+
+        <div class="value-box">
+            <p class="tit">Value</p>
+            <p class="cont">{{ rateValue }}</p>
+        </div>
     </div>
 </template>
 

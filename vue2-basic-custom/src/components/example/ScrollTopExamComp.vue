@@ -1,5 +1,9 @@
+<!-- 
+    [ ScrollTop Example Component ]
+ -->
+
 <template>
-    <div>
+    <div class="scroll-top-exam-wrap">
         <ScrollTopComp />
     </div>
 </template>

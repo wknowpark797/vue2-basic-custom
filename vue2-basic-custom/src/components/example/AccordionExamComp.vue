@@ -1,5 +1,9 @@
+<!-- 
+    [ Accordion Example Component ]
+ -->
+
 <template>
-    <div>
+    <div class="accordion-exam-wrap">
         <AccordionComp :list="accordionList" />
     </div>
 </template>

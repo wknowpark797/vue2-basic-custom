@@ -42,6 +42,7 @@
     .tags-wrap {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         .tag {
             display: flex;
             align-items: center;

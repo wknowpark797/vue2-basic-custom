@@ -75,5 +75,9 @@
 </script>
 
 <style lang="scss" scoped>
-
+    .check-group-wrap {
+        label {
+            display: block;
+        }
+    }
 </style>

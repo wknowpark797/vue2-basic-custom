@@ -1,5 +1,9 @@
+<!-- 
+    [ Loading Example Component ]
+ -->
+
 <template>
-    <div>
+    <div class="loading-exam-wrap">
         <ButtonComp @click="showLoading">
             Loading
         </ButtonComp>

@@ -1,5 +1,9 @@
+<!-- 
+    [ Alert Modal Example Component ]
+ -->
+
 <template>
-    <div>
+    <div class="alert-modal-exam-wrap">
         <ButtonComp @click="showAlertModal">
             Alert Modal
         </ButtonComp>

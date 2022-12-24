@@ -1,9 +1,17 @@
+<!-- 
+    [ Select Example Component ]
+ -->
+
 <template>
-    <div>
+    <div class="select-exam-wrap">
         <SelectComp 
             v-model="selectValue" 
             :options="selectOptions" />
-        <p>select value : {{ selectValue }}</p>
+            
+        <div class="value-box">
+            <p class="tit">Value</p>
+            <p class="cont">{{ selectValue }}</p>
+        </div>
     </div>
 </template>
 

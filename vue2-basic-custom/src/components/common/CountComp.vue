@@ -4,14 +4,14 @@
 
 <template>
     <div class="count-wrap">
-        <button class="btn-plus" 
-                @click="onClickPlus">
-            +
-        </button>
-        <p class="number">{{ compValue }}</p>
         <button class="btn-minus"
                 @click="onClickMinus">
             -
+        </button>
+        <p class="number">{{ compValue }}</p>
+        <button class="btn-plus" 
+                @click="onClickPlus">
+            +
         </button>
     </div>
 </template>

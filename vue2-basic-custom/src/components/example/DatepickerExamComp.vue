@@ -1,9 +1,17 @@
+<!-- 
+    [ Datepicker Example Component ]
+ -->
+
 <template>
-    <div>
+    <div class="datepicker-exam-wrap">
         <DatepickerComp 
             v-model="datepickerValue"
             :label="'날짜 선택'" />
-        <p>datepicker value : {{ datepickerValue }}</p>
+
+        <div class="value-box">
+            <p class="tit">Value</p>
+            <p class="cont">{{ datepickerValue }}</p>
+        </div>
     </div>
 </template>
 
