@@ -5,6 +5,8 @@
 <template>
     <div class="detail-wrap">
         <h2>{{ compDetail.name }}</h2>
+
+        <component :is="compDetail.component" />
     </div>
 </template>
 
