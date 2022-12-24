@@ -101,5 +101,19 @@
             justify-content: space-between;
             margin-bottom: 15px;
         }
+        .component-wrap {
+            margin-top: 15px;
+            height: calc(100vh - 139px);
+            overflow-y: auto;
+            > a {
+                display: block;
+                color: #fff;
+                background: #9e9e9e;
+                padding: 10px;
+                &:not(:first-child) {
+                    margin-top: 10px;
+                }
+            }
+        }
     }
 </style>
