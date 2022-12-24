@@ -85,8 +85,6 @@
 
 <style lang="scss" scoped>
     .todo-wrap {
-        border: 1px solid #ccc;
-        padding: 20px;
         .list-todo {
             margin-top: 15px;
             > li {

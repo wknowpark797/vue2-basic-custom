@@ -9,7 +9,7 @@
                 <h2>{{ compDetail.name }}</h2>
 
                 <!-- Component Detail -->
-                <div class="group-box detail-box">
+                <div class="group-box">
                     <component :is="compDetail.component" />
                 </div>
 
@@ -86,14 +86,12 @@
             }
             .group-box {
                 flex: 1;
+                border: 1px solid #ccc;
+                padding: 20px;
                 &:not(:last-child) {
                     margin-right: 30px;
                 }
             }
-        }
-        .detail-box {
-            border: 1px solid #ccc;
-            padding: 20px;
         }
     }
 </style>
