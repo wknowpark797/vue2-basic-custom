@@ -23,18 +23,12 @@ const router = new VueRouter({
         {
             path: '/login',
             name: 'login',
-            component: () => import(/* webpackChunkName: 'login' */ '@/views/LoginComp'),
-            meta: {
-                layout: 'FlatLayout'
-            }
+            component: () => import(/* webpackChunkName: 'login' */ '@/views/LoginComp')
         },
         {
             path: '/join',
             name: 'join',
-            component: () => import(/* webpackChunkName: 'join' */ '@/views/JoinComp'),
-            meta: {
-                layout: 'FlatLayout'
-            }
+            component: () => import(/* webpackChunkName: 'join' */ '@/views/JoinComp')
         },
         {
             path: '/all-view',

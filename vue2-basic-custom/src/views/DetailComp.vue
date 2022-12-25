@@ -70,7 +70,7 @@
 
             <!-- 컴포넌트 댓글 -->
             <section class="section">
-                <h3>Comments</h3>
+                <h3>댓글</h3>
 
                 <CommentsComp />
             </section>
