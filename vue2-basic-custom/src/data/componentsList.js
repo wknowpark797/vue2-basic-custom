@@ -2,7 +2,34 @@ export default [
     { 
         seq: '1',
         name: '아코디언 컴포넌트',
-        component: 'AccordionExamComp'
+        component: 'AccordionExamComp',
+        todoList: [
+            {
+                seq: '1',
+                content: '아코디언 기능추가 01',
+                done: 'N'
+            },
+            {
+                seq: '2',
+                content: '아코디언 기능추가 02',
+                done: 'N'
+            },
+            {
+                seq: '3',
+                content: '아코디언 기능추가 03',
+                done: 'Y'
+            },
+            {
+                seq: '4',
+                content: '아코디언 기능추가 04',
+                done: 'N'
+            },
+            {
+                seq: '5',
+                content: '아코디언 기능추가 05',
+                done: 'Y'
+            }
+        ]
     },
     { 
         seq: '2',
@@ -12,22 +39,95 @@ export default [
     { 
         seq: '3',
         name: '아바타 컴포넌트',
-        component: 'AvatarExamComp'
+        component: 'AvatarExamComp',
+        todoList: [
+            {
+                seq: '1',
+                content: '아바타 기능추가 01',
+                done: 'N'
+            },
+            {
+                seq: '2',
+                content: '아바타 기능추가 02',
+                done: 'N'
+            }
+        ]
     },
     { 
         seq: '4',
         name: '버튼 컴포넌트',
-        component: 'ButtonExamComp'
+        component: 'ButtonExamComp',
+        todoList: [
+            {
+                seq: '1',
+                content: '버튼 기능추가 01',
+                done: 'N'
+            },
+            {
+                seq: '2',
+                content: '버튼 기능추가 02',
+                done: 'N'
+            },
+            {
+                seq: '3',
+                content: '버튼 기능추가 03',
+                done: 'Y'
+            },
+            {
+                seq: '4',
+                content: '버튼 기능추가 04',
+                done: 'N'
+            },
+            {
+                seq: '5',
+                content: '버튼 기능추가 05',
+                done: 'Y'
+            }
+        ]
     },
     { 
         seq: '5',
         name: '체크박스 그룹 컴포넌트',
-        component: 'CheckGroupExamComp'
+        component: 'CheckGroupExamComp',
+        todoList: [
+            {
+                seq: '1',
+                content: '체크박스 그룹 기능추가 01',
+                done: 'N'
+            }
+        ]
     },
     { 
         seq: '6',
         name: '체크박스 단일 컴포넌트',
-        component: 'CheckSingleExamComp'
+        component: 'CheckSingleExamComp',
+        todoList: [
+            {
+                seq: '1',
+                content: '체크박스 단일 기능추가 01',
+                done: 'N'
+            },
+            {
+                seq: '2',
+                content: '체크박스 단일 기능추가 02',
+                done: 'N'
+            },
+            {
+                seq: '3',
+                content: '체크박스 단일 기능추가 03',
+                done: 'Y'
+            },
+            {
+                seq: '4',
+                content: '체크박스 단일 기능추가 04',
+                done: 'N'
+            },
+            {
+                seq: '5',
+                content: '체크박스 단일 기능추가 05',
+                done: 'Y'
+            }
+        ]
     },
     { 
         seq: '7',
@@ -37,27 +137,82 @@ export default [
     { 
         seq: '8',
         name: '카운트 컴포넌트',
-        component: 'CountExamComp' 
+        component: 'CountExamComp',
+        todoList: [
+            {
+                seq: '1',
+                content: '카운트 기능추가 01',
+                done: 'Y'
+            }
+        ] 
     },
     { 
         seq: '9', 
         name: '날짜선택 컴포넌트',
-        component: 'DatepickerExamComp' 
+        component: 'DatepickerExamComp',
+        todoList: [
+            {
+                seq: '1',
+                content: '날짜선택 기능추가 01',
+                done: 'N'
+            },
+            {
+                seq: '2',
+                content: '날짜선택 기능추가 02',
+                done: 'N'
+            },
+            {
+                seq: '3',
+                content: '날짜선택 기능추가 03',
+                done: 'Y'
+            },
+            {
+                seq: '4',
+                content: '날짜선택 기능추가 04',
+                done: 'N'
+            },
+            {
+                seq: '5',
+                content: '날짜선택 기능추가 05',
+                done: 'Y'
+            }
+        ] 
     },
     { 
         seq: '10', 
         name: '드롭다운 컴포넌트' ,
-        component: 'DropdownExamComp'
+        component: 'DropdownExamComp',
+        todoList: [
+            {
+                seq: '1',
+                content: '드롭다운 기능추가 01',
+                done: 'N'
+            }
+        ] 
     },
     { 
         seq: '11', 
         name: '파일 업로드 컴포넌트',
-        component: 'FileUploadExamComp' 
+        component: 'FileUploadExamComp',
+        todoList: [
+            {
+                seq: '1',
+                content: '파일 업로드 기능추가 01',
+                done: 'N'
+            }
+        ]  
     },
     { 
         seq: '12', 
         name: '입력 컴포넌트',
-        component: 'InputExamComp' 
+        component: 'InputExamComp',
+        todoList: [
+            {
+                seq: '1',
+                content: '입력 기능추가 01',
+                done: 'N'
+            }
+        ]   
     },
     { 
         seq: '13', 
@@ -72,12 +227,66 @@ export default [
     { 
         seq: '15', 
         name: '페이지네이션 컴포넌트',
-        component: 'PaginationExamComp' 
+        component: 'PaginationExamComp',
+        todoList: [
+            {
+                seq: '1',
+                content: '페이지네이션 기능추가 01',
+                done: 'N'
+            },
+            {
+                seq: '2',
+                content: '페이지네이션 기능추가 02',
+                done: 'N'
+            },
+            {
+                seq: '3',
+                content: '페이지네이션 기능추가 03',
+                done: 'Y'
+            },
+            {
+                seq: '4',
+                content: '페이지네이션 기능추가 04',
+                done: 'N'
+            },
+            {
+                seq: '5',
+                content: '페이지네이션 기능추가 05',
+                done: 'Y'
+            }
+        ] 
     },
     { 
         seq: '16', 
         name: '라디오 컴포넌트',
-        component: 'RadioExamComp' 
+        component: 'RadioExamComp',
+        todoList: [
+            {
+                seq: '1',
+                content: '라디오 기능추가 01',
+                done: 'N'
+            },
+            {
+                seq: '2',
+                content: '라디오 기능추가 02',
+                done: 'N'
+            },
+            {
+                seq: '3',
+                content: '라디오 기능추가 03',
+                done: 'Y'
+            },
+            {
+                seq: '4',
+                content: '라디오 기능추가 04',
+                done: 'N'
+            },
+            {
+                seq: '5',
+                content: '라디오 기능추가 05',
+                done: 'Y'
+            }
+        ]  
     },
     { 
         seq: '17', 
@@ -87,12 +296,36 @@ export default [
     { 
         seq: '18', 
         name: '스크롤탑 컴포넌트',
-        component: 'ScrollTopExamComp' 
+        component: 'ScrollTopExamComp',
+        todoList: [
+            {
+                seq: '1',
+                content: '스크롤탑 기능추가 01',
+                done: 'N'
+            }
+        ] 
     },
     { 
         seq: '19', 
         name: '검색 컴포넌트',
-        component: 'SearchExamComp' 
+        component: 'SearchExamComp',
+        todoList: [
+            {
+                seq: '1',
+                content: '검색 기능추가 01',
+                done: 'N'
+            },
+            {
+                seq: '2',
+                content: '검색 기능추가 02',
+                done: 'N'
+            },
+            {
+                seq: '3',
+                content: '검색 기능추가 03',
+                done: 'Y'
+            }
+        ] 
     },
     { 
         seq: '20', 
@@ -107,7 +340,24 @@ export default [
     { 
         seq: '22', 
         name: '탭 컴포넌트',
-        component: 'TabsExamComp' 
+        component: 'TabsExamComp',
+        todoList: [
+            {
+                seq: '1',
+                content: '탭 기능추가 01',
+                done: 'N'
+            },
+            {
+                seq: '2',
+                content: '탭 기능추가 02',
+                done: 'N'
+            },
+            {
+                seq: '3',
+                content: '탭 기능추가 03',
+                done: 'Y'
+            }
+        ]  
     },
     { 
         seq: '23', 
@@ -117,7 +367,14 @@ export default [
     { 
         seq: '24', 
         name: '여러줄 입력 컴포넌트',
-        component: 'TextareaExamComp' 
+        component: 'TextareaExamComp',
+        todoList: [
+            {
+                seq: '1',
+                content: '여러줄 입력 기능추가 01',
+                done: 'N'
+            }
+        ]  
     },
     { 
         seq: '25', 
