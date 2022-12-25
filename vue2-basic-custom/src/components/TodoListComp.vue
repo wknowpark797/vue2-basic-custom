@@ -26,7 +26,7 @@
                     v-if="updateSeq === todo.seq" 
                     class="update-wrap">
                     <TextareaComp 
-                        v-model="todo.content"
+                        v-model="updateParams.content"
                         :placeholder="'해야할 일을 입력해주세요.'" />
 
                     <div class="btn-wrap btn-update-wrap">
@@ -64,7 +64,7 @@
             v-if="updateSeq === ''" 
             class="input-todo">
             <TextareaComp 
-                v-model="todoInputValue"
+                v-model="inputParams.content"
                 :placeholder="'해야할 일을 입력해주세요.'" />
 
             <ButtonComp>등록</ButtonComp>
@@ -82,8 +82,18 @@
             return {
                 compSeq: '',
                 todoList: [],
+                
                 updateSeq: '',
-                todoInputValue: ''
+                updateParams: {
+                    seq: '',
+                    content: '',
+                    done: ''
+                },
+
+                inputParams: {
+                    content: '',
+                    done: 'N'
+                }
             }
         },
         methods: {
