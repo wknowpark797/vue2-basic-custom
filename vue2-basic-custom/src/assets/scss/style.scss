@@ -1,5 +1,85 @@
-/***** variables *****/
+/***** color variables *****/
 
+// main group
+$main-01: #284277;
+$main-02: #006bbd;
+$main-03: #81c8ee;
+$main-04: #ede8e4;
+$main-05: #c1afa8;
+
+// gray group
+$gray-01: #212529;
+$gray-02: #343a40;
+$gray-03: #495057;
+$gray-04: #6c757d;
+$gray-05: #adb5bd;
+$gray-06: #ced4da;
+$gray-07: #dee2e6;
+$gray-08: #e9ecef;
+$gray-09: #f8f9fa;
+
+// blue group
+$blue-01: #03045e;
+$blue-02: #023e8a;
+$blue-03: #0077b6;
+$blue-04: #0096c7;
+$blue-05: #00b4d8;
+$blue-06: #48cae4;
+$blue-07: #90e0ef;
+$blue-08: #ade8f4;
+$blue-09: #caf0f8;
+
+// red group
+$red-01: #590d22;
+$red-02: #800f2f;
+$red-03: #a4133c;
+$red-04: #c9184a;
+$red-05: #ff4d6d;
+$red-06: #ff758f;
+$red-07: #ff8fa3;
+$red-08: #ffb3c1;
+$red-09: #ffccd5;
+
+
+/***** font variables *****/
+
+@mixin h2-title ( $size: 1.5rem, $weight: 500, $line-height: 1.5, $color: $gray-01 ) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line-height;
+    color: $color;
+}
+@mixin h3-title ( $size: 1.125rem, $weight: 500, $line-height: 1.2, $color: $gray-01 ) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line-height;
+    color: $color;
+}
+@mixin h3-title ( $size: 1rem, $weight: 500, $line-height: 1.2, $color: $gray-01 ) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line-height;
+    color: $color;
+}
+
+@mixin body-1 ( $size: 1rem, $weight: 400, $line-height: 1.2, $color: $gray-01 ) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line-height;
+    color: $color;
+}
+@mixin body-2 ( $size: 0.875rem, $weight: 400, $line-height: 1.2, $color: $gray-01 ) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line-height;
+    color: $color;
+}
+@mixin body-2 ( $size: 0.75rem, $weight: 400, $line-height: 1.2, $color: $gray-01 ) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line-height;
+    color: $color;
+}
 
 
 /***** normalize, reset *****/
@@ -50,3 +130,5 @@ h2, h3, h4, h5, h6 {
 p {
     margin: 0;
 }
+
+
