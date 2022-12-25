@@ -6,7 +6,7 @@
     <div class="todo-wrap">
         <h3>해야할 일</h3>
 
-        <!-- no List -->
+        <!-- No List -->
         <p 
             v-if="!todoList || todoList.length < 1"
             class="no-result">

@@ -5,6 +5,13 @@
 <template>
     <div class="comments-wrap">
 
+        <!-- No List -->
+        <p
+            v-if="!commentsList || commentsList.length < 1"
+            class="no-result">
+            등록된 댓글이 없습니다.
+        </p>
+
         <!-- List Comments -->
         <ul class="list-comments">
             <li 
@@ -158,6 +165,9 @@
 
 <style lang="scss" scoped>
     .comments-wrap {
+        .no-result {
+            @include body-2($color: $gray-05);
+        }
         .list-comments {
             > li {
                 display: flex;
