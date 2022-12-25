@@ -10,7 +10,8 @@
             <div class="title-wrap">
                 <h2>Components</h2>
                 <ButtonComp :color="'black'"
-                            :textButton="true">
+                            :textButton="true"
+                            @click="$router.push('/all-view')">
                     모두보기
                 </ButtonComp>
             </div>

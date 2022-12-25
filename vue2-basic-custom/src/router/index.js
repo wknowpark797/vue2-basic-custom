@@ -35,6 +35,11 @@ const router = new VueRouter({
             meta: {
                 layout: 'FlatLayout'
             }
+        },
+        {
+            path: '/all-view',
+            name: 'all-view',
+            component: () => import(/* webpackChunkName: 'detail' */ '@/views/AllViewComp')
         }
     ]
 })
