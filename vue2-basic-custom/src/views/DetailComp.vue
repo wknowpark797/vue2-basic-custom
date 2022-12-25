@@ -78,7 +78,7 @@
 </template>
 
 <script>
-    import componentList from '@/data/componentList';
+    import componentList from '@/data/componentsList';
     import TodoListComp from '@/components/TodoListComp';
     import CommentsComp from '@/components/CommentsComp';
 
