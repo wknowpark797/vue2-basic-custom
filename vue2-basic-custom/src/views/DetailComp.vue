@@ -70,6 +70,8 @@
             <!-- Comments -->
             <section class="section">
                 <h3>Comments</h3>
+
+                <CommentsComp />
             </section>
         </div>
     </div>
@@ -77,12 +79,14 @@
 
 <script>
     import componentList from '@/data/componentList';
-    import TodoListComp from '@/components/TodoListComp'
+    import TodoListComp from '@/components/TodoListComp';
+    import CommentsComp from '@/components/CommentsComp';
 
     export default {
         name: 'DetailComp',
         components: {
-            TodoListComp
+            TodoListComp,
+            CommentsComp
         },
         data() {
             return {
