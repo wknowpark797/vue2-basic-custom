@@ -13,21 +13,29 @@ const router = new VueRouter({
         {
             path: '/main',
             name: 'main',
-            component: () => import(/* webpackChunkName: 'main' */ '../views/MainComp')
+            component: () => import(/* webpackChunkName: 'main' */ '@/views/MainComp')
         },
         {
             path: '/detail/:seq',
             name: 'detail',
-            component: () => import(/* webpackChunkName: 'detail' */ '../views/DetailComp')
+            component: () => import(/* webpackChunkName: 'detail' */ '@/views/DetailComp')
         },
         {
             path: '/login',
             name: 'login',
-            component: () => import(/* webpackChunkName: 'login' */ '../views/LoginComp'),
+            component: () => import(/* webpackChunkName: 'login' */ '@/views/LoginComp'),
             meta: {
                 layout: 'FlatLayout'
             }
         },
+        {
+            path: '/join',
+            name: 'join',
+            component: () => import(/* webpackChunkName: 'join' */ '@/views/JoinComp'),
+            meta: {
+                layout: 'FlatLayout'
+            }
+        }
     ]
 })
 

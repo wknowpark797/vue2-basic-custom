@@ -12,14 +12,14 @@
             <div class="input-wrap">
                 <InputComp 
                     v-model="inputParams.email" 
-                    :placeholder="'내용 입력'" />
+                    :placeholder="'이메일을 입력해주세요.'" />
             </div>
 
             <!-- 비밀번호 -->
             <div class="input-wrap">
                 <InputComp 
                     v-model="inputParams.password" 
-                    :placeholder="'내용 입력'" />
+                    :placeholder="'비밀번호를 입력해주세요.'" />
             </div>
 
             <div class="btn-wrap">
@@ -27,9 +27,10 @@
                     로그인
                 </ButtonComp>
                 <ButtonComp 
-                    class="btn-signup" 
+                    class="btn-join" 
                     :color="'black'"
-                    :textButton="true">
+                    :textButton="true"
+                    @click="$router.push('/join')">
                     회원가입
                 </ButtonComp>
             </div>
