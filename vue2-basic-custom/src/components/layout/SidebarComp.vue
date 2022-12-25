@@ -30,7 +30,7 @@
             <div class="btn-wrap">
                 <ButtonComp @click="showProfileUpdateModal">프로필 수정</ButtonComp>
                 <ButtonComp>로그아웃</ButtonComp>
-                <ButtonComp>로그인</ButtonComp>
+                <ButtonComp @click="$router.push('/login')">로그인</ButtonComp>
             </div>
         </div>
         
