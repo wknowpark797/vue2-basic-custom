@@ -40,8 +40,9 @@
                 <!-- 보기 -->
                 <template v-else>
                     <div class="view-wrap">
-                        <CheckSingleComp v-model="todo.done" />
-                        <p class="content">{{ todo.content }}</p>
+                        <CheckSingleComp 
+                            v-model="todo.done"
+                            :label="todo.content" />
                     </div>
 
                     <div class="btn-wrap btn-view-wrap">
@@ -138,9 +139,6 @@
                     flex: 1;
                     display: flex;
                     align-items: flex-start;
-                    .content {
-                        margin-left: 7px;
-                    }
                 }
                 .btn-wrap {
                     button {
