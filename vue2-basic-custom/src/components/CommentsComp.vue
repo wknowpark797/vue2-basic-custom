@@ -1,11 +1,11 @@
 <!-- 
-    [ Comments Component ]
+    [ 상세 > 댓글 ]
  -->
 
 <template>
     <div class="comments-wrap">
 
-        <!-- Comments List -->
+        <!-- List Comments -->
         <ul class="list-comments">
             <li 
                 v-for="comment in commentsList"
@@ -13,7 +13,7 @@
 
                 <!-- 프로필 -->
                 <div class="profile-wrap">
-                    <AvatarComp :text="'Ara'" />
+                    <AvatarComp :text="comment.name[0]" />
                 </div>
 
                 <!-- 댓글 정보 -->
@@ -22,43 +22,78 @@
                         {{ comment.name }}
                         <span>[{{ comment.department }}]</span>
                     </p>
-                    <p class="content">{{ comment.content }}</p>
-                    <div class="bottom-wrap">
-                        <p class="date">{{ comment.date }}</p>
-                        <div class="btn-wrap">
-                            <ButtonComp>
-                                수정
-                            </ButtonComp>
-                            <ButtonComp>
-                                삭제
-                            </ButtonComp>
+
+                    <!-- 수정 -->
+                    <div
+                        v-if="updateSeq === comment.seq" 
+                        class="update-wrap">
+                        <div class="input-wrap">
+                            <TextareaComp 
+                                v-model="updateParams.content"
+                                :placeholder="'댓글을 입력해주세요.'" />
+                        </div>
+
+                        <div class="bottom-wrap">
+                            <p class="date">{{ updateParams.date }}</p>
+                            <div class="btn-wrap">
+                                <ButtonComp @click="onCancelUpdate">
+                                    취소
+                                </ButtonComp>
+                                <ButtonComp>
+                                    등록
+                                </ButtonComp>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- 보기 -->
+                    <div
+                        v-else 
+                        class="view-wrap">
+                        <p class="content">
+                            {{ comment.content }}
+                        </p>
+
+                        <div class="bottom-wrap">
+                            <p class="date">{{ comment.date }}</p>
+                            <div class="btn-wrap">
+                                <ButtonComp 
+                                    @click="onUpdateComment(comment.seq)">
+                                    수정
+                                </ButtonComp>
+                                <ButtonComp>
+                                    삭제
+                                </ButtonComp>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
             </li>
         </ul>
 
-        <!-- Comment Input -->
+        <!-- Input Comment -->
         <div class="input-comment">
+
             <!-- 프로필 -->
             <div class="profile-wrap">
-                <AvatarComp :text="'Ara'" />
+                <AvatarComp :text="inputParams.name[0]" />
             </div>
 
             <!-- 댓글 정보 -->
             <div class="info-wrap">
                 <p class="name">
-                    {{ userInfo.name }}
-                    <span>[{{ userInfo.department }}]</span>
+                    {{ inputParams.name }}
+                    <span>[{{ inputParams.department }}]</span>
                 </p>
                 <div class="input-wrap">
                     <TextareaComp 
-                        v-model="userInfo.content"
-                        :placeholder="'내용 입력'" />
+                        v-model="inputParams.content"
+                        :placeholder="'댓글을 입력해주세요.'" />
                 </div>
                 <div class="bottom-wrap">
-                    <p class="date">{{ userInfo.date }}</p>
+                    <p class="date">{{ inputParams.date }}</p>
                     <div class="btn-wrap">
                         <ButtonComp>
                             등록
@@ -67,32 +102,32 @@
                 </div>
             </div>
         </div>
+
     </div>
 </template>
 
 <script>
+    import componentsList from '@/data/componentsList';
+    import userInfo from '@/data/userInfo';
+
     export default {
         name: 'CommentsComp',
         data() {
             return {
-                commentsList: [
-                    {
-                        seq: '1',
-                        name: '김이름',
-                        department: '개발팀',
-                        content: '댓글 내용',
-                        date: '2022.12.25'
-                    },
-                    {
-                        seq: '2',
-                        name: '김이름',
-                        department: '기획팀',
-                        content: '댓글 내용',
-                        date: '2022.12.25'
-                    }
-                ],
-                userInfo: {
-                    seq: '1',
+                compSeq: '',
+                commentsList: [],
+                userInfo: {},
+
+                updateSeq: '',
+                updateParams: {
+                    seq: '',
+                    name: '',
+                    department: '',
+                    content: '',
+                    date: '2022.12.25'
+                },
+
+                inputParams: {
                     name: '김이름',
                     department: '개발팀',
                     content: '',
@@ -101,10 +136,22 @@
             }
         },
         methods: {
-            
+            onUpdateComment(seq) {
+                this.updateSeq = seq;
+            },
+            onCancelUpdate() {
+                this.updateSeq = '';
+            }
         },
         mounted() {
-            
+            this.compSeq = this.$route.params.seq;
+
+            const result = componentsList.find(item => {
+                return item.seq === this.compSeq;
+            })
+            this.commentsList = result.commentsList;
+
+            this.userInfo = userInfo;
         }
     }
 </script>
@@ -127,21 +174,23 @@
         }
         .info-wrap {
             flex: 1;
-            border: 1px solid #ccc;
+            border: 1px solid $gray-05;
             padding: 20px;
             margin-left: 15px;
+            .name {
+                margin-bottom: 10px;
+            }
             .content {
                 padding: 10px;
-                margin: 10px 0;
             }
             .input-wrap {
                 padding: 10px;
-                margin: 10px 0;
             }
             .bottom-wrap {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                margin-top: 10px;
                 button {
                     &:not(:first-child) {
                         margin-left: 10px;

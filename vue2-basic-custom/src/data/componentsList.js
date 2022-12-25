@@ -29,12 +29,52 @@ export default [
                 content: '아코디언 기능추가 05',
                 done: 'Y'
             }
+        ],
+        commentsList: [
+            {
+                seq: '1',
+                name: '김이름',
+                department: '개발팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            },
+            {
+                seq: '2',
+                name: '김이름',
+                department: '기획팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            }
         ]
     },
     { 
         seq: '2',
         name: '공통 메세지 모달 컴포넌트',
-        component: 'AlertModalExamComp'
+        component: 'AlertModalExamComp',
+        todoList: [],
+        commentsList: [
+            {
+                seq: '1',
+                name: '김이름',
+                department: '개발팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            },
+            {
+                seq: '2',
+                name: '김이름',
+                department: '기획팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            },
+            {
+                seq: '3',
+                name: '김이름',
+                department: '기획팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            }
+        ]
     },
     { 
         seq: '3',
@@ -50,6 +90,29 @@ export default [
                 seq: '2',
                 content: '아바타 기능추가 02',
                 done: 'N'
+            }
+        ],
+        commentsList: [
+            {
+                seq: '1',
+                name: '김이름',
+                department: '개발팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            },
+            {
+                seq: '2',
+                name: '김이름',
+                department: '기획팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            },
+            {
+                seq: '3',
+                name: '김이름',
+                department: '기획팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
             }
         ]
     },
@@ -83,6 +146,29 @@ export default [
                 content: '버튼 기능추가 05',
                 done: 'Y'
             }
+        ],
+        commentsList: [
+            {
+                seq: '1',
+                name: '김이름',
+                department: '개발팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            },
+            {
+                seq: '2',
+                name: '김이름',
+                department: '기획팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            },
+            {
+                seq: '3',
+                name: '김이름',
+                department: '기획팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            }
         ]
     },
     { 
@@ -94,6 +180,29 @@ export default [
                 seq: '1',
                 content: '체크박스 그룹 기능추가 01',
                 done: 'N'
+            }
+        ],
+        commentsList: [
+            {
+                seq: '1',
+                name: '김이름',
+                department: '개발팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            },
+            {
+                seq: '2',
+                name: '김이름',
+                department: '기획팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            },
+            {
+                seq: '3',
+                name: '김이름',
+                department: '기획팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
             }
         ]
     },
@@ -127,12 +236,37 @@ export default [
                 content: '체크박스 단일 기능추가 05',
                 done: 'Y'
             }
+        ],
+        commentsList: [
+            {
+                seq: '1',
+                name: '김이름',
+                department: '개발팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            },
+            {
+                seq: '2',
+                name: '김이름',
+                department: '기획팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            },
+            {
+                seq: '3',
+                name: '김이름',
+                department: '기획팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            }
         ]
     },
     { 
         seq: '7',
         name: '공통 메세지 확인 모달 컴포넌트',
-        component: 'ConfirmModalExamComp'
+        component: 'ConfirmModalExamComp',
+        todoList: [],
+        commentsList: []
     },
     { 
         seq: '8',
@@ -144,10 +278,33 @@ export default [
                 content: '카운트 기능추가 01',
                 done: 'Y'
             }
-        ] 
+        ],
+        commentsList: [
+            {
+                seq: '1',
+                name: '김이름',
+                department: '개발팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            },
+            {
+                seq: '2',
+                name: '김이름',
+                department: '기획팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            },
+            {
+                seq: '3',
+                name: '김이름',
+                department: '기획팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            }
+        ]
     },
     { 
-        seq: '9', 
+        seq: '9',
         name: '날짜선택 컴포넌트',
         component: 'DatepickerExamComp',
         todoList: [
@@ -176,10 +333,33 @@ export default [
                 content: '날짜선택 기능추가 05',
                 done: 'Y'
             }
-        ] 
+        ],
+        commentsList: [
+            {
+                seq: '1',
+                name: '김이름',
+                department: '개발팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            },
+            {
+                seq: '2',
+                name: '김이름',
+                department: '기획팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            },
+            {
+                seq: '3',
+                name: '김이름',
+                department: '기획팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            }
+        ]
     },
     { 
-        seq: '10', 
+        seq: '10',
         name: '드롭다운 컴포넌트' ,
         component: 'DropdownExamComp',
         todoList: [
@@ -188,10 +368,33 @@ export default [
                 content: '드롭다운 기능추가 01',
                 done: 'N'
             }
-        ] 
+        ],
+        commentsList: [
+            {
+                seq: '1',
+                name: '김이름',
+                department: '개발팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            },
+            {
+                seq: '2',
+                name: '김이름',
+                department: '기획팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            },
+            {
+                seq: '3',
+                name: '김이름',
+                department: '기획팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            }
+        ]
     },
     { 
-        seq: '11', 
+        seq: '11',
         name: '파일 업로드 컴포넌트',
         component: 'FileUploadExamComp',
         todoList: [
@@ -200,10 +403,11 @@ export default [
                 content: '파일 업로드 기능추가 01',
                 done: 'N'
             }
-        ]  
+        ],
+        commentsList: []
     },
     { 
-        seq: '12', 
+        seq: '12',
         name: '입력 컴포넌트',
         component: 'InputExamComp',
         todoList: [
@@ -212,20 +416,69 @@ export default [
                 content: '입력 기능추가 01',
                 done: 'N'
             }
-        ]   
+        ],
+        commentsList: []
     },
     { 
-        seq: '13', 
+        seq: '13',
         name: '공통 로딩 컴포넌트',
-        component: 'LoadingExamComp' 
+        component: 'LoadingExamComp',
+        todoList: [],
+        commentsList: [
+            {
+                seq: '1',
+                name: '김이름',
+                department: '개발팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            },
+            {
+                seq: '2',
+                name: '김이름',
+                department: '기획팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            },
+            {
+                seq: '3',
+                name: '김이름',
+                department: '기획팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            }
+        ]
     },
     { 
-        seq: '14', 
+        seq: '14',
         name: '모달 컴포넌트',
-        component: 'ModalExamComp' 
+        component: 'ModalExamComp',
+        todoList: [],
+        commentsList: [
+            {
+                seq: '1',
+                name: '김이름',
+                department: '개발팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            },
+            {
+                seq: '2',
+                name: '김이름',
+                department: '기획팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            },
+            {
+                seq: '3',
+                name: '김이름',
+                department: '기획팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            }
+        ]
     },
     { 
-        seq: '15', 
+        seq: '15',
         name: '페이지네이션 컴포넌트',
         component: 'PaginationExamComp',
         todoList: [
@@ -254,10 +507,11 @@ export default [
                 content: '페이지네이션 기능추가 05',
                 done: 'Y'
             }
-        ] 
+        ],
+        commentsList: []
     },
     { 
-        seq: '16', 
+        seq: '16',
         name: '라디오 컴포넌트',
         component: 'RadioExamComp',
         todoList: [
@@ -286,15 +540,40 @@ export default [
                 content: '라디오 기능추가 05',
                 done: 'Y'
             }
-        ]  
+        ],
+        commentsList: [
+            {
+                seq: '1',
+                name: '김이름',
+                department: '개발팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            },
+            {
+                seq: '2',
+                name: '김이름',
+                department: '기획팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            },
+            {
+                seq: '3',
+                name: '김이름',
+                department: '기획팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            }
+        ]
     },
     { 
-        seq: '17', 
+        seq: '17',
         name: '별점 컴포넌트',
-        component: 'RatingExamComp' 
+        component: 'RatingExamComp',
+        todoList: [],
+        commentsList: []
     },
     { 
-        seq: '18', 
+        seq: '18',
         name: '스크롤탑 컴포넌트',
         component: 'ScrollTopExamComp',
         todoList: [
@@ -303,10 +582,33 @@ export default [
                 content: '스크롤탑 기능추가 01',
                 done: 'N'
             }
-        ] 
+        ],
+        commentsList: [
+            {
+                seq: '1',
+                name: '김이름',
+                department: '개발팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            },
+            {
+                seq: '2',
+                name: '김이름',
+                department: '기획팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            },
+            {
+                seq: '3',
+                name: '김이름',
+                department: '기획팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            }
+        ]
     },
     { 
-        seq: '19', 
+        seq: '19',
         name: '검색 컴포넌트',
         component: 'SearchExamComp',
         todoList: [
@@ -325,20 +627,47 @@ export default [
                 content: '검색 기능추가 03',
                 done: 'Y'
             }
-        ] 
+        ],
+        commentsList: [
+            {
+                seq: '1',
+                name: '김이름',
+                department: '개발팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            },
+            {
+                seq: '2',
+                name: '김이름',
+                department: '기획팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            },
+            {
+                seq: '3',
+                name: '김이름',
+                department: '기획팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            }
+        ]
     },
     { 
-        seq: '20', 
+        seq: '20',
         name: '셀렉트 컴포넌트',
-        component: 'SelectExamComp' 
+        component: 'SelectExamComp',
+        todoList: [],
+        commentsList: []
     },
     { 
-        seq: '21', 
+        seq: '21',
         name: '스위치 컴포넌트',
-        component: 'SwitchExamComp' 
+        component: 'SwitchExamComp',
+        todoList: [],
+        commentsList: []
     },
     { 
-        seq: '22', 
+        seq: '22',
         name: '탭 컴포넌트',
         component: 'TabsExamComp',
         todoList: [
@@ -357,15 +686,40 @@ export default [
                 content: '탭 기능추가 03',
                 done: 'Y'
             }
-        ]  
+        ],
+        commentsList: [
+            {
+                seq: '1',
+                name: '김이름',
+                department: '개발팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            },
+            {
+                seq: '2',
+                name: '김이름',
+                department: '기획팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            },
+            {
+                seq: '3',
+                name: '김이름',
+                department: '기획팀',
+                content: '댓글 내용',
+                date: '2022.12.25'
+            }
+        ]
     },
     { 
-        seq: '23', 
+        seq: '23',
         name: '태그 컴포넌트',
-        component: 'TagsExamComp' 
+        component: 'TagsExamComp',
+        todoList: [],
+        commentsList: []
     },
     { 
-        seq: '24', 
+        seq: '24',
         name: '여러줄 입력 컴포넌트',
         component: 'TextareaExamComp',
         todoList: [
@@ -374,16 +728,21 @@ export default [
                 content: '여러줄 입력 기능추가 01',
                 done: 'N'
             }
-        ]  
+        ],
+        commentsList: []
     },
     { 
-        seq: '25', 
+        seq: '25',
         name: '시간선택 컴포넌트',
-        component: 'TimepickerExamComp'
+        component: 'TimepickerExamComp',
+        todoList: [],
+        commentsList: []
      },
      { 
-        seq: '26', 
+        seq: '26',
         name: '공통 토스트 컴포넌트',
-        component: 'ToastExamComp'
+        component: 'ToastExamComp',
+        todoList: [],
+        commentsList: []
      }
 ]
