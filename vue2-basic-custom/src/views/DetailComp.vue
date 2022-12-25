@@ -1,19 +1,20 @@
 <!-- 
-    [ Component Detail Component ]
+    [ 컴포넌트 상세 화면 ]
  -->
 
 <template>
     <div class="detail-wrap">
         <div class="section-wrap">
+
             <section class="section flex-section">
                 <h2>{{ compDetail.name }}</h2>
 
-                <!-- Component Detail -->
+                <!-- 컴포넌트 상세 -->
                 <div class="group-box">
                     <component :is="compDetail.component" />
                 </div>
 
-                <!-- Todo List -->
+                <!-- 해야할 일 -->
                 <div class="group-box">
                     <TodoListComp />
                 </div>
@@ -67,18 +68,19 @@
                 </table>
             </section>
 
-            <!-- Comments -->
+            <!-- 컴포넌트 댓글 -->
             <section class="section">
                 <h3>Comments</h3>
 
                 <CommentsComp />
             </section>
+
         </div>
     </div>
 </template>
 
 <script>
-    import componentList from '@/data/componentsList';
+    import componentsList from '@/data/componentsList';
     import TodoListComp from '@/components/TodoListComp';
     import CommentsComp from '@/components/CommentsComp';
 
@@ -100,10 +102,8 @@
         mounted() {
             this.compSeq = this.$route.params.seq;
 
-            componentList.forEach(item => {
-                if(item.seq === this.compSeq) {
-                    this.compDetail = item;
-                }
+            this.compDetail = componentsList.find(item => {
+                return item.seq === this.compSeq;
             })
         }
     }
@@ -128,7 +128,7 @@
             }
             .group-box {
                 flex: 1;
-                border: 1px solid #ccc;
+                border: 1px solid $gray-05;
                 padding: 20px;
                 &:not(:last-child) {
                     margin-right: 30px;
@@ -140,11 +140,11 @@
 
 <style lang="scss">
     .value-box {
-        background: #eee;
+        background: $gray-07;
         padding: 15px;
         margin-top: 15px;
         .tit {
-            font-size: 0.875rem;
+            @include body-2;
         }
         .cont {
             margin-top: 5px;
