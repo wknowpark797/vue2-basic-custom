@@ -1,21 +1,23 @@
 <!-- 
-    [ Todo List Component ]
+    [ 상세 > 해야할 일 컴포넌트 ]
  -->
 
 <template>
     <div class="todo-wrap">
-        <h3>Todo List</h3>
+        <h3>해야할 일</h3>
 
-        <!-- Todo List -->
+        <!-- List Todo -->
         <ul class="list-todo">
             <li 
                 v-for="todo in todoList"
                 :key="todo.seq">
+
                 <div class="check-wrap">
                     <CheckSingleComp 
                         v-model="todo.done"
                         :label="todo.content" />
                 </div>
+
                 <div class="btn-wrap">
                     <ButtonComp :textButton="true">
                         수정
@@ -27,14 +29,13 @@
             </li>
         </ul>
 
-        <!-- Todo Input -->
+        <!-- Input Todo -->
         <div class="input-todo">
             <TextareaComp 
                 v-model="todoInputValue"
-                :placeholder="'내용 입력'" />
-            <div class="btn-wrap">
-                <ButtonComp>등록</ButtonComp>
-            </div>
+                :placeholder="'해야할 일을 입력해주세요.'" />
+
+            <ButtonComp>등록</ButtonComp>
         </div>
     </div>
 </template>
@@ -105,9 +106,7 @@
         }
         .input-todo {
             margin-top: 50px;
-            .btn-wrap {
-                text-align: right;
-            }
+            text-align: right;
         }
     }
 </style>
