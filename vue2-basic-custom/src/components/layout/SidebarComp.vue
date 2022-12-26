@@ -1,5 +1,5 @@
 <!-- 
-    [ Sidebar Component ]
+    [ 사이드 영역 컴포넌트 ]
  -->
 
 <template>
@@ -13,24 +13,46 @@
             </ButtonComp>
 
             <div class="profile-wrap">
-                <AvatarComp :src="require('@/assets/images/sample-image.png')" />
+                <AvatarComp 
+                    :src="require('@/assets/images/sample-image.png')"
+                    :size="'150px'" />
                 <ButtonComp 
+                    v-if="isLogin"
                     :size="'small'"
+                    class="btn-update"
                     @click="showProfileImgUpdateModal">
                     수정
                 </ButtonComp>
             </div>
 
-            <div class="info-wrap">
-                <p class="name">{{ userInfo.name }}</p>
-                <p class="department">{{ userInfo.department }}</p>
-                <p class="email">{{ userInfo.email }}</p>
+            <div 
+                v-if="isLogin"
+                class="info-wrap">
+                <p class="name">
+                    {{ userInfo.name }}
+                </p>
+                <p class="department">
+                    {{ userInfo.department }}
+                </p>
+                <p class="email">
+                    {{ userInfo.email }}
+                </p>
             </div>
 
             <div class="btn-wrap">
-                <ButtonComp @click="showProfileUpdateModal">프로필 수정</ButtonComp>
-                <ButtonComp>로그아웃</ButtonComp>
-                <ButtonComp @click="$router.push('/login')">로그인</ButtonComp>
+                <template v-if="isLogin">
+                    <ButtonComp @click="showProfileUpdateModal">
+                        프로필 수정
+                    </ButtonComp>
+                    <ButtonComp @click="onLogout">
+                        로그아웃
+                    </ButtonComp>    
+                </template>
+                <ButtonComp 
+                    v-else 
+                    @click="onLogin">
+                    로그인
+                </ButtonComp>
             </div>
         </div>
         
@@ -110,6 +132,7 @@
         name: 'SidebarComp',
         data() {
             return {
+                isLogin: true,
                 userInfo: {
                     seq: '1',
                     name: '김이름',
@@ -143,6 +166,12 @@
             },
             closeProfileImgUpdateModal() {
                 this.$refs.profileImgUpdateModal.close();
+            },
+            onLogin() {
+                this.$router.push('/login');
+            },
+            onLogout() {
+                this.isLogin = false;
             }
         }
     }
@@ -152,14 +181,29 @@
     .sidebar-wrap {
         width: 250px;
         height: 100vh;
-        background: #eee;
+        background: $gray-08;
         padding: 15px;
         box-sizing: border-box;
         .inner-sidebar {
+            .profile-wrap {
+                text-align: center;
+                position: relative;
+                .btn-update {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                }
+            }
             .info-wrap {
-                margin: 15px 0;
+                margin-top: 20px;
+                p {
+                    &:not(:first-child) {
+                        margin-top: 10px;
+                    }
+                }
             }
             .btn-wrap {
+                margin-top: 20px;
                 button {
                     display: block;
                     width: 100%;
