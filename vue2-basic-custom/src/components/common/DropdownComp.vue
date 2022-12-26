@@ -4,10 +4,15 @@
 
 <template>
     <div class="dropdown-wrap">
-        <p>{{ showText }}</p>
+        <p @click="isOpen = !isOpen">
+            {{ showText }}
+        </p>
 
-        <ul class="list-option">
-            <li v-for="(option, idx) in options" 
+        <ul 
+            v-if="isOpen"
+            class="list-option">
+            <li 
+                v-for="(option, idx) in options" 
                 :key="idx" 
                 @click="onClick(option.value)">
                 {{ option.text }}
@@ -25,7 +30,8 @@
         },
         data() {
             return {
-                compValue: this.value
+                compValue: this.value,
+                isOpen: false
             }
         },
         computed: {
@@ -48,11 +54,38 @@
             onClick(value) {
                 this.compValue = value;
                 this.$emit('click', this.compValue);
+                this.isOpen = false;
             }
         }
     }
 </script>
 
 <style lang="scss" scoped>
-
+    .dropdown-wrap {
+        position: relative;
+        > p {
+            display: flex;
+            align-items: center;
+            height: 34px;
+            border: 1px solid $gray-01;
+            padding: 0 7px;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+        .list-option {
+            position: absolute;
+            top: 34px;
+            left: 0;
+            width: 100%;
+            background: $gray-06;
+            > li {
+                padding: 7px;
+                text-align: left;
+                cursor: pointer;
+                &:hover {
+                    background: $gray-05;
+                }
+            }
+        }
+    }
 </style>
