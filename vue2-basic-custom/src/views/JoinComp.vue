@@ -93,6 +93,7 @@
         justify-content: center;
         .inner-join {
             width: 300px;
+            padding-bottom: 50px;
             text-align: center;
             h2 {
                 margin-bottom: 20px;

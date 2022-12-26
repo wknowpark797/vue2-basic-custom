@@ -64,6 +64,7 @@
         justify-content: center;
         .inner-login {
             width: 300px;
+            padding-bottom: 100px;
             text-align: center;
             h2 {
                 margin-bottom: 20px;
