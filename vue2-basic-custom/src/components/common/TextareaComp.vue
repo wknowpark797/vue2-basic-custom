@@ -8,7 +8,7 @@
 
 <template>
     <label>
-        {{ label }}
+        <span v-if="label">{{ label }}</span>
         <textarea v-model="compValue"
                   :placeholder="placeholder"
                   :rows="rows"
@@ -61,8 +61,22 @@
 </script>
 
 <style lang="scss" scoped>
-    textarea {
-        width: 100%;
-        box-sizing: border-box;
+    label {
+        span {
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        textarea {
+            width: 100%;
+            border-radius: 0;
+            border: 1px solid $gray-01;
+            padding: 7px;
+            box-sizing: border-box;
+            outline: none;
+            @include body-1;
+            &::placeholder {
+                color: $gray-05;
+            }
+        }
     }
 </style>

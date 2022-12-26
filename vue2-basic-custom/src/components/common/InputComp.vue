@@ -8,7 +8,7 @@
 
 <template>
     <label>
-        {{ label }}
+        <span v-if="label">{{ label }}</span>
         <input v-model="compValue"
                :placeholder="placeholder"
                :type="type" 
@@ -81,6 +81,9 @@
     label {
         display: flex;
         align-items: center;
+        span {
+            margin-right: 10px;
+        }
         input {
             flex: 1;
             height: 34px;
@@ -89,6 +92,7 @@
             padding: 0 7px;
             box-sizing: border-box;
             outline: none;
+            @include body-1;
             &::placeholder {
                 color: $gray-05;
             }
