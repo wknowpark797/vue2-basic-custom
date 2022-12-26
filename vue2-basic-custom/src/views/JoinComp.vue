@@ -101,10 +101,14 @@
             .input-wrap {
                 margin-bottom: 10px;
             }
+            .dropdown-wrap {
+                margin-bottom: 10px;
+            }
             .btn-wrap {
                 text-align: right;
                 .btn-join {
                     width: 100%;
+                    margin-bottom: 5px;
                 }
             }
         }

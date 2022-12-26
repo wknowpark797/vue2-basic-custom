@@ -76,6 +76,7 @@
                 text-align: right;
                 .btn-login {
                     width: 100%;
+                    margin-bottom: 5px;
                 }
             }
         }

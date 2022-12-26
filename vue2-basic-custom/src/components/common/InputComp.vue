@@ -85,8 +85,13 @@
             flex: 1;
             height: 34px;
             border-radius: 0;
-            border: 1px solid #333;
+            border: 1px solid $gray-01;
+            padding: 0 7px;
             box-sizing: border-box;
+            outline: none;
+            &::placeholder {
+                color: $gray-05;
+            }
         }
     }
 </style>
