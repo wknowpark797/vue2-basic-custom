@@ -57,79 +57,24 @@
         </div>
         
         <!-- 프로필 수정 모달 -->
-        <ModalComp 
-            ref="profileUpdateModal" 
-            class="profile-update-modal">
-            <template v-slot:title>
-                프로필 수정
-            </template>
-
-            <template v-slot:body>
-                <div class="inner-modal">
-                    <div class="input-wrap">
-                        <InputComp 
-                            v-model="updateParams.name" 
-                            :placeholder="'이름을 입력해주세요.'" />
-                    </div>
-                    <div class="dropdown-wrap">
-                        <DropdownComp 
-                            v-model="updateParams.department" 
-                            :options="departmentOptions" />
-                    </div>
-                    <div class="input-wrap">
-                        <InputComp 
-                            v-model="updateParams.email" 
-                            :placeholder="'이메일을 입력해주세요.'" />
-                    </div>
-                </div>
-            </template>
-
-            <template v-slot:footer>
-                <div class="btn-wrap">
-                    <ButtonComp>
-                        취소
-                    </ButtonComp>
-                    <ButtonComp>
-                        수정
-                    </ButtonComp>
-                </div>
-            </template>
-        </ModalComp>
+        <ProfileUpdateModal ref="profileUpdateModal" />
 
         <!-- 프로필 이미지 수정 모달 -->
-        <ModalComp 
-            ref="profileImgUpdateModal"
-            class="profile-img-update-modal">
-            <template v-slot:title>
-                프로필 이미지 수정
-            </template>
-
-            <template v-slot:body>
-                <div class="inner-modal">
-                    <div class="upload-wrap">
-                        <FileUploadComp v-model="imgUploadValue" />
-                    </div>
-                </div>
-            </template>
-
-            <template v-slot:footer>
-                <div class="btn-wrap">
-                    <ButtonComp>
-                        취소
-                    </ButtonComp>
-                    <ButtonComp>
-                        수정
-                    </ButtonComp>
-                </div>
-            </template>
-        </ModalComp>
-
+        <ProfileImgUpdateModal ref="profileImgUpdateModal" />
+        
     </div>
 </template>
 
 <script>
+    import ProfileUpdateModal from '@/components/modal/ProfileUpdateModal';
+    import ProfileImgUpdateModal from '@/components/modal/ProfileImgUpdateModal';
+
     export default {
         name: 'SidebarComp',
+        components: {
+            ProfileUpdateModal,
+            ProfileImgUpdateModal
+        },
         data() {
             return {
                 isLogin: true,
@@ -140,18 +85,7 @@
                     email: 'email@gmail.com',
                     content: '',
                     date: '2022.12.25'
-                },
-                updateParams: {
-                    name: '',
-                    department: '1',
-                    email: ''
-                },
-                departmentOptions: [
-                    { text: '개발팀', value: '1' },
-                    { text: '기획팀', value: '2' },
-                    { text: '디자인팀', value: '3' }
-                ],
-                imgUploadValue: null
+                }
             }
         },
         methods: {
@@ -210,37 +144,6 @@
                     &:not(:first-child) {
                         margin-top: 10px;
                     }
-                }
-            }
-        }
-    }
-
-    // 프로필 수정 모달
-    .profile-update-modal {
-        .inner-modal {
-            > div {
-                &:not(:first-child) {
-                    margin-top: 15px;
-                }
-            }
-        }
-        .btn-wrap {
-            text-align: right;
-            button {
-                &:not(:first-child) {
-                    margin-left: 10px;
-                }
-            }
-        }
-    }
-
-    // 프로필 이미지 수정 모달
-    .profile-img-update-modal {
-        .btn-wrap {
-            text-align: right;
-            button {
-                &:not(:first-child) {
-                    margin-left: 10px;
                 }
             }
         }
