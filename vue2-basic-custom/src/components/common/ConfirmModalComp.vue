@@ -85,6 +85,7 @@
         width: 100%;
         height: 100vh;
         box-sizing: border-box;
+        z-index: 9;
         .back-dimmed {
             position: absolute;
             top: 0;
