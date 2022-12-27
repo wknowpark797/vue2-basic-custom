@@ -43,6 +43,7 @@
         align-items: center;
         justify-content: center;
         background: rgba(255, 255, 255, .8);
+        z-index: 9;
         .circle {
             border: 8px solid #eee;
             border-top: 8px solid #3498db;
