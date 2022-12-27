@@ -4,15 +4,6 @@
 
 <template>
     <div class="join-wrap">
-
-        <!-- Home Button -->
-        <button 
-            type="button" 
-            class="btn-home"
-            @click="$router.push('/')">
-            <font-awesome-icon icon="house" />
-        </button>
-
         <div class="inner-join">
 
             <h2>Join</h2>
@@ -100,21 +91,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        .btn-home {
-            position: fixed;
-            top: 30px;
-            left: 30px;
-            padding: 10px;
-            border-radius: 50%;
-            cursor: pointer;
-            &:hover {
-                background: $main-04;
-            }
-            svg {
-                height: 20px;
-                color: $gray-04;
-            }
-        }
         .inner-join {
             width: 300px;
             padding-bottom: 50px;

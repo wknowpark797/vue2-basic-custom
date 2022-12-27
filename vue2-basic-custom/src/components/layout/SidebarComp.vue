@@ -5,13 +5,6 @@
 <template>
     <div class="sidebar-wrap">
         <div class="inner-sidebar">
-            <ButtonComp 
-                :color="'black'"
-                :textButton="true"
-                @click="$router.push('/')">
-                홈
-            </ButtonComp>
-
             <div class="profile-wrap">
                 <AvatarComp 
                     :src="require('@/assets/images/sample-image.png')"

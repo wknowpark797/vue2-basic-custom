@@ -4,15 +4,6 @@
 
 <template>
     <div class="login-wrap">
-
-        <!-- Home Button -->
-        <button 
-            type="button" 
-            class="btn-home"
-            @click="$router.push('/')">
-            <font-awesome-icon icon="house" />
-        </button>
-
         <div class="inner-login">
                 
             <h2>Login</h2>
@@ -71,21 +62,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        .btn-home {
-            position: fixed;
-            top: 30px;
-            left: 30px;
-            padding: 10px;
-            border-radius: 50%;
-            cursor: pointer;
-            &:hover {
-                background: $main-04;
-            }
-            svg {
-                height: 20px;
-                color: $gray-04;
-            }
-        }
         .inner-login {
             width: 300px;
             padding-bottom: 100px;
