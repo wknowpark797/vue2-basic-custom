@@ -4,6 +4,7 @@ import router from './router'
 import './plugins/global-components'
 import './plugins/global-example'
 import './plugins/inject-layout'
+import '@/utils/fontAwesomeIcon'
 
 Vue.config.productionTip = false
 
