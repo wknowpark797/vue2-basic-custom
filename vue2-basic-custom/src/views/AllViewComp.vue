@@ -4,73 +4,81 @@
 
 <template>
     <div class="all-view-wrap">
-        <h2>All View Component</h2>
+        <h2>컴포넌트 모두보기 <span>{{ componentsList.length }}</span></h2>
 
-        <div class="group-box">
+        <div class="comp-box">
+            <h3>색상</h3>
 
-            <div class="comp-box">
-                <h3>Color</h3>
-
-                <div class="color-group">
-                    <span class="main-01" />
-                    <span class="main-02" />
-                    <span class="main-03" />
-                    <span class="main-04" />
-                    <span class="main-05" />
-                </div>
-                <div class="color-group">
-                    <span class="gray-01" />
-                    <span class="gray-02" />
-                    <span class="gray-03" />
-                    <span class="gray-04" />
-                    <span class="gray-05" />
-                    <span class="gray-06" />
-                    <span class="gray-07" />
-                    <span class="gray-08" />
-                    <span class="gray-09" />
-                </div>
-                <div class="color-group">
-                    <span class="blue-01" />
-                    <span class="blue-02" />
-                    <span class="blue-03" />
-                    <span class="blue-04" />
-                    <span class="blue-05" />
-                    <span class="blue-06" />
-                    <span class="blue-07" />
-                    <span class="blue-08" />
-                    <span class="blue-09" />
-                </div>
-                <div class="color-group">
-                    <span class="red-01" />
-                    <span class="red-02" />
-                    <span class="red-03" />
-                    <span class="red-04" />
-                    <span class="red-05" />
-                    <span class="red-06" />
-                    <span class="red-07" />
-                    <span class="red-08" />
-                    <span class="red-09" />
-                </div>
+            <div class="color-group">
+                <span class="main-01" />
+                <span class="main-02" />
+                <span class="main-03" />
+                <span class="main-04" />
+                <span class="main-05" />
             </div>
+            <div class="color-group">
+                <span class="gray-01" />
+                <span class="gray-02" />
+                <span class="gray-03" />
+                <span class="gray-04" />
+                <span class="gray-05" />
+                <span class="gray-06" />
+                <span class="gray-07" />
+                <span class="gray-08" />
+                <span class="gray-09" />
+            </div>
+            <div class="color-group">
+                <span class="blue-01" />
+                <span class="blue-02" />
+                <span class="blue-03" />
+                <span class="blue-04" />
+                <span class="blue-05" />
+                <span class="blue-06" />
+                <span class="blue-07" />
+                <span class="blue-08" />
+                <span class="blue-09" />
+            </div>
+            <div class="color-group">
+                <span class="red-01" />
+                <span class="red-02" />
+                <span class="red-03" />
+                <span class="red-04" />
+                <span class="red-05" />
+                <span class="red-06" />
+                <span class="red-07" />
+                <span class="red-08" />
+                <span class="red-09" />
+            </div>
+        </div>
+
+        <div 
+            class="comp-box" 
+            v-for="component in componentsList"
+            :key="component.seq">
+
+            <h3>{{ component.name }}</h3>
+            <component :is="component.component" />
 
         </div>
 
-        <div class="group-box">
-
-        </div>
     </div>
 </template>
 
 <script>
+    import componentsList from '@/data/componentsList';
+
     export default {
         name: 'AllViewComp',
         data() {
             return {
-                
+                componentsList: []
             }
         },
         methods: {
             
+        },
+        mounted() {
+            this.componentsList = componentsList;
         }
     }
 </script>
@@ -78,16 +86,22 @@
 <style lang="scss" scoped>
     .all-view-wrap {
         display: flex;
-        align-content: flex-start;
         flex-wrap: wrap;
         h2 {
             width: 100%;
             margin-bottom: 15px;
+            span {
+                color: $blue-03;
+            }
         }
-        .group-box {
-            flex: 1;
-            &:not(:last-child) {
-                margin-right: 30px;
+        .comp-box {
+            flex-basis: calc(50% - 10px);
+            border: 1px solid $gray-03;
+            padding: 15px;
+            margin: 5px;
+            box-sizing: border-box;
+            h3 {
+                margin-bottom: 10px;
             }
         }
         .color-group {
