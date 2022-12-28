@@ -20,10 +20,10 @@
         </div>
 
         <div class="input-wrap">
-            <label for="disabled-label">Disabled Label</label>
+            <label for="input-disabled">Disabled Label</label>
             <InputComp 
                 v-model="inputValue" 
-                :id="'disabled-label'"
+                :id="'input-disabled'"
                 :placeholder="'내용을 입력해 주세요.'"
                 :disabled=true />
         </div>
