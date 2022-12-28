@@ -1,22 +1,38 @@
 <!-- 
-    [ Input Example Component ]
+    [ 입력 컴포넌트 Example ]
  -->
 
 <template>
     <div class="input-exam-wrap">
-        <InputComp 
-            v-model="inputValue" 
-            :placeholder="'내용 입력'"
-            :label="'Label'"
-            @focusin="inputFocusin"
-            @focusout="inputFocusout" 
-            @enter="inputEnter"
-            @keyup="inputKeyup" />
 
+        <div class="input-wrap">
+            <label for="input-label">Input Label</label>
+            <InputComp 
+                v-model="inputValue" 
+                :id="'input-label'"
+                :placeholder="'내용을 입력해 주세요.'"
+                :maxlength="100"
+                :errorMsg="inputValue ? '':'필수 입력 항목입니다.'"
+                @focusin="inputFocusin"
+                @focusout="inputFocusout" 
+                @enter="inputEnter"
+                @keyup="inputKeyup" />
+        </div>
+
+        <div class="input-wrap">
+            <label for="disabled-label">Disabled Label</label>
+            <InputComp 
+                v-model="inputValue" 
+                :id="'disabled-label'"
+                :placeholder="'내용을 입력해 주세요.'"
+                :disabled=true />
+        </div>
+        
         <div class="value-box">
-            <p class="tit">Value</p>
+            <p class="tit">VALUE : </p>
             <p class="cont">{{ inputValue }}</p>
         </div>
+
     </div>
 </template>
 
@@ -30,21 +46,31 @@
         },
         methods: {
             inputFocusin() {
-                console.log('input focusin');
+                
             },
             inputFocusout() {
-                console.log('input focusout');
+                
             },
             inputEnter() {
-                console.log('input enter');
+                
             },
-            inputKeyup(value) {
-                console.log('keyup value : ', value);
+            inputKeyup() {
+                
             }
         }
     }
 </script>
 
 <style lang="scss" scoped>
-
+    .input-exam-wrap {
+        .input-wrap {
+            &:not(:first-child) {
+                margin-top: 15px;
+            }
+        }
+        label {
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+    }
 </style>

@@ -1,12 +1,5 @@
 /***** color variables *****/
 
-// main group
-$main-01: #284277;
-$main-02: #006bbd;
-$main-03: #81c8ee;
-$main-04: #ede8e4;
-$main-05: #c1afa8;
-
 // gray group
 $gray-01: #212529;
 $gray-02: #343a40;
@@ -17,17 +10,6 @@ $gray-06: #ced4da;
 $gray-07: #dee2e6;
 $gray-08: #e9ecef;
 $gray-09: #f8f9fa;
-
-// blue group
-$blue-01: #03045e;
-$blue-02: #023e8a;
-$blue-03: #0077b6;
-$blue-04: #0096c7;
-$blue-05: #00b4d8;
-$blue-06: #48cae4;
-$blue-07: #90e0ef;
-$blue-08: #ade8f4;
-$blue-09: #caf0f8;
 
 // red group
 $red-01: #590d22;
@@ -90,7 +72,7 @@ body {
     font-family: 'Noto Sans KR', 'sans-serif';
     box-sizing: border-box;
     margin: 0;
-    @include body-1;
+    @include body-2;
 }
 
 input, textarea {
@@ -118,11 +100,11 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
     thead {
-        background: #eee;
+        background: $gray-07;
     }
     th, td {
-        border: 1px solid #ccc;
-        padding: 7px;
+        border: 1px solid $gray-08;
+        padding: 12px;
     }
 }
 
@@ -141,5 +123,7 @@ h4 { @include h4-title; }
 p {
     margin: 0;
 }
+
+
 
 

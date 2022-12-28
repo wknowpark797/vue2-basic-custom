@@ -142,12 +142,12 @@
     .value-box {
         background: $gray-07;
         padding: 15px;
-        margin-top: 15px;
+        margin-top: 30px;
         .tit {
-            @include body-2;
+            @include body-2($weight: 700);
         }
         .cont {
-            margin-top: 5px;
+            margin-top: 10px;
         }
     }
 </style>

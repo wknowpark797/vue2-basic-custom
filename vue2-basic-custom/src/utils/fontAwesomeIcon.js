@@ -2,8 +2,8 @@ import Vue from 'vue';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
-import { faHouse } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faHouse);
+library.add(faHouse, faCircleXmark);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
