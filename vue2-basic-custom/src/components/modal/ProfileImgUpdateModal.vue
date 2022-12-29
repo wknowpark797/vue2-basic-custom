@@ -20,10 +20,14 @@
 
         <template v-slot:footer>
             <div class="btn-wrap">
-                <ButtonComp @click="close">
+                <ButtonComp
+                    :size="'small'"
+                    :color="'red'" 
+                    @click="close">
                     취소
                 </ButtonComp>
-                <ButtonComp>
+                <ButtonComp
+                    :size="'small'">
                     수정
                 </ButtonComp>
             </div>

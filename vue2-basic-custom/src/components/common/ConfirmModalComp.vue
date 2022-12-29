@@ -13,8 +13,11 @@
         <div class="confirm-modal">
             <div class="modal-header">
                 <p class="title">{{ title }}</p>
-                <button class="btn-close"
-                        @click="close" />
+                <button 
+                    class="btn-close"
+                    @click="close">
+                    <font-awesome-icon icon="xmark" />
+                </button>
             </div>
 
             <div class="modal-body">
@@ -22,11 +25,15 @@
             </div>
 
             <div class="modal-footer">
-                <ButtonComp :color="'red'"
-                            @click="close">
+                <ButtonComp 
+                    :size="'small'"
+                    :color="'red'"
+                    @click="close">
                     취소
                 </ButtonComp>
-                <ButtonComp @click="onClickOk">
+                <ButtonComp
+                    :size="'small'" 
+                    @click="onClickOk">
                     확인
                 </ButtonComp>
             </div>
@@ -109,26 +116,25 @@
             align-items: center;
             justify-content: space-between;
             background: #eee;
-            padding: 10px;
+            padding: 12px 15px;
             .title {
                 margin: 0;
             }
             .btn-close {
                 cursor: pointer;
-                &::before {
-                    content: 'X';
+                svg {
+                    height: 16px;
                 }
             }
         }
         .modal-body {
-            padding: 10px;
+            padding: 20px;
             .content {
                 margin: 0;
             }
         }
         .modal-footer {
-            background: #eee;
-            padding: 10px;
+            padding: 12px 15px;
             text-align: right;
             button {
                 &:not(:first-child) {

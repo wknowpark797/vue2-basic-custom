@@ -12,6 +12,7 @@
                 <ButtonComp 
                     v-if="isLogin"
                     :size="'small'"
+                    :color="'blue'"
                     class="btn-update"
                     @click="showProfileImgUpdateModal">
                     수정
@@ -109,7 +110,7 @@
         width: 250px;
         height: 100vh;
         background: $gray-08;
-        padding: 15px;
+        padding: 35px 20px;
         box-sizing: border-box;
         .inner-sidebar {
             .profile-wrap {

@@ -113,7 +113,7 @@
     .detail-wrap {
         .section {
             &:not(:first-child) {
-                margin-top: 30px;
+                margin-top: 55px;
             }
             h2, h3 {
                 margin-bottom: 15px;

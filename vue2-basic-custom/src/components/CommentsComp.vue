@@ -43,11 +43,14 @@
                         <div class="bottom-wrap">
                             <p class="date">{{ updateParams.date }}</p>
                             <div class="btn-wrap">
-                                <ButtonComp @click="onCancelUpdate">
+                                <ButtonComp
+                                    :size="'small'" 
+                                    @click="onCancelUpdate">
                                     취소
                                 </ButtonComp>
-                                <ButtonComp>
-                                    등록
+                                <ButtonComp
+                                    :size="'small'">
+                                    확인
                                 </ButtonComp>
                             </div>
                         </div>
@@ -65,10 +68,13 @@
                             <p class="date">{{ comment.date }}</p>
                             <div class="btn-wrap">
                                 <ButtonComp 
+                                    :size="'small'"
                                     @click="onUpdateComment(comment.seq)">
                                     수정
                                 </ButtonComp>
-                                <ButtonComp>
+                                <ButtonComp
+                                    :size="'small'"
+                                    :color="'red'">
                                     삭제
                                 </ButtonComp>
                             </div>
@@ -102,7 +108,8 @@
                 <div class="bottom-wrap">
                     <p class="date">{{ inputParams.date }}</p>
                     <div class="btn-wrap">
-                        <ButtonComp>
+                        <ButtonComp
+                            :size="'small'">
                             등록
                         </ButtonComp>
                     </div>

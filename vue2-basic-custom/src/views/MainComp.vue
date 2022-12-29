@@ -10,7 +10,7 @@
             <div class="title-wrap">
                 <h2>컴포넌트</h2>
                 <ButtonComp 
-                    :color="'black'"
+                    :color="'blue'"
                     :textButton="true"
                     @click="$router.push('/all-view')">
                     모두보기
@@ -94,7 +94,7 @@
         .group-box {
             flex: 1;
             &:not(:first-child) {
-                margin-left: 30px;
+                margin-left: 50px;
             }
         }
         .title-wrap {
@@ -105,7 +105,7 @@
         }
         .components-wrap {
             margin-top: 15px;
-            height: calc(100vh - 160px);
+            height: calc(100vh - 176px);
             overflow-y: auto;
             > a {
                 display: block;
@@ -121,7 +121,7 @@
             }
         }
         .list-comments-main {
-            height: calc(100vh - 111px);
+            height: calc(100vh - 121px);
             overflow-y: auto;
             > li {
                 &:not(:first-child) {

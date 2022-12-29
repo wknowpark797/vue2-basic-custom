@@ -5,16 +5,19 @@
 <template>
     <div class="search-wrap">
         <div class="input-wrap">
-            <InputComp v-model="compValue"
-                       :placeholder="placeholder"
-                       :type="'text'"
-                       :disabled="disabled"
-                       :readonly="readonly"
-                       @input="onInput"
-                       @enter="onEnter" />
+            <InputComp 
+                v-model="compValue"
+                :placeholder="placeholder"
+                :type="'text'"
+                :disabled="disabled"
+                :readonly="readonly"
+                @input="onInput"
+                @enter="onEnter" />
         </div>
-        <ButtonComp class="btn-search" 
-                    @click="onSearch">
+        <ButtonComp 
+            class="btn-search"
+            :size="'large'" 
+            @click="onSearch">
             검색
         </ButtonComp>
     </div>

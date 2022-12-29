@@ -28,7 +28,7 @@
                 </ButtonComp>
                 <ButtonComp 
                     class="btn-join" 
-                    :color="'black'"
+                    :color="'blue'"
                     :textButton="true"
                     @click="$router.push('/join')">
                     회원가입
@@ -74,9 +74,10 @@
             }
             .btn-wrap {
                 text-align: right;
+                margin-top: 20px;
                 .btn-login {
                     width: 100%;
-                    margin-bottom: 5px;
+                    margin-bottom: 10px;
                 }
             }
         }

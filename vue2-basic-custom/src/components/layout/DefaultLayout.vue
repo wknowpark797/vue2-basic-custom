@@ -68,7 +68,7 @@
         .content-wrapper {
             flex: 1;
             height: 100vh;
-            padding: 30px;
+            padding: 35px 50px;
             box-sizing: border-box;
             overflow: auto;
         }

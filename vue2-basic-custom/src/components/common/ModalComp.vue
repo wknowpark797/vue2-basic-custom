@@ -16,8 +16,11 @@
               <!-- Modal Header -->
               <div class="modal-header">
                 <slot name="title" />
-                <button class="btn-close"
-                        @click="close" />
+                <button 
+                    class="btn-close"
+                    @click="close">
+                    <font-awesome-icon icon="xmark" />
+                </button>
               </div>
 
               <!-- Modal Body -->
@@ -77,7 +80,7 @@
         width: 100%;
         height: 100vh;
         box-sizing: border-box;
-        z-index: 9;
+        z-index: 99;
         .back-dimmed {
             position: absolute;
             top: 0;
@@ -101,20 +104,19 @@
             align-items: center;
             justify-content: space-between;
             background: #eee;
-            padding: 10px;
+            padding: 12px 15px;
             .btn-close {
                 cursor: pointer;
-                &::before {
-                    content: 'X';
+                svg {
+                    height: 16px;
                 }
             }
         }
         .modal-body {
-            padding: 10px;
+            padding: 20px;
         }
         .modal-footer {
-            background: #eee;
-            padding: 10px;
+            padding: 12px 15px;
         }
     }
 </style>

@@ -30,10 +30,15 @@
                         :placeholder="'해야할 일을 입력해주세요.'" />
 
                     <div class="btn-wrap btn-update-wrap">
-                        <ButtonComp @click="onCancelUpdate">
+                        <ButtonComp 
+                            :size="'small'"
+                            @click="onCancelUpdate">
                             취소
                         </ButtonComp>
-                        <ButtonComp>등록</ButtonComp>
+                        <ButtonComp
+                            :size="'small'">
+                            등록
+                        </ButtonComp>
                     </div>
                 </div>
 
@@ -47,12 +52,15 @@
 
                     <div class="btn-wrap btn-view-wrap">
                         <ButtonComp 
+                            :color="'blue'"
                             :textButton="true"
                             @click="onUpdateTodo(todo.seq)">
-                            수정
+                            <font-awesome-icon icon="pen" />
                         </ButtonComp>
-                        <ButtonComp :textButton="true">
-                            삭제
+                        <ButtonComp
+                            :color="'red'" 
+                            :textButton="true">
+                            <font-awesome-icon icon="circle-xmark" />
                         </ButtonComp>
                     </div>    
                 </template>
@@ -68,7 +76,10 @@
                 v-model="inputParams.content"
                 :placeholder="'해야할 일을 입력해주세요.'" />
 
-            <ButtonComp>등록</ButtonComp>
+            <ButtonComp
+                :size="'small'">
+                등록
+            </ButtonComp>
         </div>
 
     </div>
@@ -143,14 +154,18 @@
                 .btn-wrap {
                     button {
                         &:not(:first-child) {
-                            margin-left: 7px;
+                            margin-left: 10px;
                         }
                     }
                     &.btn-update-wrap {
                         text-align: right;
+                        margin-top: 3px;
                     }
                     &.btn-view-wrap {
                         margin-left: 10px;
+                        svg {
+                            height: 16px;
+                        }
                     }
                 }
             }
@@ -158,6 +173,9 @@
         .input-todo {
             margin-top: 50px;
             text-align: right;
+            button {
+                margin-top: 3px;
+            }
         }
     }
 </style>

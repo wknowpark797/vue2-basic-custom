@@ -49,7 +49,7 @@
                 </ButtonComp>
                 <ButtonComp 
                     class="btn-login" 
-                    :color="'black'"
+                    :color="'blue'"
                     :textButton="true"
                     @click="$router.push('/login')">
                     로그인
@@ -106,9 +106,10 @@
             }
             .btn-wrap {
                 text-align: right;
+                margin-top: 20px;
                 .btn-join {
                     width: 100%;
-                    margin-bottom: 5px;
+                    margin-bottom: 10px;
                 }
             }
         }
