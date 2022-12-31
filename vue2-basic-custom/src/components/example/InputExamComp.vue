@@ -6,7 +6,9 @@
     <div class="input-exam-wrap">
 
         <div class="input-wrap">
-            <label for="input-label">Input Label</label>
+            <label for="input-label">
+                Input Label
+            </label>
             <InputComp 
                 v-model="inputValue" 
                 :id="'input-label'"
@@ -20,7 +22,9 @@
         </div>
 
         <div class="input-wrap">
-            <label for="input-disabled">Disabled Label</label>
+            <label for="input-disabled">
+                Input Disabled
+            </label>
             <InputComp 
                 v-model="inputValue" 
                 :id="'input-disabled'"
@@ -29,8 +33,12 @@
         </div>
         
         <div class="value-box">
-            <p class="tit">VALUE : </p>
-            <p class="cont">{{ inputValue }}</p>
+            <p class="tit">
+                VALUE : 
+            </p>
+            <p class="cont">
+                {{ inputValue }}
+            </p>
         </div>
 
     </div>

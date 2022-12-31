@@ -1,5 +1,5 @@
 <!-- 
-    [ Loading Example Component ]
+    [ 로딩 컴포넌트 Example ]
  -->
 
 <template>

@@ -1,10 +1,11 @@
 <!-- 
-    [ Loading Component - 공통 사용 ]
+    [ 로딩 컴포넌트 - 공통 사용 ]
  -->
 
 <template>
-    <div class="loading-wrap" 
-         v-if="isShowLoading">
+    <div 
+        class="loading-wrap" 
+        v-if="isShowLoading">
 
         <div class="circle" />
 
