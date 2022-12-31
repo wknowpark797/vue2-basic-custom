@@ -1,17 +1,24 @@
 <!-- 
-    [ Checkbox Group Example Component ]
+    [ 체크박스 그룹 컴포넌트 Example ]
  -->
 
 <template>
     <div class="check-group-exam-wrap">
+        
         <CheckGroupComp 
             v-model="checkGroupValue"
-            :options="checkGroupOptions" />
+            :options="checkGroupOptions"
+            :errorMsg="checkGroupValue.length > 0 ? '':'필수 입력 항목입니다.'" />
 
         <div class="value-box">
-            <p class="tit">Value</p>
-            <p class="cont">{{ checkGroupValue }}</p>
+            <p class="tit">
+                VALUE : 
+            </p>
+            <p class="cont">
+                {{ checkGroupValue }}
+            </p>
         </div>
+
     </div>
 </template>
 
