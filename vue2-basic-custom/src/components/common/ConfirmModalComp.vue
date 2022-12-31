@@ -1,27 +1,34 @@
 <!-- 
-    [ Confirm Modal Component - 공통 사용 ]
+    [ 메세지 확인 모달 컴포넌트 - 공통 사용 ]
  -->
 
 <template>
-    <div ref="confirm-modal-container"
-         v-if="isShowModal"
-         class="confirm-modal-wrap">
+    <div 
+        ref="confirm-modal-container"
+        v-if="isShowModal"
+        class="confirm-modal-wrap">
         
-        <div class="back-dimmed" 
-             @click="close" />
+        <div 
+            class="back-dimmed" 
+            @click="close" />
 
         <div class="confirm-modal">
             <div class="modal-header">
-                <p class="title">{{ title }}</p>
-                <button 
+                <p class="title">
+                    {{ title }}
+                </p>
+                <ButtonComp 
                     class="btn-close"
+                    :textButton=true
                     @click="close">
                     <font-awesome-icon icon="xmark" />
-                </button>
+                </ButtonComp>
             </div>
 
             <div class="modal-body">
-                <p class="content">{{ content }}</p>
+                <p class="content">
+                    {{ content }}
+                </p>
             </div>
 
             <div class="modal-footer">

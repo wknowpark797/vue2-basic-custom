@@ -1,5 +1,5 @@
 <!-- 
-    [ Confirm Modal Example Component ]
+    [ 메세지 확인 모달 컴포넌트 Example ]
  -->
 
 <template>
