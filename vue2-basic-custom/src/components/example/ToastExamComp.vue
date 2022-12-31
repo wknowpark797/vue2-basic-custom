@@ -1,5 +1,5 @@
 <!-- 
-    [ Toast Example Component ]
+    [ 토스트 컴포넌트 Example ]
  -->
 
 <template>
