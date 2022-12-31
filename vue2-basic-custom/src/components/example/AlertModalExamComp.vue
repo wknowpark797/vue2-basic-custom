@@ -1,5 +1,5 @@
 <!-- 
-    [ Alert Modal Example Component ]
+    [ 메세지 모달 컴포넌트 Example ]
  -->
 
 <template>
