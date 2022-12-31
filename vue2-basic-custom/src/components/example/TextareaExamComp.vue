@@ -6,7 +6,9 @@
     <div class="textarea-exam-wrap">
 
         <div class="input-wrap">
-            <label for="textarea-label">Textarea Label</label>
+            <label for="textarea-label">
+                Textarea Label
+            </label>
             <TextareaComp 
                 v-model="textareaValue"
                 :id="'textarea-label'"
@@ -20,7 +22,9 @@
         </div>
 
         <div class="input-wrap">
-            <label for="textarea-disabled">Textarea Disabled</label>
+            <label for="textarea-disabled">
+                Textarea Disabled
+            </label>
             <TextareaComp 
                 v-model="textareaValue"
                 :id="'textarea-disabled'"
@@ -29,8 +33,12 @@
         </div>
         
         <div class="value-box">
-            <p class="tit">VALUE : </p>
-            <p class="cont">{{ textareaValue }}</p>
+            <p class="tit">
+                VALUE : 
+            </p>
+            <p class="cont">
+                {{ textareaValue }}
+            </p>
         </div>
     </div>
 </template>

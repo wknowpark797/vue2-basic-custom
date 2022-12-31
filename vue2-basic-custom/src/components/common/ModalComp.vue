@@ -21,7 +21,7 @@
                 <slot name="title" />
                 <ButtonComp 
                     class="btn-close"
-                    :textButton=true
+                    :textButton="true"
                     @click="close">
                     <font-awesome-icon icon="xmark" />
                 </ButtonComp>

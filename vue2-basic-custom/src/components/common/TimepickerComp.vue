@@ -1,19 +1,20 @@
 <!-- 
-    [ Timepicker Component ]
+    [ 시간선택 컴포넌트 ]
 
     - TODO : 
         new Date 시간 데이터 형변환 (filter 사용)
  -->
 
 <template>
-    <label>
-        {{ label }}
-        <input type="time"
-               v-model="compValue"
-               :disabled="disabled" 
-               :readonly="readonly"
-               @input="onInput">
-    </label>
+    <div class="timepicker-wrap">
+        <input 
+            type="time"
+            v-model="compValue"
+            :id="id"
+            :disabled="disabled" 
+            :readonly="readonly"
+            @input="onInput">
+    </div>
 </template>
 
 <script>
@@ -29,6 +30,10 @@
                 type: [Date, String],
                 default: ''
             },
+            id: {
+                type: String,
+                default: ''
+            },
             disabled: {
                 type: Boolean,
                 default: false
@@ -36,10 +41,6 @@
             readonly: {
                 type: Boolean,
                 default: false
-            },
-            label: {
-                type: String,
-                default: ''
             }
         },
         methods: {
@@ -51,5 +52,19 @@
 </script>
 
 <style lang="scss" scoped>
-
+    .timepicker-wrap {
+        input {
+            width: 100%;
+            height: 40px;
+            border-radius: 0;
+            border: 1px solid $gray-04;
+            padding: 0 12px;
+            box-sizing: border-box;
+            outline: none;
+            @include body-2;
+            &:disabled {
+                opacity: .3;
+            }
+        }
+    }
 </style>
