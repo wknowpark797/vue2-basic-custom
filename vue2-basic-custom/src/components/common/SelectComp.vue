@@ -1,13 +1,16 @@
 <!-- 
-    [ Select Component ]
+    [ 셀렉트 컴포넌트 ]
  -->
 
 <template>
-    <select v-model="compValue" 
-            @change="onChange">
-        <option v-for="(select, idx) in options" 
-                :key="idx"
-                :value="select.value">
+    <select 
+        v-model="compValue"
+        :disabled="disabled" 
+        @change="onChange">
+        <option 
+            v-for="(select, idx) in options" 
+            :key="idx"
+            :value="select.value">
             {{ select.text }}
         </option>
     </select>
@@ -30,6 +33,10 @@
                 type: String,
                 default: ''
             },
+            disabled: {
+                type: Boolean,
+                default: false
+            },
             options: {
                 type: Array,
                 default: () => []
@@ -44,5 +51,17 @@
 </script>
 
 <style lang="scss" scoped>
-
+    select {
+        width: 100%;
+        height: 40px;
+        border-radius: 0;
+        border: 1px solid $gray-04;
+        padding: 0 12px;
+        box-sizing: border-box;
+        outline: none;
+        @include body-2;
+        &:disabled {
+            opacity: .3;
+        }
+    }
 </style>

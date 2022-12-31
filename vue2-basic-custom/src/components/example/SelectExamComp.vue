@@ -1,16 +1,31 @@
 <!-- 
-    [ Select Example Component ]
+    [ 셀렉트 컴포넌트 Example ]
  -->
 
 <template>
     <div class="select-exam-wrap">
-        <SelectComp 
-            v-model="selectValue" 
-            :options="selectOptions" />
+
+        <div class="input-wrap">
+            <SelectComp 
+                v-model="selectValue" 
+                :options="selectOptions" />
+        </div>
+
+        <div class="input-wrap">
+            <SelectComp 
+                v-model="selectValue"
+                :disabled="true" 
+                :options="selectOptions" />
+        </div>
+        
             
         <div class="value-box">
-            <p class="tit">Value</p>
-            <p class="cont">{{ selectValue }}</p>
+            <p class="tit">
+                VALUE : 
+            </p>
+            <p class="cont">
+                {{ selectValue }}
+            </p>
         </div>
     </div>
 </template>
@@ -35,5 +50,11 @@
 </script>
 
 <style lang="scss" scoped>
-
+    .select-exam-wrap {
+        .input-wrap {
+            &:not(:first-child) {
+                margin-top: 15px;
+            }
+        }
+    }
 </style>

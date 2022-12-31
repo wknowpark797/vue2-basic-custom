@@ -1,5 +1,5 @@
 <!-- 
-    [ Search Component ]
+    [ 검색 컴포넌트 ]
  -->
 
 <template>

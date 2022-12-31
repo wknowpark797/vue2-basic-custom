@@ -1,5 +1,5 @@
 <!-- 
-    [ Search Example Component ]
+    [ 검색 컴포넌트 Example ]
  -->
 
 <template>
@@ -9,8 +9,12 @@
             @search="onSearch" />
 
         <div class="value-box">
-            <p class="tit">Value</p>
-            <p class="cont">{{ searchValue }}</p>
+            <p class="tit">
+                VALUE : 
+            </p>
+            <p class="cont">
+                {{ searchValue }}
+            </p>
         </div>
     </div>
 </template>
