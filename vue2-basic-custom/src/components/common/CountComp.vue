@@ -1,18 +1,28 @@
 <!-- 
-    [ Count Component ]
+    [ 카운트 컴포넌트 ]
  -->
 
 <template>
     <div class="count-wrap">
-        <button class="btn-minus"
-                @click="onClickMinus">
-            -
-        </button>
-        <p class="number">{{ compValue }}</p>
-        <button class="btn-plus" 
-                @click="onClickPlus">
-            +
-        </button>
+
+        <ButtonComp 
+            class="btn-minus"
+            :textButton=true
+            @click="onClickMinus">
+            <font-awesome-icon icon="minus" />
+        </ButtonComp>
+        
+        <p class="number">
+            {{ compValue }}
+        </p>
+        
+        <ButtonComp 
+            class="btn-plus"
+            :textButton=true 
+            @click="onClickPlus">
+            <font-awesome-icon icon="plus" />
+        </ButtonComp>
+
     </div>
 </template>
 
@@ -49,10 +59,15 @@
 
 <style lang="scss" scoped>
     .count-wrap {
-        display: flex;
+        display: inline-flex;
         align-items: center;
+        height: 40px;
+        border: 1px solid $gray-04;
+        padding: 0 10px;
+        box-sizing: border-box;
         p {
-            margin: 0 10px;
+            margin: 0 15px;
+            @include body-1;
         }
         button {
             display: flex;
@@ -60,8 +75,11 @@
             justify-content: center;
             width: 20px;
             height: 20px;
-            border: 1px solid #ccc;
             cursor: pointer;
+            svg {
+                height: 16px;
+                color: $gray-03;
+            }
         }
     }
 </style>
