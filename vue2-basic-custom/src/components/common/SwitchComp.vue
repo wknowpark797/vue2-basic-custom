@@ -1,5 +1,5 @@
 <!-- 
-    [ Switch Component ]
+    [ 스위치 컴포넌트 ]
  -->
 
 <template>

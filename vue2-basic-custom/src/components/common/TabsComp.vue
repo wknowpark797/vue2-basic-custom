@@ -1,5 +1,5 @@
 <!-- 
-    [ Tabs Component ]
+    [ 탭 컴포넌트 ]
 
     - TODO : 
         기존 컴포넌트를 확장 - 버튼 슬라이드 추가
@@ -10,21 +10,24 @@
         
         <!-- Tabs Button -->
         <div class="btn-tabs-wrap">
-            <button type="button" 
-                    v-for="tab in list"
-                    :key="tab.seq"
-                    :class="{'active' : compValue === tab.seq}"
-                    @click="onClickTab(tab.seq)">
+            <button 
+                type="button" 
+                v-for="tab in list"
+                :key="tab.seq"
+                :class="{'active' : compValue === tab.seq}"
+                @click="onClickTab(tab.seq)">
                 {{ tab.title }}
             </button>
         </div>
 
         <!-- Content -->
-        <div class="tab-content" 
-             v-for="tab in list"
-             :key="tab.seq">
-            <slot :name="`content-${tab.seq}`"
-                  v-if="compValue === tab.seq" />
+        <div 
+            class="tab-content" 
+            v-for="tab in list"
+            :key="tab.seq">
+            <slot 
+                :name="`content-${tab.seq}`"
+                v-if="compValue === tab.seq" />
         </div>
     </div>
 </template>
@@ -64,21 +67,21 @@
     .tabs-wrap {
         .btn-tabs-wrap {
             button {
-                border: 1px solid #ccc;
-                padding: 5px 10px;
+                border: 1px solid $gray-05;
+                padding: 7px 10px;
                 cursor: pointer;
                 &:not(:first-child) {
                     margin-left: 7px;
                 }
                 &.active {
-                    background: #ccc;
+                    background: $gray-05;
                 }
             }
         }
         .tab-content {
             margin-top: 7px;
             .inner-tab {
-                border: 1px solid #ccc;
+                border: 1px solid $gray-05;
                 padding: 15px;
             }
         }

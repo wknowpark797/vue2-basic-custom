@@ -1,5 +1,5 @@
 <!-- 
-    [ Switch Example Component ]
+    [ 스위치 컴포넌트 Example ]
  -->
 
 <template>
@@ -7,8 +7,12 @@
         <SwitchComp v-model="switchValue" />
 
         <div class="value-box">
-            <p class="tit">Value</p>
-            <p class="cont">{{ switchValue }}</p>
+            <p class="tit">
+                VALUE : 
+            </p>
+            <p class="cont">
+                {{ switchValue }}
+            </p>
         </div>
     </div>
 </template>

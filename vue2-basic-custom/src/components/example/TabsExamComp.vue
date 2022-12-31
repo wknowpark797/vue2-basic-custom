@@ -1,5 +1,5 @@
 <!-- 
-    [ Tabs Example Component ]
+    [ 탭 컴포넌트 Example ]
  -->
 
 <template>
@@ -25,8 +25,12 @@
         </TabsComp>
 
         <div class="value-box">
-            <p class="tit">Value</p>
-            <p class="cont">{{ tabValue }}</p>
+            <p class="tit">
+                VALUE : 
+            </p>
+            <p class="cont">
+                {{ tabValue }}
+            </p>
         </div>
     </div>
 </template>
