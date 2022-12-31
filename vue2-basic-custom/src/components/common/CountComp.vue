@@ -9,7 +9,7 @@
             class="btn-minus"
             :textButton=true
             @click="onClickMinus">
-            <font-awesome-icon icon="minus" />
+            -
         </ButtonComp>
         
         <p class="number">
@@ -20,7 +20,7 @@
             class="btn-plus"
             :textButton=true 
             @click="onClickPlus">
-            <font-awesome-icon icon="plus" />
+            +
         </ButtonComp>
 
     </div>
@@ -62,8 +62,8 @@
         display: inline-flex;
         align-items: center;
         height: 40px;
-        border: 1px solid $gray-04;
-        padding: 0 10px;
+        border: 1px solid $gray-05;
+        padding: 0 7px;
         box-sizing: border-box;
         p {
             margin: 0 15px;
@@ -73,12 +73,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 20px;
-            height: 20px;
+            width: 25px;
+            height: 25px;
             cursor: pointer;
-            svg {
-                height: 16px;
-                color: $gray-03;
+            &.text-button {
+                background: $gray-06;
+                @include body-1;
             }
         }
     }

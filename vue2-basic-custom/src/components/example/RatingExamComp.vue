@@ -1,5 +1,5 @@
 <!-- 
-    [ Rating Example Component ]
+    [ 별점 컴포넌트 Example ]
  -->
 
 <template>
@@ -7,8 +7,12 @@
         <RatingComp v-model="rateValue" />
 
         <div class="value-box">
-            <p class="tit">Value</p>
-            <p class="cont">{{ rateValue }}</p>
+            <p class="tit">
+                VALUE : 
+            </p>
+            <p class="cont">
+                {{ rateValue }}
+            </p>
         </div>
     </div>
 </template>

@@ -1,31 +1,31 @@
 <!-- 
-    [ Pagination Component ]
-
-    - TODO : 
-        서버 연동 구현하기 (더미 데이터)
+    [ 페이지네이션 컴포넌트 ]
  -->
 
 <template>
     <div class="pagination-wrap">
-        <button class="btn-prev"
-                v-if="displayBtn" 
-                :disabled="btnPrevDisabled"
-                @click="onClickPrev">
+        <button 
+            class="btn-prev"
+            v-if="displayBtn" 
+            :disabled="btnPrevDisabled"
+            @click="onClickPrev">
             이전
         </button>
 
-        <button class="btn-page"
-                v-for="page in pageList"
-                :key="page"
-                :class="{'active':compValue === page}"
-                @click="onClickPage(page)">
+        <button 
+            class="btn-page"
+            v-for="page in pageList"
+            :key="page"
+            :class="{'active':compValue === page}"
+            @click="onClickPage(page)">
             {{ page }}
         </button>
 
-        <button class="btn-next"
-                v-if="displayBtn"
-                :disabled="btnNextDisabled"
-                @click="onClickNext">
+        <button 
+            class="btn-next"
+            v-if="displayBtn"
+            :disabled="btnNextDisabled"
+            @click="onClickNext">
             다음
         </button>
     </div>
@@ -147,9 +147,9 @@
             &.btn-page {
                 width: 25px;
                 height: 25px;
-                border: 1px solid #ccc;
+                border: 1px solid $gray-05;
                 &.active {
-                    background: #ccc;
+                    background: $gray-05;
                 }
             }
         }

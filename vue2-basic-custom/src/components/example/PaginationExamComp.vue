@@ -1,5 +1,5 @@
 <!-- 
-    [ Pagination Example Component ]
+    [ 페이지네이션 컴포넌트 Example ]
  -->
 
 <template>
@@ -7,8 +7,12 @@
         <PaginationComp v-model="paginationValue" />
 
         <div class="value-box">
-            <p class="tit">Value</p>
-            <p class="cont">{{ paginationValue }}</p>
+            <p class="tit">
+                VALUE : 
+            </p>
+            <p class="cont">
+                {{ paginationValue }}
+            </p>
         </div>
     </div>
 </template>

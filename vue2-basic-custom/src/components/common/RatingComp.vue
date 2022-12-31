@@ -1,5 +1,5 @@
 <!-- 
-    [ Rating Component ]
+    [ 별점 컴포넌트 ]
 
     - TODO : 
         별모양 아이콘 적용
@@ -7,10 +7,11 @@
 
 <template>
     <div class="rating-wrap">
-        <button class="btn-rate" 
-                v-for="(rate, idx) in totalRate"
-                :key="idx"
-                @click="onClickRate(idx + 1)">
+        <button 
+            class="btn-rate" 
+            v-for="(rate, idx) in totalRate"
+            :key="idx"
+            @click="onClickRate(idx + 1)">
             {{ idx + 1 }}
         </button>
     </div>
@@ -74,13 +75,13 @@
         .btn-rate {
             width: 25px;
             height: 25px;
-            border: 1px solid #ccc;
+            border: 1px solid $gray-05;
             cursor: pointer;
             &:not(:first-child) {
                 margin-left: 15px;
             }
             &.active {
-                background: #ccc;
+                background: $gray-05;
             }
         }
     }
