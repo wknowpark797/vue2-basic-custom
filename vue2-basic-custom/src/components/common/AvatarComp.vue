@@ -1,5 +1,5 @@
 <!-- 
-    [ Avatar Component ]
+    [ 아바타 컴포넌트 ]
 
     - TODO : 
         등록 이미지가 없을 경우 랜덤 색상, 이니셜 적용하기
@@ -7,17 +7,22 @@
 
 <template>
     <div class="avatar-wrap">
-         <div class="inner-wrap"
-              :class="{'rounded':rounded}"
-              :style="`width: ${size}; height: ${size};`">
-            <img v-if="src" 
-                 :src="src" 
-                 alt="avatar image">
-            <span v-else>{{ text }}</span>
+         <div 
+            class="inner-wrap"
+            :class="{'rounded':rounded}"
+            :style="`width: ${size}; height: ${size};`">
+            <img 
+                v-if="src" 
+                :src="src" 
+                alt="avatar image">
+            <span v-else>
+                {{ text }}
+            </span>
          </div>
          
-         <span class="badge" 
-               v-if="badge" />               
+         <span 
+            class="badge" 
+            v-if="badge" />
     </div>
 </template>
 
@@ -50,9 +55,6 @@
                 type: String,
                 default: '50px'
             }
-        },
-        methods: {
-            
         }
     }
 </script>

@@ -1,5 +1,5 @@
 <!-- 
-    [ Avatar Example Component ]
+    [ 아바타 컴포넌트 Example ]
  -->
 
 <template>
