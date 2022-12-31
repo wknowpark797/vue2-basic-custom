@@ -5,6 +5,7 @@
 <template>
     <div class="datepicker-exam-wrap">
 
+        <!-- Component -->
         <div class="input-wrap">
             <label for="datepicker-label">
                 Datepicker Label
@@ -24,6 +25,7 @@
                 :disabled="true" />
         </div>
         
+        <!-- Value -->
         <div class="value-box">
             <p class="tit">
                 VALUE : 
@@ -32,6 +34,7 @@
                 {{ datepickerValue }}
             </p>
         </div>
+        
     </div>
 </template>
 

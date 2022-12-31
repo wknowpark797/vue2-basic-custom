@@ -4,7 +4,10 @@
 
 <template>
     <div class="accordion-exam-wrap">
+
+        <!-- Component -->
         <AccordionComp :list="accordionList" />
+    
     </div>
 </template>
 
@@ -41,6 +44,9 @@
                     }
                 ]
             }
+        },
+        methods: {
+            
         }
     }
 </script>

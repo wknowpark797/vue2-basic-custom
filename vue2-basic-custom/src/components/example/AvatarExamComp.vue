@@ -4,21 +4,21 @@
 
 <template>
     <div class="avatar-exam-wrap">
+
+        <!-- Component -->
         <AvatarComp 
             :src="require('@/assets/images/sample-image.png')"
             :size="'80px'" />
-
         <AvatarComp 
             :src="require('@/assets/images/sample-image.png')"
             :rounded="false"
             :size="'80px'" />
-
         <AvatarComp 
             :src="require('@/assets/images/sample-image.png')"
             :badge="true" />
-
         <AvatarComp 
             :text="'Ara'" />
+
     </div>
 </template>
 

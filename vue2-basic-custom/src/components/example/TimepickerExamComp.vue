@@ -5,6 +5,7 @@
 <template>
     <div class="timepicker-exam-wrap">
 
+        <!-- Component -->
         <div class="input-wrap">
             <label for="timepicker-label">
                 Timepicker Label
@@ -24,6 +25,7 @@
                 :disabled="true" />
         </div>
         
+        <!-- Value -->
         <div class="value-box">
             <p class="tit">
                 VALUE : 
@@ -32,6 +34,7 @@
                 {{ timepickerValue }}
             </p>
         </div>
+        
     </div>
 </template>
 

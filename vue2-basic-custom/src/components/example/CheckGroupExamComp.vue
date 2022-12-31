@@ -5,11 +5,13 @@
 <template>
     <div class="check-group-exam-wrap">
         
+        <!-- Component -->
         <CheckGroupComp 
             v-model="checkGroupValue"
             :options="checkGroupOptions"
-            :errorMsg="checkGroupValue.length > 0 ? '':'필수 입력 항목입니다.'" />
+            :errorMsg="errorMsg" />
 
+        <!-- Value -->
         <div class="value-box">
             <p class="tit">
                 VALUE : 
@@ -25,6 +27,15 @@
 <script>
     export default {
         name: 'CheckGroupExamComp',
+        computed: {
+            errorMsg() {
+                if(this.checkGroupValue.length > 0) {
+                    return '';
+                } else {
+                    return '필수 입력 항목입니다.';
+                }
+            }
+        },
         data() {
             return {
                 checkGroupValue: [],

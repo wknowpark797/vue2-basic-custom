@@ -5,10 +5,12 @@
 <template>
     <div class="dropdown-exam-wrap">
 
+        <!-- Component -->
         <DropdownComp 
             v-model="dropdownValue" 
             :options="dropdownOptions" />
 
+        <!-- Value -->
         <div class="value-box">
             <p class="tit">
                 VALUE : 

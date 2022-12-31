@@ -5,11 +5,13 @@
 <template>
     <div class="check-single-exam-wrap">
 
+        <!-- Component -->
         <CheckSingleComp 
             v-model="checkSingleValue"
             :label="'Label'"
-            :errorMsg="checkSingleValue === 'Y' ? '':'항목 체크는 필수입니다.'" />
+            :errorMsg="errorMsg" />
 
+        <!-- Value -->
         <div class="value-box">
             <p class="tit">
                 VALUE : 
@@ -18,13 +20,22 @@
                 {{ checkSingleValue }}
             </p>
         </div>
-
+        
     </div>
 </template>
 
 <script>
     export default {
         name: 'CheckSingleExamComp',
+        computed: {
+            errorMsg() {
+                if(this.checkSingleValue === 'Y') {
+                    return '';
+                } else {
+                    return '항목 체크는 필수입니다.';
+                }
+            }
+        },
         data() {
             return {
                 checkSingleValue: 'N'

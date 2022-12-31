@@ -4,10 +4,13 @@
 
 <template>
     <div class="tags-exam-wrap">
+
+        <!-- Component -->
         <TagsComp 
             :list="tagList" 
             @deleteTag="onDeleteTag" />
 
+        <!-- Value -->
         <div class="value-box">
             <p class="tit">
                 VALUE : 
@@ -16,6 +19,7 @@
                 {{ tagList }}
             </p>
         </div>
+        
     </div>
 </template>
 

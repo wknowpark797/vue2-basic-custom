@@ -4,7 +4,10 @@
 
 <template>
     <div class="scroll-top-exam-wrap">
+
+        <!-- Component -->
         <ScrollTopComp />
+    
     </div>
 </template>
 

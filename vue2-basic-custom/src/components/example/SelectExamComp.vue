@@ -5,6 +5,7 @@
 <template>
     <div class="select-exam-wrap">
 
+        <!-- Component -->
         <div class="input-wrap">
             <SelectComp 
                 v-model="selectValue" 
@@ -14,11 +15,11 @@
         <div class="input-wrap">
             <SelectComp 
                 v-model="selectValue"
-                :disabled="true" 
-                :options="selectOptions" />
+                :options="selectOptions"
+                :disabled="true" />
         </div>
         
-            
+        <!-- Value -->
         <div class="value-box">
             <p class="tit">
                 VALUE : 
@@ -27,6 +28,7 @@
                 {{ selectValue }}
             </p>
         </div>
+        
     </div>
 </template>
 

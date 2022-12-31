@@ -4,6 +4,8 @@
 
 <template>
     <div class="tabs-exam-wrap">
+
+        <!-- Component -->
         <TabsComp 
             v-model="tabValue"
             :list="tabList">
@@ -24,6 +26,7 @@
             </template>
         </TabsComp>
 
+        <!-- Value -->
         <div class="value-box">
             <p class="tit">
                 VALUE : 
@@ -32,6 +35,7 @@
                 {{ tabValue }}
             </p>
         </div>
+        
     </div>
 </template>
 

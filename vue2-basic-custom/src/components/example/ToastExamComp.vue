@@ -4,9 +4,12 @@
 
 <template>
     <div class="toast-exam-wrap">
+
+        <!-- Component -->
         <ButtonComp @click="showToast">
             Toast
         </ButtonComp>
+    
     </div>
 </template>
 

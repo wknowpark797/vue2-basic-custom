@@ -4,9 +4,12 @@
 
 <template>
     <div class="alert-modal-exam-wrap">
+
+        <!-- Component -->
         <ButtonComp @click="showAlertModal">
             Alert Modal
         </ButtonComp>
+    
     </div>
 </template>
 

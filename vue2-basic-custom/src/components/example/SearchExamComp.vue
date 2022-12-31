@@ -4,10 +4,13 @@
 
 <template>
     <div class="search-exam-wrap">
+
+        <!-- Component -->
         <SearchComp 
             v-model="searchValue"
             @search="onSearch" />
 
+        <!-- Value -->
         <div class="value-box">
             <p class="tit">
                 VALUE : 
@@ -16,6 +19,7 @@
                 {{ searchValue }}
             </p>
         </div>
+        
     </div>
 </template>
 

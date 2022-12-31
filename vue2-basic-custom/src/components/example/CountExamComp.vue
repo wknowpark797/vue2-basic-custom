@@ -5,8 +5,10 @@
 <template>
     <div class="count-exam-wrap">
 
+        <!-- Component -->
         <CountComp v-model="countValue" />
 
+        <!-- Value -->
         <div class="value-box">
             <p class="tit">
                 VALUE : 

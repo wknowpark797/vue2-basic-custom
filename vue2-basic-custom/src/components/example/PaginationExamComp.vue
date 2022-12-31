@@ -4,8 +4,11 @@
 
 <template>
     <div class="pagination-exam-wrap">
+
+        <!-- Component -->
         <PaginationComp v-model="paginationValue" />
 
+        <!-- Value -->
         <div class="value-box">
             <p class="tit">
                 VALUE : 
@@ -14,6 +17,7 @@
                 {{ paginationValue }}
             </p>
         </div>
+        
     </div>
 </template>
 

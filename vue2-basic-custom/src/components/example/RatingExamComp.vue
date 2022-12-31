@@ -4,8 +4,11 @@
 
 <template>
     <div class="rating-exam-wrap">
+        
+        <!-- Component -->
         <RatingComp v-model="rateValue" />
 
+        <!-- Value -->
         <div class="value-box">
             <p class="tit">
                 VALUE : 
@@ -14,6 +17,7 @@
                 {{ rateValue }}
             </p>
         </div>
+        
     </div>
 </template>
 

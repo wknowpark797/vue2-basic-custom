@@ -4,11 +4,14 @@
 
 <template>
     <div class="radio-exam-wrap">
+
+        <!-- Component -->
         <RadioComp 
             v-model="radioValue" 
             :options="radioOptions"
-            :errorMsg="radioValue ? '':'필수 선택 항목입니다.'" />
+            :errorMsg="errorMsg" />
 
+        <!-- Value -->
         <div class="value-box">
             <p class="tit">
                 VALUE : 
@@ -17,12 +20,22 @@
                 {{ radioValue }}
             </p>
         </div>
+        
     </div>
 </template>
 
 <script>
     export default {
         name: 'RadioExamComp',
+        computed: {
+            errorMsg() {
+                if(this.radioValue) {
+                    return '';
+                } else {
+                    return '필수 선택 항목입니다.';
+                }
+            }
+        },
         data() {
             return {
                 radioValue: '',

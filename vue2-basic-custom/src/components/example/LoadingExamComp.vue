@@ -4,9 +4,12 @@
 
 <template>
     <div class="loading-exam-wrap">
+
+        <!-- Component -->
         <ButtonComp @click="showLoading">
             Loading
         </ButtonComp>
+    
     </div>
 </template>
 

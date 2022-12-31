@@ -4,8 +4,11 @@
 
 <template>
     <div class="switch-exam-wrap">
+
+        <!-- Component -->
         <SwitchComp v-model="switchValue" />
 
+        <!-- Value -->
         <div class="value-box">
             <p class="tit">
                 VALUE : 
@@ -14,6 +17,7 @@
                 {{ switchValue }}
             </p>
         </div>
+        
     </div>
 </template>
 

@@ -4,9 +4,12 @@
 
 <template>
     <div class="confirm-modal-exam-wrap">
+
+        <!-- Component -->
         <ButtonComp @click="showConfirmModal">
             Confirm Modal
         </ButtonComp>
+    
     </div>
 </template>
 

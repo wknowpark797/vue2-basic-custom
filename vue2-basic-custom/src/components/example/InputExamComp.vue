@@ -5,6 +5,7 @@
 <template>
     <div class="input-exam-wrap">
 
+        <!-- Component -->
         <div class="input-wrap">
             <label for="input-label">
                 Input Label
@@ -14,7 +15,7 @@
                 :id="'input-label'"
                 :placeholder="'내용을 입력해 주세요.'"
                 :maxlength="100"
-                :errorMsg="inputValue ? '':'필수 입력 항목입니다.'"
+                :errorMsg="errorMsg"
                 @focusin="inputFocusin"
                 @focusout="inputFocusout" 
                 @enter="inputEnter"
@@ -32,6 +33,7 @@
                 :disabled=true />
         </div>
         
+        <!-- Value -->
         <div class="value-box">
             <p class="tit">
                 VALUE : 
@@ -47,6 +49,15 @@
 <script>
     export default {
         name: 'InputExamComp',
+        computed: {
+            errorMsg() {
+                if(this.inputValue) {
+                    return '';
+                } else {
+                    return '필수 입력 항목입니다.';
+                }
+            }
+        },
         data() {
             return {
                 inputValue: ''
