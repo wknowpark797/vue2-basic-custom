@@ -1,17 +1,23 @@
 <!-- 
-    [ Dropdown Example Component ]
+    [ 드롭다운 컴포넌트 Example ]
  -->
 
 <template>
     <div class="dropdown-exam-wrap">
+
         <DropdownComp 
             v-model="dropdownValue" 
             :options="dropdownOptions" />
 
         <div class="value-box">
-            <p class="tit">Value</p>
-            <p class="cont">{{ dropdownValue }}</p>
+            <p class="tit">
+                VALUE : 
+            </p>
+            <p class="cont">
+                {{ dropdownValue }}
+            </p>
         </div>
+        
     </div>
 </template>
 

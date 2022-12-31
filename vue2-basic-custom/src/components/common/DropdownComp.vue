@@ -1,5 +1,5 @@
 <!-- 
-    [ Dropdown Component ]
+    [ 드롭다운 컴포넌트 ]
  -->
 
 <template>
@@ -66,25 +66,26 @@
         > p {
             display: flex;
             align-items: center;
-            height: 34px;
-            border: 1px solid $gray-01;
-            padding: 0 7px;
+            height: 40px;
+            border: 1px solid $gray-04;
+            padding: 0 12px;
             box-sizing: border-box;
             cursor: pointer;
         }
         .list-option {
             position: absolute;
-            top: 34px;
+            top: 40px;
             left: 0;
             width: 100%;
-            background: $gray-06;
+            background: $gray-02;
+            color: #FFF;
             z-index: 9;
             > li {
-                padding: 7px;
+                padding: 10px;
                 text-align: left;
                 cursor: pointer;
                 &:hover {
-                    background: $gray-05;
+                    background: $gray-01;
                 }
             }
         }
