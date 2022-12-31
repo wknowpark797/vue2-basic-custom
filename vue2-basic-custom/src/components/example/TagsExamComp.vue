@@ -1,5 +1,5 @@
 <!-- 
-    [ Tags Example Component ]
+    [ 태그 컴포넌트 Example ]
  -->
 
 <template>
@@ -9,8 +9,12 @@
             @deleteTag="onDeleteTag" />
 
         <div class="value-box">
-            <p class="tit">Value</p>
-            <p class="cont">{{ tagList }}</p>
+            <p class="tit">
+                VALUE : 
+            </p>
+            <p class="cont">
+                {{ tagList }}
+            </p>
         </div>
     </div>
 </template>
