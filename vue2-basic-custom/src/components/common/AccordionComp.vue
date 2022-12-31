@@ -1,20 +1,26 @@
 <!-- 
-    [ Accordion Component ]
+    [ 아코디언 컴포넌트 ]
  -->
 
 <template>
     <div class="accordion-wrap">
-        <div class="accordion-box" 
-             v-for="item in compList"
-             :key="item.seq">
-            <p class="title" 
-               @click="onToggleActive(item.seq)">
+        <div 
+            class="accordion-box" 
+            v-for="item in compList"
+            :key="item.seq">
+            
+            <p 
+                class="title" 
+                @click="onToggleActive(item.seq)">
                 {{ item.title }}
             </p>
-            <div class="content"
-                 v-if="item.active">
+            
+            <div 
+                class="content"
+                v-if="item.active">
                 {{ item.content }}
             </div>
+        
         </div>
     </div>
 </template>
@@ -57,19 +63,19 @@
 
 <style lang="scss" scoped>
     .accordion-wrap {
-        border: 1px solid #ccc;
+        border: 1px solid $gray-05;
         .accordion-box {
             &:not(:last-child) {
-                border-bottom: 1px solid #ccc;
+                border-bottom: 1px solid $gray-05;
             }
             .title {
-                background: #eee;
-                padding: 5px;
+                padding: 10px;
                 margin: 0;
                 cursor: pointer;
             }
             .content {
-                padding: 10px;
+                background: $gray-08;
+                padding: 15px;
             }
         }
     }

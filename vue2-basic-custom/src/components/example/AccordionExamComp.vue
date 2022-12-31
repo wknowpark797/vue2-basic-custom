@@ -1,5 +1,5 @@
 <!-- 
-    [ Accordion Example Component ]
+    [ 아코디언 컴포넌트 Example ]
  -->
 
 <template>
@@ -41,9 +41,6 @@
                     }
                 ]
             }
-        },
-        methods: {
-            
         }
     }
 </script>
