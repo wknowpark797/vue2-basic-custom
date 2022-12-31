@@ -1,5 +1,5 @@
 <!-- 
-    [ Modal Example Component ]
+    [ 모달 컴포넌트 Example ]
  -->
 
 <template>

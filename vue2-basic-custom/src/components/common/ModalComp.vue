@@ -1,38 +1,43 @@
 <!-- 
-    [ Modal Component ]
+    [ 모달 컴포넌트 ]
  -->
 
 <template>
-    <div ref="modal-container" 
-         v-if="isShowModal"
-         class="modal-wrap">
+    <div 
+        ref="modal-container" 
+        v-if="isShowModal"
+        class="modal-wrap">
 
-         <div class="back-dimmed" 
-              @click="close" />
+         <div 
+            class="back-dimmed" 
+            @click="close" />
 
-         <div class="modal"
-              :class="modalClass">
+         <div 
+            class="modal"
+            :class="modalClass">
 
-              <!-- Modal Header -->
-              <div class="modal-header">
+            <!-- Modal Header -->
+            <div class="modal-header">
                 <slot name="title" />
-                <button 
+                <ButtonComp 
                     class="btn-close"
+                    :textButton=true
                     @click="close">
                     <font-awesome-icon icon="xmark" />
-                </button>
-              </div>
+                </ButtonComp>
+            </div>
 
-              <!-- Modal Body -->
-              <div class="modal-body">
+            <!-- Modal Body -->
+            <div class="modal-body">
                 <slot name="body" />
-              </div>
+            </div>
 
-              <!-- Modal Footer -->
-              <div class="modal-footer" 
-                   v-if="$slots.footer">
+            <!-- Modal Footer -->
+            <div 
+                class="modal-footer" 
+                v-if="$slots.footer">
                 <slot name="footer" />
-              </div>
+            </div>
 
          </div>
         
