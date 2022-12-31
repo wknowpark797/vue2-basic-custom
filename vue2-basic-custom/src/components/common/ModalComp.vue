@@ -19,12 +19,11 @@
             <!-- Modal Header -->
             <div class="modal-header">
                 <slot name="title" />
-                <ButtonComp 
+                <button 
                     class="btn-close"
-                    :textButton="true"
                     @click="close">
                     <font-awesome-icon icon="xmark" />
-                </ButtonComp>
+                </button>
             </div>
 
             <!-- Modal Body -->
@@ -111,6 +110,7 @@
             background: #eee;
             padding: 12px 15px;
             .btn-close {
+                display: flex;
                 cursor: pointer;
                 svg {
                     height: 16px;

@@ -3,13 +3,17 @@
  -->
 
 <template>
-    <div class="scroll-top-wrap" 
-         v-if="isScroll">
-        <button type="button" 
-                class="btn-scroll-top"
-                @click="onScrollTop">
+    <div 
+        class="scroll-top-wrap" 
+        v-if="isScroll">
+
+        <button 
+            type="button" 
+            class="btn-scroll-top"
+            @click="onScrollTop">
             TOP
         </button>
+        
     </div>
 </template>
 

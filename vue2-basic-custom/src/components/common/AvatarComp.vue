@@ -9,7 +9,7 @@
     <div class="avatar-wrap">
          <div 
             class="inner-wrap"
-            :class="{'rounded':rounded}"
+            :class="{'rounded' : rounded}"
             :style="`width: ${size}; height: ${size};`">
             <img 
                 v-if="src" 

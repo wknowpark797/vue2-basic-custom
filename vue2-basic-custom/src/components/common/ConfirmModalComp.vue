@@ -13,24 +13,27 @@
             @click="close" />
 
         <div class="confirm-modal">
+
+            <!-- Modal Header -->
             <div class="modal-header">
                 <p class="title">
                     {{ title }}
                 </p>
-                <ButtonComp 
+                <button 
                     class="btn-close"
-                    :textButton=true
                     @click="close">
                     <font-awesome-icon icon="xmark" />
-                </ButtonComp>
+                </button>
             </div>
 
+            <!-- Modal Body -->
             <div class="modal-body">
                 <p class="content">
                     {{ content }}
                 </p>
             </div>
 
+            <!-- Modal Footer -->
             <div class="modal-footer">
                 <ButtonComp 
                     :size="'small'"
@@ -128,6 +131,7 @@
                 margin: 0;
             }
             .btn-close {
+                display: flex;
                 cursor: pointer;
                 svg {
                     height: 16px;

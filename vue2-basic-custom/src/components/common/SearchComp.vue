@@ -4,6 +4,7 @@
 
 <template>
     <div class="search-wrap">
+
         <div class="input-wrap">
             <InputComp 
                 v-model="compValue"
@@ -14,12 +15,14 @@
                 @input="onInput"
                 @enter="onEnter" />
         </div>
+
         <ButtonComp 
             class="btn-search"
             :size="'large'" 
             @click="onSearch">
             검색
         </ButtonComp>
+        
     </div>
 </template>
 

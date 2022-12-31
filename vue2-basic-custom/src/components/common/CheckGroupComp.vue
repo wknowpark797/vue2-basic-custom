@@ -8,6 +8,7 @@
 <template>
     <div class="check-group-wrap">
         
+        <!-- All 버튼 -->
         <label>
             <input 
                 type="checkbox" 
@@ -16,6 +17,7 @@
             All
         </label>
 
+        <!-- Option 버튼 -->
         <label 
             v-for="(check, idx) in options" 
             :key="idx">

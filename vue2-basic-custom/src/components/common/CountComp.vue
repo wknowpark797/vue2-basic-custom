@@ -5,23 +5,21 @@
 <template>
     <div class="count-wrap">
 
-        <ButtonComp 
+        <button 
             class="btn-minus"
-            :textButton=true
             @click="onClickMinus">
             -
-        </ButtonComp>
+        </button>
         
         <p class="number">
             {{ compValue }}
         </p>
         
-        <ButtonComp 
+        <button 
             class="btn-plus"
-            :textButton=true 
             @click="onClickPlus">
             +
-        </ButtonComp>
+        </button>
 
     </div>
 </template>
@@ -75,11 +73,9 @@
             justify-content: center;
             width: 25px;
             height: 25px;
+            background: $gray-06;
+            @include body-1($size: 1.125rem);
             cursor: pointer;
-            &.text-button {
-                background: $gray-06;
-                @include body-1;
-            }
         }
     }
 </style>

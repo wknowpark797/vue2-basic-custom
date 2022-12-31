@@ -4,8 +4,10 @@
 
 <template>
     <div class="file-upload-wrap">
-        <input type="file" 
-               @change="onChange">
+        <input 
+            type="file" 
+            @change="onChange">
+            
         <p>{{ fileName }}</p>
     </div>
 </template>

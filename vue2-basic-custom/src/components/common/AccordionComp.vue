@@ -8,19 +8,16 @@
             class="accordion-box" 
             v-for="item in compList"
             :key="item.seq">
-            
             <p 
                 class="title" 
                 @click="onToggleActive(item.seq)">
                 {{ item.title }}
             </p>
-            
             <div 
                 class="content"
                 v-if="item.active">
                 {{ item.content }}
             </div>
-        
         </div>
     </div>
 </template>

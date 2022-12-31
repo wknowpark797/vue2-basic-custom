@@ -11,12 +11,11 @@
             
             <p>{{ tag.content }}</p>
             
-            <ButtonComp 
+            <button 
                 class="btn-delete"
-                :textButton="true" 
                 @click="onDeleteTag(tag.seq)">
                 <font-awesome-icon icon="xmark" />
-            </ButtonComp>
+            </button>
         </div>
     </div>
 </template>
@@ -59,6 +58,7 @@
                 margin: 0;
             }
             .btn-delete {
+                display: flex;
                 margin-left: 10px;
                 cursor: pointer;
             }

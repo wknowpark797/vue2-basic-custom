@@ -5,9 +5,10 @@
 <template>
     <label class="switch-wrap">
         {{ label }}
-        <input type="checkbox" 
-               v-model="compValue"
-               @change="onChange">
+        <input 
+            type="checkbox" 
+            v-model="compValue"
+            @change="onChange">
         <span class="slider" />
     </label>
 </template>
