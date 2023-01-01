@@ -48,7 +48,6 @@
 
 <style lang="scss" scoped>
     .wrapper {
-        display: flex;
         .btn-home {
             position: fixed;
             top: 10px;
@@ -66,11 +65,9 @@
             }
         }
         .content-wrapper {
-            flex: 1;
-            height: 100vh;
             padding: 35px 50px;
+            margin-left: 250px;
             box-sizing: border-box;
-            overflow: auto;
         }
     }
 </style>

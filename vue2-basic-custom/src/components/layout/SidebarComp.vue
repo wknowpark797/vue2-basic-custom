@@ -107,6 +107,9 @@
 
 <style lang="scss" scoped>
     .sidebar-wrap {
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 250px;
         height: 100vh;
         background: $gray-08;
