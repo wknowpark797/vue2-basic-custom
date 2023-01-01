@@ -38,7 +38,7 @@
                 <ButtonComp 
                     class="btn-join" 
                     @click="$router.push('/join')">
-                    회원가입
+                    회원가입 이동
                 </ButtonComp>
             </div>
             
