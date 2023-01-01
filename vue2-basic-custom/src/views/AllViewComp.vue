@@ -115,3 +115,13 @@
         }
     }
 </style>
+
+<style lang="scss">
+    .all-view-wrap {
+        .scroll-top-wrap {
+            position: relative;
+            bottom: auto;
+            right: auto;
+        }
+    }
+</style>

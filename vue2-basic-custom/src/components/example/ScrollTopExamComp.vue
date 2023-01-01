@@ -1,5 +1,5 @@
 <!-- 
-    [ ScrollTop Example Component ]
+    [ 스크롤탑 컴포넌트 Example ]
  -->
 
 <template>

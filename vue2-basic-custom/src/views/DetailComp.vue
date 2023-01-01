@@ -12,6 +12,9 @@
                 <!-- 컴포넌트 상세 -->
                 <div class="group-box">
                     <component :is="compDetail.component" />
+                    <p v-if="compDetail.component === 'ScrollTopExamComp'">
+                        스크롤 시 오른쪽 하단에서 노출됩니다.
+                    </p>
                 </div>
 
                 <!-- 해야할 일 -->
