@@ -1,35 +1,42 @@
 <!-- 
-    [ Login Component ]
+    [ 로그인 컴포넌트 ]
  -->
 
 <template>
     <div class="login-wrap">
         <div class="inner-login">
                 
-            <h2>Login</h2>
+            <h2>로그인</h2>
 
             <!-- 이메일 -->
             <div class="input-wrap">
                 <InputComp 
-                    v-model="inputParams.email" 
-                    :placeholder="'이메일을 입력해주세요.'" />
+                    v-model="loginParams.email" 
+                    :placeholder="'이메일을 입력해주세요.'"
+                    :errorMsg="valid.email"
+                    @keyup="validCheck"
+                    @enter="onClickLogin" />
             </div>
 
             <!-- 비밀번호 -->
             <div class="input-wrap">
                 <InputComp 
-                    v-model="inputParams.password" 
-                    :placeholder="'비밀번호를 입력해주세요.'" />
+                    v-model="loginParams.password" 
+                    :placeholder="'비밀번호를 입력해주세요.'"
+                    :errorMsg="valid.password"
+                    @keyup="validCheck"
+                    @enter="onClickLogin" />
             </div>
 
             <div class="btn-wrap">
-                <ButtonComp class="btn-login">
+                <ButtonComp 
+                    class="btn-login"
+                    :color="'blue'"
+                    @click="onClickLogin">
                     로그인
                 </ButtonComp>
                 <ButtonComp 
                     class="btn-join" 
-                    :color="'blue'"
-                    :textButton="true"
                     @click="$router.push('/join')">
                     회원가입
                 </ButtonComp>
@@ -44,14 +51,28 @@
         name: 'LoginComp',
         data() {
             return {
-                inputParams: {
+                loginParams: {
+                    email: '',
+                    password: ''
+                },
+                valid: {
                     email: '',
                     password: ''
                 }
             }
         },
         methods: {
-            
+            validCheck() {
+                this.valid.email = this.loginParams.email ? '' : '필수 입력 항목입니다.';
+                this.valid.password = this.loginParams.password ? '' : '필수 입력 항목입니다.';
+
+                return !this.valid.email && !this.valid.password;
+            },
+            onClickLogin() {
+                if(this.validCheck()) {
+                    alert('로그인 되었습니다.');
+                }
+            }
         }
     }
 </script>
@@ -73,11 +94,9 @@
                 margin-bottom: 10px;
             }
             .btn-wrap {
-                text-align: right;
-                margin-top: 20px;
-                .btn-login {
+                button {
                     width: 100%;
-                    margin-bottom: 10px;
+                    margin-top: 10px;
                 }
             }
         }

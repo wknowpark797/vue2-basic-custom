@@ -35,7 +35,9 @@
             <p class="error">
                 {{ errorMsg }}
             </p>
-            <p class="count">
+            <p
+                v-if="maxlength" 
+                class="count">
                 {{ compValue.length }}/{{ maxlength }}
             </p>
         </div>
