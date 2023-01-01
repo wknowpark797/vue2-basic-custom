@@ -4,6 +4,16 @@
 
 <template>
     <div class="sidebar-wrap">
+
+        <!-- Home Button -->
+        <button 
+            type="button" 
+            class="btn-home"
+            @click="$router.push('/')">
+            <font-awesome-icon icon="house" />
+        </button>
+
+        <!-- Inner Sidebar -->
         <div class="inner-sidebar">
             <div class="profile-wrap">
                 <AvatarComp 
@@ -115,6 +125,23 @@
         background: $gray-08;
         padding: 35px 20px;
         box-sizing: border-box;
+        z-index: 9;
+        .btn-home {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 9;
+            &:hover {
+                background: $gray-06;
+            }
+            svg {
+                height: 20px;
+                color: $gray-04;
+            }
+        }
         .inner-sidebar {
             .profile-wrap {
                 text-align: center;

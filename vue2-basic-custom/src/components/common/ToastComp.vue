@@ -60,6 +60,7 @@
         width: 100%;
         padding: 15px 20px;
         box-sizing: border-box;
+        z-index: 9;
         .toast-box {
             border-radius: 10px;
             background: $red-05;

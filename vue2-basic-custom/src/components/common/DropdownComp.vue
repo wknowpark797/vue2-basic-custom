@@ -79,7 +79,7 @@
             width: 100%;
             background: $gray-02;
             color: #FFF;
-            z-index: 9;
+            z-index: 1;
             > li {
                 padding: 10px;
                 text-align: left;
