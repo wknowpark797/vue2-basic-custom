@@ -63,8 +63,8 @@
         z-index: 9;
         .toast-box {
             border-radius: 10px;
-            background: $red-05;
-            color: #fff;
+            background: #0a7eda;
+            color: #FFF;
             padding: 15px;
             .content {
                 margin: 0;

@@ -77,15 +77,14 @@
             top: 40px;
             left: 0;
             width: 100%;
-            background: $gray-02;
-            color: #FFF;
+            background: #bfdef6;
             z-index: 1;
             > li {
                 padding: 10px;
                 text-align: left;
                 cursor: pointer;
                 &:hover {
-                    background: $gray-01;
+                    background: #88c6f7;
                 }
             }
         }
